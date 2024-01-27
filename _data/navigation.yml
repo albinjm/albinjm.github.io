@@ -1,0 +1,23 @@
+main:
+
+  - title: "Contact"
+    url: ./#contact 
+    right: true 
+
+  - title: "Projects"
+    url: ./#projects
+
+  - title: "Teaching"
+    url: ./#teaching
+
+  - title: "Talks"
+    url: ./#talks
+
+  - title: "Publications & WP"
+    url: ./#publications
+
+  - title: "Blogs"
+    url: ./#blogs
+
+  - title: "Bio"
+    url: ./#about-me

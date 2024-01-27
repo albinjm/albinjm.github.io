@@ -1,0 +1,51 @@
+main:
+
+  - title: Markdown 和 Zotero 的推介与应用实践
+    authors: 
+    conference_short: Markdown & Zotero
+    conference: 
+    abstract: 2022年1月：山东财经大学 YEP 团队部分成员 [<strong style="color:#e74d3c">1 hour</strong>]<br>2022年4月：山东财经大学龙山荣誉学院本科生 [<strong style="color:#e74d3c">1 hour</strong>]
+    pdf: ./assets/files/初虹_202201_Markdown_Zotero.pdf
+    web: 
+    image: ./assets/files/Markdown&Zotero.gif
+    notes: 线上（130人+）
+
+  - title: 2022 年师门内部“本硕衔接”培训
+    authors:
+    conference_short: Stata & DID & GMM
+    conference: 
+    abstract: 2022年5月21日：Stata 基本操作 [<strong style="color:#e74d3c">1.5 hours</strong>]<br>2022年6月26日：常见微观调查数据库介绍与微观数据库清洗 [<strong style="color:#e74d3c">2 hours</strong>]<br>2022年7月19日：动态面板模型与广义矩估计 [<strong style="color:#e74d3c">2.5 hours</strong>]<br>2022年7月30日：潜在结果框架与双重差分法 [<strong style="color:#e74d3c">2.5 hours</strong>]
+    pdf: 
+    web: 
+    image: ./assets/files/2022年本硕衔接.png
+    notes: 线下（20人+）
+
+  - title: 2023年师门内部在校生培训
+    authors: 
+    conference_short: 数据清洗与实证研究范式
+    conference: 
+    abstract: 2023年2月26日：地级市宏观数据库（EPS、CSMAR、CNRDS、统计年鉴、CEIC）的清洗与对接 [<strong style="color:#e74d3c">2.5 hours</strong>]<br>2023年2月27日：上市公司数据库（CSMAR）的清洗对接与期刊论文复刻 [<strong style="color:#e74d3c">2.5 hours</strong>]<br>2023年3月2日：经管实证分析基本范式（稳健性分析、内生性检验、敏感性分析与可逆性分析） [<strong style="color:#e74d3c">2.5 hours</strong>]<br>2023年3月3日：双重差分法基本原理与Stata应用（潜在结果框架、DID原理与假设、Standard DID与TWFE） [<strong style="color:#e74d3c">2.5 h</strong>]<br>2023年3月4日：双重差分法基本范式（事件研究法、安慰剂检验、前定控制变量与时间趋势项、Staggered DID的“负权重”问题与异质性偏误） [<strong style="color:#e74d3c">2.5 hours</strong>]
+    pdf: 
+    web: 
+    image: ./assets/files/202302.png
+    notes: 线下（8人）
+
+  - title: 2023 年师门内部“本硕衔接”培训
+    authors: 
+    conference_short: 地级市数据清洗 & DID
+    conference: 
+    abstract: 2023年5月14日：地级市宏观数据清洗与对接 [<strong style="color:#e74d3c">2.5 hours</strong>]<br>2023年5月28日：上市公司期刊论文复刻<br>2023年7月15日：双重差分法基本原理与Stata应用 [<strong style="color:#e74d3c">2.5 h</strong>]<br>2023年7月29日：双重差分法基本范式 [<strong style="color:#e74d3c">2.5 hours</strong>]<br>
+    pdf: 
+    web: 
+    image: ./assets/files/202305.png
+    notes: 线下（10人+）
+
+  - title: 连享会2023年暑期公开课讲座：Stata 实战之地级市宏观数据和上市公司数据的清洗与合并
+    authors: 
+    conference_short: Stata 数据清洗
+    conference: 2023年6月27日
+    abstract: 受中山大学连玉君老师邀请，于2023年6月27日在连享会平台进行以「Stata 清洗三大地级市宏观数据库和 CSMAR 上市公司数据库」为主题的公开课直播，共吸引 1400 余名老师和同学们参与。
+    pdf: ./assets/files/20230627_初虹_连享会公开课.pdf
+    web: https://www.lianxh.cn/details/1226.html
+    image: ./assets/files/20230627.png
+    notes: 网络直播（1400人+, 2 hours）
