@@ -14,7 +14,8 @@ layout: homepage
 
 <h4 style="margin:0 10px 0;">Research Direction</h4>
 
-- 财税理论与政策、收入分配等
+- **Computer Vision:** image recognition, image generation, video captioning
+- **Machine Learning:** meta-learning, incremental learning, transfer learning
 
 <h4 style="margin:0 10px 0;">获奖情况</h4>
 
