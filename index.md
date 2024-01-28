@@ -12,7 +12,7 @@ layout: homepage
 - Graduation（2021 - 2025）：National Institute of Technology Nagaland · Bachelor of Technology · Computer Science & Engineering
 - Intermediate（2018 - 2020）：Placid Vidya Vihar Sr Sec School · CBSE
 
-<h4 style="margin:0 10px 0;">Research Direction</h4>
+<h4 style="margin:0 10px 0;">Research Interests</h4>
 
 - **Computer Vision:** image recognition, image generation, video captioning
 - **Machine Learning:** meta-learning, incremental learning, transfer learning
