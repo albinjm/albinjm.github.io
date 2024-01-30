@@ -9,7 +9,7 @@ layout: homepage
 
 <h4 style="margin:0 10px 0;">Education background</h4>
 
-- Graduation（2021 - 2025）：National Institute of Technology Nagaland · Bachelor of Technology · Computer Science & Engineering
+- Graduation（2021 - 2025）：National Institute of Technology · Bachelor of Technology · Computer Science & Engineering
 - Intermediate（2018 - 2020）：Placid Vidya Vihar Sr Sec School · CBSE
 
 <h4 style="margin:0 10px 0;">Research Interests</h4>
