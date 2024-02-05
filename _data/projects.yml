@@ -12,7 +12,7 @@ main:
    - title: Awesome
      authors: 
      project_short: CSS
-     project: 4 种非嵌套列表的分栏、类似 Beamer 的导航进度栏、5 种类型的封面页、3 种类型的目录页和 5 种 Callouts 引用框等。
+     project: The current v1.2 version provides 6 colors (dark, blue, green, red, yellow, brown) and 30 custom styles, including 6 page columns, 4 non-nested list columns, and Beamer-like columns. Progress navigation bar, 5 types of cover pages, 3 types of content pages, 5 types of Callouts reference boxes, etc. 4 种非嵌套列表的分栏、类似 Beamer 的导航进度栏、5 种类型的封面页、3 种类型的目录页和 5 种 Callouts 引用框等。
      pdf: ./assets/files/郭健2023.pdf
      web: https://github.com/favourhong/Awesome-Marp
      image: ./assets/img/AwesomeMarp.gif
