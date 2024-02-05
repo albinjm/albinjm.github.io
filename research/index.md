@@ -3,83 +3,38 @@ layout: homepage
 ---
 
 
-<h1 id="projects"></h1>
+<h1 id="about-me"></h1>
 
-<h2 style="margin: 30px 0px -15px;">Projects<temp style="font-size:15px;"></temp></h2>
+<h2 style="margin: 60px 0px 10px;">Bio</h2>
 
-<div class="publications">
-<ol class="bibliography">
+<h4 style="margin:0 10px 0;">Education background</h4>
 
-{% for link in site.data.projects.main %}
+- Graduation（2021 - 2025）：National Institute of Technology · Bachelor of Technology · Computer Science & Engineering
+- Intermediate（2018 - 2020）：Placid Vidya Vihar Sr Sec School · CBSE
 
-<li>
-<div class="pub-row">
-  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width=100;height=40%">
-            <abbr class="badge">{{ link.project_short }}</abbr>
-  </div>
-  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
-      <div class="title"><a href="{{ link.pdf }}">{{ link.title }}</a></div>
-      <div class="author">{{ link.authors }}</div>
-      <div class="author">{{ link.abstract }}</div>
-      <!-- <div class="periodical"><em>{{ link.project }}</em> -->
-      <div class="periodical" style="text-align: justify;">{{ link.project }}
-      </div>
-    <div class="links">
-      {% if link.pdf %} 
-      <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
-      {% endif %}
-      {% if link.code %} 
-      <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
-      {% endif %}
-      {% if link.page %} 
-      <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project Page</a>
-      {% endif %}
-      {% if link.bibtex %} 
-      <a href="{{ link.bibtex }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
-      {% endif %}
-      {% if link.web %} 
-      <a href="{{ link.web }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Website</a>
-      {% endif %}
-      {% if link.notes %}
-      <strong> <i style="color:#e74d3c">{{ link.notes }}</i></strong>
-      <!-- <strong style="color:#e74d3c">{{ link.notes }}</strong> -->
-      {% endif %}
-      {% if link.others %} 
-      {{ link.others }}
-      {% endif %}
-    </div>
-  </div>
-</div>
-</li>
+<h4 style="margin:0 10px 0;">Research Interests</h4>
 
-<br>
+- **Computer Vision:** image recognition, image generation, video captioning
+- **Machine Learning:** meta-learning, incremental learning, transfer learning
 
-{% endfor %}
+<h4 style="margin:0 10px 0;">获奖情况</h4>
+
+<ul style="margin:0 10px 0px;">
+  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px; margin-right: 5px">奖学金</strong><strong>[2021 - 2024年] </strong> 一等学业奖学金 3 次 </li>  
+  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px; margin-right: 5px">奖学金</strong><strong>[2017 - 2021&nbsp;年] </strong> 一等学业奖学金 8 次、国家励志奖学金 2 次 </li>  
+  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px; margin-right: 5px">荣誉称号</strong><strong>[2018 - 2021&nbsp;年] </strong> 校级优秀学生 (3 次)、校级优秀共青团员 (2 次)</li>  
+  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px; margin-right: 5px">比赛活动</strong><strong>[2019年9月] </strong> 第五届「互联网+」全国大学生创新创业大赛 <strong style="color:#e74d3c">山东省金奖</strong></li>
+  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px; margin-right: 5px">比赛活动</strong><strong>[2019年5月] </strong> 第十六届「挑战杯」全国课外学术科技作品大赛 <strong style="color:#e74d3c">山东省一等奖</strong></li>
+  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px;margin-right: 5px">比赛活动</strong><strong>[2021年9月] </strong> 2020年全国大学生创新创业训练计划项目结项 <strong style="color:#e74d3c">主持人</strong></li>
+  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px;margin-right: 5px">社会实践</strong><strong>[2018年12月] </strong> 全国大学生「三下乡·千村行动」共青团助力扶贫专项行动 <strong style="color:#e74d3c"><br>山东省优秀服务团队、山东省优秀学生</strong></li>
+  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px;margin-right: 5px">社会实践</strong><strong>[2018 - 2020年] </strong> 山东财经大学大学生社会实践「三千计划」校级优秀服务团队 (队长，3 次)、校级社会实践之星 (2 次)、校级社会实践百优学生</li>
+</ul>
+
+<h4 style="margin:0 10px 0;">技能偏好</h4>
+
+- 数据分析：Stata > Python = R
+- 地图制图：ArcGIS 
+- 写作：Markdown、Marp、LaTeX
+- 前端：HTML、CSS
 
 
-<li>
-<div class="pub-row">
-  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-    <img src="./assets/img/AwesomeMarp.gif" class="teaser img-fluid z-depth-1">
-            <abbr class="badge">CSS Themes</abbr>
-  </div>
-  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
-      <div class="title"><a href="https://github.com/favourhong/Awesome-Marp">Awesome Marp</a></div>
-      <div class="author"></div>
-      <div class="periodical" style="text-align: justify;">一整套 Marp 主题，Marp 是用 Markdown 语法来渲染创作 PPT 的工具，可以在<a href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode"> VS Code </a>和<a href="https://obsidian.md/"> Obsidian </a>中使用。目前 v1.2 版本提供了 6 种颜色（dark、blue、green、red、yellow、brown）和 30 种自定义样式，包括 6 种页面分栏、4 种非嵌套列表的分栏、类似 Beamer 的进度导航栏、5 种类型的封面页、3 种类型的目录页和 5 种 Callouts 引用框等。</div>
-    <div class="links">
-      <!-- <a href="" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a> -->
-      <!-- <a href="https://github.com/yaoyao-liu/meta-transfer-learning" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a> -->
-      <a href="https://github.com/favourhong/Awesome-Marp" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Website</a>
-      <strong><i style="color:#e74d3c">Open Source (244 GitHub Stars)</i></strong>
-    </div>
-  </div>
-</div>
-</li>
-
-</ol>
-</div>
-
-
-{% include_relative ../_includes/contact.md %}
