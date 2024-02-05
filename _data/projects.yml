@@ -9,4 +9,11 @@ main:
      image: ./assets/img/AwesomeMarp.gif
      notes: Open Source
 
-
+   - title: Awesome
+     authors: 
+     project_short: CSS
+     project: 4 种非嵌套列表的分栏、类似 Beamer 的导航进度栏、5 种类型的封面页、3 种类型的目录页和 5 种 Callouts 引用框等。
+     pdf: ./assets/files/郭健2023.pdf
+     web: https://github.com/favourhong/Awesome-Marp
+     image: ./assets/img/AwesomeMarp.gif
+     notes: Open Source (3 Github Stars)
