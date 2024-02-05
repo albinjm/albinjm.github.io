@@ -82,4 +82,4 @@ layout: homepage
 </div>
 
 
-{% include_relative _includes/contact.md %}
+{% include_relative ../_includes/contact.md %}
