@@ -1,7 +1,7 @@
 ---
 layout: homepage
-title: Research
 ---
+
 
 <h1 id="projects"></h1>
 
@@ -81,4 +81,5 @@ title: Research
 </ol>
 </div>
 
-[Back](..)
+
+{% include_relative _includes/contact.md %}
