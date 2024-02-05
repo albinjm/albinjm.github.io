@@ -1,40 +1,173 @@
 ---
-layout: homepage
+layout: page
+title: CS748 - Advanced Reinforcement Learning (Spring 2023)
+subtitle: Research
 ---
 
+## Readings & Reviews
 
-<h1 id="about-me"></h1>
+These are the research papers (ang technical reviews written by me) that I read during the course on Advanced Reinforcement Learning in Spring 2023. They are arranged in decreasing
+order of recency of the publication.
 
-<h2 style="margin: 60px 0px 10px;">Bio</h2>
+[**Outracing champion Gran Turismo drivers with deep reinforcement learning**](https://docs.google.com/viewer?url=https://www.cs.utexas.edu/~pstone/Papers/bib2html-links/nature22.pdf)  
+Authors: Peter R. Wurman, Samuel Barrett, Kenta Kawamoto, James MacGlashan, Kaushik Subramanian, Thomas J. Walsh, Roberto Capobianco, Alisa Devlic, Franziska Eckert, Florian Fuchs, Leilani Gilpin, Piyush Khandelwal, Varun Kompella, HaoChih Lin, Patrick MacAlpine, Declan Oller, Takuma Seno, Craig Sherstan, Michael D. Thomure, Houmehr Aghabozorgi, Leon Barrett, Rory Douglas, Dion Whitehead, Peter Dürr, Peter Stone, Michael Spranger, and Hiroaki Kitano  
+Year: 2022  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/02-turismo-deep-rl.pdf)
 
-<h4 style="margin:0 10px 0;">Education background</h4>
+[**On the Dangers of Stochastic Parrots:Can Language Models Be Too Big? 🦜**](https://docs.google.com/viewer?url=https://dl.acm.org/doi/pdf/10.1145/3442188.3445922)  
+Authors: Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell  
+Year: 2021  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/15-stochastic-parrots.pdf)
 
-- Graduation（2021 - 2025）：National Institute of Technology · Bachelor of Technology · Computer Science & Engineering
-- Intermediate（2018 - 2020）：Placid Vidya Vihar Sr Sec School · CBSE
+[**On the Expressivity of Markov Reward**](https://docs.google.com/viewer?url=https://david-abel.github.io/papers/neurips2021_oteomr.pdf)  
+Authors: David Abel, Will Dabney, Anna Harutyunyan, Mark K. Ho, Michael L. Littman, Doina Precup, and Satinder Singh  
+Year: 2021  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/05-markov-reward-expressivity.pdf)
 
-<h4 style="margin:0 10px 0;">Research Interests</h4>
+[**Neural Thompson Sampling**](https://docs.google.com/viewer?url=https://openreview.net/pdf?id=tkAtoZkcUnm)  
+Authors: Weitong Zhang, Dongruo Zhou, Lihong Li, and Quanquan Gu  
+Year: 2021  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/12-neural-ts.pdf)
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+[**A Tighter Analysis of Randomised Policy Iteration**](https://docs.google.com/viewer?url=https://www.cse.iitb.ac.in/~shivaram/papers/tk_uai_2019.pdf)  
+Authors: Meet Taraviya and Shivaram Kalyanakrishnan  
+Year: 2019  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/08-policy-iteration-tighter-analysis.pdf)
 
-<h4 style="margin:0 10px 0;">获奖情况</h4>
+[**Neural Architecture Search with Reinforcement Learning**](https://docs.google.com/viewer?url=https://arxiv.org/pdf/1611.01578.pdf)  
+Authors: Barret Zoph and Quoc V. Le  
+Year: 2017  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/10-nas-rl.pdf)
 
-<ul style="margin:0 10px 0px;">
-  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px; margin-right: 5px">奖学金</strong><strong>[2021 - 2024年] </strong> 一等学业奖学金 3 次 </li>  
-  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px; margin-right: 5px">奖学金</strong><strong>[2017 - 2021&nbsp;年] </strong> 一等学业奖学金 8 次、国家励志奖学金 2 次 </li>  
-  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px; margin-right: 5px">荣誉称号</strong><strong>[2018 - 2021&nbsp;年] </strong> 校级优秀学生 (3 次)、校级优秀共青团员 (2 次)</li>  
-  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px; margin-right: 5px">比赛活动</strong><strong>[2019年9月] </strong> 第五届「互联网+」全国大学生创新创业大赛 <strong style="color:#e74d3c">山东省金奖</strong></li>
-  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px; margin-right: 5px">比赛活动</strong><strong>[2019年5月] </strong> 第十六届「挑战杯」全国课外学术科技作品大赛 <strong style="color:#e74d3c">山东省一等奖</strong></li>
-  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px;margin-right: 5px">比赛活动</strong><strong>[2021年9月] </strong> 2020年全国大学生创新创业训练计划项目结项 <strong style="color:#e74d3c">主持人</strong></li>
-  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px;margin-right: 5px">社会实践</strong><strong>[2018年12月] </strong> 全国大学生「三下乡·千村行动」共青团助力扶贫专项行动 <strong style="color:#e74d3c"><br>山东省优秀服务团队、山东省优秀学生</strong></li>
-  <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px;margin-right: 5px">社会实践</strong><strong>[2018 - 2020年] </strong> 山东财经大学大学生社会实践「三千计划」校级优秀服务团队 (队长，3 次)、校级社会实践之星 (2 次)、校级社会实践百优学生</li>
-</ul>
+[**Action Selection for Hammer Shots in Curling**](https://docs.google.com/viewer?url=http://webdocs.cs.ualberta.ca/~holte/Publications/ijcai2016-curling.pdf)  
+Authors: Zaheen Farraz Ahmad, Robert C. Holte, and Michael Bowling  
+Year: 2016  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/13-hammer-shots-curling.pdf)
 
-<h4 style="margin:0 10px 0;">技能偏好</h4>
+[**A Contextual-Bandit Approach to Personalized News Article Recommendation**](https://docs.google.com/viewer?url=https://www.ra.ethz.ch/cdstore/www2010/www/p661.pdf)  
+Authors: Lihong Li, Wei Chu, John Langford, and Robert E. Schapire  
+Year: 2012  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/11-contextual-bandit-personalized-news.pdf)
 
-- 数据分析：Stata > Python = R
-- 地图制图：ArcGIS 
-- 写作：Markdown、Marp、LaTeX
-- 前端：HTML、CSS
+[**Is it Enough to Get the Behaviour Right?**](https://docs.google.com/viewer?url=http://www.cs.toronto.edu/~hector/Papers/chinese.pdf)  
+Authors: Hector J. Levesque  
+Year: 2009  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/09-right-behaviour.pdf)
 
+[**Adaptive Treatment of Epilepsy via Batch-mode Reinforcement Learning**](https://docs.google.com/viewer?url=https://www.cs.mcgill.ca/~jpineau/files/guez-iaai08.pdf)  
+Authors: Arthur Guez, Robert D. Vincent, Massimo Avoli, and Joelle Pineau  
+Year: 2008  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/01-epilepsy-batch-rl.pdf)
 
+[**Cross-Domain Transfer for Reinforcement Learning**](https://docs.google.com/viewer?url=https://www.cs.utexas.edu/~pstone/Papers/bib2html-links/ICML07-taylor.pdf)  
+Authors: Matthew E. Taylor and Peter Stone  
+Year: 2007  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/14-transfer-rl.pdf)
+
+[**Labeling Images with a Computer Game**](https://docs.google.com/viewer?url=https://www.cs.cmu.edu/~biglou/ESP.pdf)  
+Authors: Luis von Ahn and Laura Dabbish  
+Year: 2004  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/03-labeling-game.pdf)
+
+[**Policy Gradient Reinforcement Learning for Fast Quadrupedal Locomotion**](https://docs.google.com/viewer?url=https://www.cs.utexas.edu/~pstone/Papers/bib2html-links/icra04.pdf)  
+Authors: Nate Kohl and Peter Stone  
+Year: 2004  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/06-policy-gradient-rl-quadrupedal.pdf)
+
+[**Algorithms for Inverse Reinforcement Learning**](https://docs.google.com/viewer?url=http://ai.stanford.edu/~ang/papers/icml00-irl.pdf)  
+Authors: Andrew Y. Ng and Stuart Russell  
+Year: 2000  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/04-inverse-rl.pdf)
+
+[**On the Complexity of Policy Iteration**](https://docs.google.com/viewer?url=https://arxiv.org/pdf/1301.6718.pdf)  
+Authors: Yishay Mansour and Satinder Singh  
+Year: 1999  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/07-policy-iteration-complexity.pdf)
+
+[Back](..)---
+layout: page
+title: CS748 - Advanced Reinforcement Learning (Spring 2023)
+subtitle: Research
+---
+
+## Readings & Reviews
+
+These are the research papers (ang technical reviews written by me) that I read during the course on Advanced Reinforcement Learning in Spring 2023. They are arranged in decreasing
+order of recency of the publication.
+
+[**Outracing champion Gran Turismo drivers with deep reinforcement learning**](https://docs.google.com/viewer?url=https://www.cs.utexas.edu/~pstone/Papers/bib2html-links/nature22.pdf)  
+Authors: Peter R. Wurman, Samuel Barrett, Kenta Kawamoto, James MacGlashan, Kaushik Subramanian, Thomas J. Walsh, Roberto Capobianco, Alisa Devlic, Franziska Eckert, Florian Fuchs, Leilani Gilpin, Piyush Khandelwal, Varun Kompella, HaoChih Lin, Patrick MacAlpine, Declan Oller, Takuma Seno, Craig Sherstan, Michael D. Thomure, Houmehr Aghabozorgi, Leon Barrett, Rory Douglas, Dion Whitehead, Peter Dürr, Peter Stone, Michael Spranger, and Hiroaki Kitano  
+Year: 2022  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/02-turismo-deep-rl.pdf)
+
+[**On the Dangers of Stochastic Parrots:Can Language Models Be Too Big? 🦜**](https://docs.google.com/viewer?url=https://dl.acm.org/doi/pdf/10.1145/3442188.3445922)  
+Authors: Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell  
+Year: 2021  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/15-stochastic-parrots.pdf)
+
+[**On the Expressivity of Markov Reward**](https://docs.google.com/viewer?url=https://david-abel.github.io/papers/neurips2021_oteomr.pdf)  
+Authors: David Abel, Will Dabney, Anna Harutyunyan, Mark K. Ho, Michael L. Littman, Doina Precup, and Satinder Singh  
+Year: 2021  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/05-markov-reward-expressivity.pdf)
+
+[**Neural Thompson Sampling**](https://docs.google.com/viewer?url=https://openreview.net/pdf?id=tkAtoZkcUnm)  
+Authors: Weitong Zhang, Dongruo Zhou, Lihong Li, and Quanquan Gu  
+Year: 2021  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/12-neural-ts.pdf)
+
+[**A Tighter Analysis of Randomised Policy Iteration**](https://docs.google.com/viewer?url=https://www.cse.iitb.ac.in/~shivaram/papers/tk_uai_2019.pdf)  
+Authors: Meet Taraviya and Shivaram Kalyanakrishnan  
+Year: 2019  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/08-policy-iteration-tighter-analysis.pdf)
+
+[**Neural Architecture Search with Reinforcement Learning**](https://docs.google.com/viewer?url=https://arxiv.org/pdf/1611.01578.pdf)  
+Authors: Barret Zoph and Quoc V. Le  
+Year: 2017  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/10-nas-rl.pdf)
+
+[**Action Selection for Hammer Shots in Curling**](https://docs.google.com/viewer?url=http://webdocs.cs.ualberta.ca/~holte/Publications/ijcai2016-curling.pdf)  
+Authors: Zaheen Farraz Ahmad, Robert C. Holte, and Michael Bowling  
+Year: 2016  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/13-hammer-shots-curling.pdf)
+
+[**A Contextual-Bandit Approach to Personalized News Article Recommendation**](https://docs.google.com/viewer?url=https://www.ra.ethz.ch/cdstore/www2010/www/p661.pdf)  
+Authors: Lihong Li, Wei Chu, John Langford, and Robert E. Schapire  
+Year: 2012  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/11-contextual-bandit-personalized-news.pdf)
+
+[**Is it Enough to Get the Behaviour Right?**](https://docs.google.com/viewer?url=http://www.cs.toronto.edu/~hector/Papers/chinese.pdf)  
+Authors: Hector J. Levesque  
+Year: 2009  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/09-right-behaviour.pdf)
+
+[**Adaptive Treatment of Epilepsy via Batch-mode Reinforcement Learning**](https://docs.google.com/viewer?url=https://www.cs.mcgill.ca/~jpineau/files/guez-iaai08.pdf)  
+Authors: Arthur Guez, Robert D. Vincent, Massimo Avoli, and Joelle Pineau  
+Year: 2008  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/01-epilepsy-batch-rl.pdf)
+
+[**Cross-Domain Transfer for Reinforcement Learning**](https://docs.google.com/viewer?url=https://www.cs.utexas.edu/~pstone/Papers/bib2html-links/ICML07-taylor.pdf)  
+Authors: Matthew E. Taylor and Peter Stone  
+Year: 2007  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/14-transfer-rl.pdf)
+
+[**Labeling Images with a Computer Game**](https://docs.google.com/viewer?url=https://www.cs.cmu.edu/~biglou/ESP.pdf)  
+Authors: Luis von Ahn and Laura Dabbish  
+Year: 2004  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/03-labeling-game.pdf)
+
+[**Policy Gradient Reinforcement Learning for Fast Quadrupedal Locomotion**](https://docs.google.com/viewer?url=https://www.cs.utexas.edu/~pstone/Papers/bib2html-links/icra04.pdf)  
+Authors: Nate Kohl and Peter Stone  
+Year: 2004  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/06-policy-gradient-rl-quadrupedal.pdf)
+
+[**Algorithms for Inverse Reinforcement Learning**](https://docs.google.com/viewer?url=http://ai.stanford.edu/~ang/papers/icml00-irl.pdf)  
+Authors: Andrew Y. Ng and Stuart Russell  
+Year: 2000  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/04-inverse-rl.pdf)
+
+[**On the Complexity of Policy Iteration**](https://docs.google.com/viewer?url=https://arxiv.org/pdf/1301.6718.pdf)  
+Authors: Yishay Mansour and Satinder Singh  
+Year: 1999  
+[Review](https://docs.google.com/viewer?url=https://sarthakmittal92.github.io/research/cs748-s2023/07-policy-iteration-complexity.pdf)
+
+[Back](..)
