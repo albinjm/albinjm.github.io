@@ -1,7 +1,8 @@
 ---
-layout: home
+layout: page
 title: CS748 - Advanced Reinforcement Learning (Spring 2023)
 subtitle: Research
+stylesheet: ../style.css
 ---
 
 ## Readings & Reviews
