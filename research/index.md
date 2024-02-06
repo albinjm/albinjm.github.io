@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: CS748 - Advanced Reinforcement Learning (Spring 2023)
 subtitle: Research
 ---
