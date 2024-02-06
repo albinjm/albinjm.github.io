@@ -37,8 +37,6 @@ layout: homepage
 - 写作：Markdown、Marp、LaTeX
 - 前端：HTML、CSS
 
-## [Research](./research/)
-
 {% include_relative _includes/projects.md %}
 
 {% include_relative _includes/blogs.md %}
