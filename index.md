@@ -16,9 +16,9 @@ layout: homepage
 
 - **Computer Vision:** image recognition, image generation, video captioning
 - **Machine Learning:** meta-learning, incremental learning, transfer learning
-
-<h4 style="margin:0 10px 0;">获奖情况</h4>
 <!--
+<h4 style="margin:0 10px 0;">获奖情况</h4>
+
 <ul style="margin:0 10px 0px;">
   <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px; margin-right: 5px">奖学金</strong><strong>[2021 - 2024年] </strong> 一等学业奖学金 3 次 </li>  
   <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px; margin-right: 5px">奖学金</strong><strong>[2017 - 2021&nbsp;年] </strong> 一等学业奖学金 8 次、国家励志奖学金 2 次 </li>  
