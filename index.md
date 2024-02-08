@@ -16,7 +16,7 @@ layout: homepage
 
 - **Computer Vision:** image recognition, image generation, video captioning
 - **Machine Learning:** meta-learning, incremental learning, transfer learning
-<!--
+<!-- 
 <h4 style="margin:0 10px 0;">获奖情况</h4>
 
 <ul style="margin:0 10px 0px;">
