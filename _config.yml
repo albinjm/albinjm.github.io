@@ -36,7 +36,7 @@ orcid: https://orcid.org/0009-0007-4956-4092
 
 # Images 
 avatar: ./assets/img/avatar-small.png
-favicon: ./assets/img/favicon.jpg
+favicon: ./assets/img/favicon.ico
 favicon_dark: 
 
 # Footnotes
