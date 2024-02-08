@@ -45,8 +45,8 @@ layout: homepage
 
 {% include_relative _includes/wp.md %}
 
-{% include_relative _includes/talks.md %}
+<!-- {% include_relative _includes/talks.md %} -->
 
-{% include_relative _includes/teaching.md %}
+<!-- {% include_relative _includes/teaching.md %} -->
 
 {% include_relative _includes/contact.md %}
