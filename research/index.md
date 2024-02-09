@@ -1,3 +1,8 @@
+---
+layout: homepage
+---
+
+
 <h1 id="projects"></h1>
 
 <h2 style="margin: 30px 0px -15px;">Projects<temp style="font-size:15px;"></temp></h2>
