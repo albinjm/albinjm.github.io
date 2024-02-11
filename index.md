@@ -30,12 +30,12 @@ layout: homepage
   <li style="margin:0 0 5px; margin-left: -10px"><strong style="color:#e74d3c; border:0.6px solid #757575; padding: 3px;font-size: 0.9rem; border-radius:5px;margin-right: 5px">社会实践</strong><strong>[2018 - 2020年] </strong> 山东财经大学大学生社会实践「三千计划」校级优秀服务团队 (队长，3 次)、校级社会实践之星 (2 次)、校级社会实践百优学生</li>
 </ul>
 -->
-<h4 style="margin:0 10px 0;">技能偏好</h4>
+<h4 style="margin:0 10px 0;">Technical Skills</h4>
 
-- 数据分析：Stata > Python = R
-- 地图制图：ArcGIS 
-- 写作：Markdown、Marp、LaTeX
-- 前端：HTML、CSS
+- Languages：C/C++, Python, Java, Dart, LaTeX
+- Data Science：NumPy, Pandas, Matplotlib, Scipy, OpenCV-Py, Sklearn, SQL
+- Development：Django, JS, HTML, CSS, React, Node, Flutter
+- Software：Git, Wireshark
 
 {% include_relative _includes/projects.md %}
 
