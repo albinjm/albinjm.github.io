@@ -10,11 +10,11 @@ main:
   # title: "Talks"
   # url: ./#talks
 
-  - title: "Publications & WP"
-    url: ./#publications
+  #- title: "Publications & WP"
+   # url: ./#publications
 
-  - title: "Blogs"
-    url: ./#blogs
+ # - title: "Blogs"
+ #   url: ./#blogs
 
   - title: "Projects"
     url: ./#projects
