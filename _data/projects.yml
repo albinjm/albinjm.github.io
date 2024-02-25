@@ -1,9 +1,19 @@
 main:
 
+   - title: ChromaCut
+     authors: 
+     project_short: Image Segmentation
+     project: ChromaCut is a cutting-edge toolkit engineered for high-precision image segmentation. It incorporates state-of-the-art superpixel over-segmentation and graph-based segmentation techniques, including the renowned Boykov-Kolmogorov (Min-cut/Max-flow) algorithm for graph partitioning. This toolkit efficiently transforms input images into segmented outputs, starting with superpixel division for in-depth analysis and using graph-based algorithms for accurate segmentation. It utilizes CIDE2000 for color difference evaluation and foreground extraction, improving segmentation precision across various images.
+     pdf: ./assets/files/IJITEE_2019.pdf
+     web: https://github.com/albinjm/ChromaCut
+     image: ./assets/img/ChromaCut.gif
+     notes: Open Source
+
    - title: NeuroCluster
      authors: 
      project_short: Image Segmentation
      project: NeuroCluster is an advanced image segmentation toolkit leveraging the Improved Intuitionistic Fuzzy C-Means (IIFCM) algorithm, specifically tailored for magnetic resonance (MR) image analysis. This toolkit enables precise segmentation of MR images into distinct regions, enhancing the ability to identify and analyze various brain structures based on pixel intensity and color values.
+     pdf: ./assets/files/IIFCM_2015_Elsevier.pdf
      web: https://github.com/albinjm/NeuroCluster
      image: ./assets/img/NeuroCluster.gif
      notes: Open Source
