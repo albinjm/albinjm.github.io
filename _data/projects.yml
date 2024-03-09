@@ -17,3 +17,12 @@ main:
      web: https://github.com/albinjm/NeuroCluster
      image: ./assets/img/NeuroCluster.gif
      notes: Open Source
+
+   - title: AutoDigit
+     authors: 
+     project_short: Image Denoising
+     project: This project investigates the use of autoencoders for denoising images to improve handwritten digit recognition accuracy using the MNIST dataset. By introducing noise to the dataset and employing an autoencoder for image reconstruction, the study aims to enhance digit classification performance, demonstrating the practical applications and effectiveness of autoencoders in deep learning.
+     pdf: ./assets/files/tan2010.pdf
+     web: https://github.com/albinjm/AutoDigit
+     image: ./assets/img/AutoDigit.gif
+     notes: Open Source
