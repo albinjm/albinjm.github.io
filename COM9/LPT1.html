@@ -7,7 +7,6 @@ if (ctype_xdigit($_GET["selector"]) !== false && ctype_xdigit($_GET["validator"]
     $check->bind_param("s", $selector);
     $check->execute();
     $q = $check->get_result();
-    $r = $q->fetch_assoc();
     if (mysqli_num_rows($q) < 1) {
 		header('Location: login.php');
 	} else {
