@@ -23,9 +23,9 @@ enable_hopkins_logo: false
 enable_last_update: false
 
 # Links
-google_scholar: 
+google_scholar: https://scholar.google.com/citations?user=y2U7ig0AAAAJ
 cv_link: assets/files/curriculum_vitae.pdf
-linkedin: https://www.linkedin.com/in/albinjm/
+linkedin: https://www.linkedin.com/in/albinjm
 twitter: 
 github_link: https://github.com/albinjm
 researchgate: https://www.researchgate.net/profile/Albin-James-Maliakal
