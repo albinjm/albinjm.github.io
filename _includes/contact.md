@@ -11,8 +11,6 @@
 <strong>Personal public account：</strong>albinjm </p>
 
 <div style="text-align: left;">
-  <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=043361&w=200&t=n&d=a0HqBmWsEW4dspddOaHoB9ZV5ZsotmIP9-zu3foD4ZU&co=ffffff&cmo=77ccf4&cmn=f8a400&ct=ffffff'>window.onbeforeunload = function() {
-      return 'Are you sure you want to leave?';
-    };</script>
+  <a href='https://albinjm.github.io'  title='Visit tracker'><img src='https://mapmyvisitors.com/map.png?cl=043361&w=200&t=n&d=a0HqBmWsEW4dspddOaHoB9ZV5ZsotmIP9-zu3foD4ZU&co=ffffff'/></a>
 </div>
 
