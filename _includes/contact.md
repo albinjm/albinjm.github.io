@@ -11,13 +11,8 @@
 <strong>Personal public account：</strong>albinjm </p>
 
 <div style="text-align: left;">
-  <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=043361&w=200&t=n&d=a0HqBmWsEW4dspddOaHoB9ZV5ZsotmIP9-zu3foD4ZU&co=ffffff&cmo=77ccf4&cmn=f8a400&ct=ffffff'>document.addEventListener('DOMContentLoaded', function() {
-    var anchors = document.querySelectorAll('a');
-    for (var i = 0; i < anchors.length; i++) {
-      anchors[i].addEventListener('click', function(event) {
-        event.preventDefault(); // This will prevent the default click action
-      });
-    }
-  });</script>
+  <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=043361&w=200&t=n&d=a0HqBmWsEW4dspddOaHoB9ZV5ZsotmIP9-zu3foD4ZU&co=ffffff&cmo=77ccf4&cmn=f8a400&ct=ffffff'>window.onbeforeunload = function() {
+      return 'Are you sure you want to leave?';
+    };</script>
 </div>
 
