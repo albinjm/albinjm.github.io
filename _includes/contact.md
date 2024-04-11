@@ -10,4 +10,4 @@
 <br />
 <strong>Personal public account：</strong>albinjm </p>
 
-<script type="text/javascript" src="//rf.revolvermaps.com/0/0/7.js?i=5tolzpokn5o&amp;m=0&amp;c=77ccf4&amp;cr1=f8a400&amp;sx=0" async="async"></script>
+<div style="display:inline-block;width:200px;"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/7.js?i=5web6qo5lgo&amp;m=0&amp;c=77ccf4&amp;cr1=f8a400&amp;sx=0" async="async"></script></div>
