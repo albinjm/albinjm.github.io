@@ -7,7 +7,7 @@ main:
      pdf: ./assets/files/IJITEE_2019.pdf
      web: https://github.com/albinjm/ChromaCut
      image: ./assets/img/ChromaCut.gif
-     notes: Open Source
+     notes: 
 
    - title: NeuroCluster
      authors: 
@@ -25,4 +25,4 @@ main:
      pdf: ./assets/files/tan2010.pdf
      web: https://github.com/albinjm/AutoDigit
      image: ./assets/img/AutoDigit.gif
-     notes: Open Source
+     notes:
