@@ -11,6 +11,6 @@
 <strong>Personal public account：</strong>albinjm </p>
 
 <div style="text-align: left;">
-  <a href='https://albinjm.github.io'  title='Visit tracker'><img src='https://mapmyvisitors.com/map.png?cl=043361&w=200&t=n&d=a0HqBmWsEW4dspddOaHoB9ZV5ZsotmIP9-zu3foD4ZU&co=ffffff'/></a>
+  <a href='https://albinjm.github.io/'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=043361&w=200&t=n&d=ooTqjJi41ik-2LG0Q84IQhSHec48B0eo_fl3Le5faX8&co=ffffff'/></a>
 </div>
 
