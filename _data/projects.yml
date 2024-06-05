@@ -18,6 +18,15 @@ main:
      image: ./assets/img/NeuroCluster.gif
      notes: Open Source
 
+   - title: FinSpeech
+     authors: 
+     project_short: Speech Recognition
+     project: This project aims to enhance speech recognition capabilities within banking dialogues by employing a Convolutional, Recurrent, and Dense Neural Network (CRDNN) alongside Language Model (LM) support. Utilizing the HarperValleyBank (HVB) corpus, the project strives to develop an ASR system that can accurately transcribe spoken banking dialogues, improving customer service experiences and operational efficiencies.
+     pdf: ./assets/files/wu2021harpervalleybank.pdf
+     web: https://github.com/albinjm/FinSpeech
+     image: ./assets/img/FinSpeech.gif
+     notes: Open Source
+
    - title: AutoDigit
      authors: 
      project_short: Image Denoising
