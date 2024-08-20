@@ -9,8 +9,8 @@ layout: homepage
 
 <h4 style="margin:0 10px 0;">Education</h4>
 
+- Summer Research Fellow (2024): Indian Institute of Technology Madras · <a href="https://cse.iitm.ac.in/pages.php?pages=MTE4#:~:text=CS24SFP5773,ALBIN%20JAMES%20MALIAKAL">Department of Computer Science & Engineering</a> · <a href="https://akanksha-agrawal.weebly.com/group.html#:~:text=Albin%20James%20Maliakal">Prof. Akanksha Agrawal</a>
 - Undergraduate（2021 - 2025)：National Institute of Technology · Bachelor of Technology · Computer Science & Engineering
-- Summer Research Fellow (2024): Indian Institute of Technology Madras · Department of Computer Science & Engineering · Research in Algorithms & Graphs (RAnG) Lab
 
 <h4 style="margin:0 10px 0;">Research Interests</h4>
 
