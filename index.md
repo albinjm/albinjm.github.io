@@ -7,9 +7,10 @@ layout: homepage
 
 <h2 style="margin: 60px 0px 10px;">Bio</h2>
 
-<h4 style="margin:0 10px 0;">Education background</h4>
+<h4 style="margin:0 10px 0;">Education</h4>
 
-- Graduation（2021 - 2025）：National Institute of Technology · Bachelor of Technology · Computer Science & Engineering
+- Undergraduate（2021 - 2025)：National Institute of Technology · Bachelor of Technology · Computer Science & Engineering
+- Summer Research Fellow (2024): Indian Institute of Technology Madras · Department of Computer Science & Engineering · Research in Algorithms & Graphs (RAnG) Lab
 
 <h4 style="margin:0 10px 0;">Research Interests</h4>
 
