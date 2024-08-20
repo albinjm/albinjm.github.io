@@ -10,12 +10,12 @@ layout: homepage
 <h4 style="margin:0 10px 0;">Education background</h4>
 
 - Graduation（2021 - 2025）：National Institute of Technology · Bachelor of Technology · Computer Science & Engineering
-- Intermediate（2018 - 2020）：Placid Vidya Vihar Sr Sec School · CBSE
 
 <h4 style="margin:0 10px 0;">Research Interests</h4>
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+- **Algorithms and their analysis:** Graph algorithms, randomized algorithms, approximation algorithms, fixed-parameter algorithms, streaming algorithms
+- **Complexity theory:** Boolean circuit complexity, structural complexity theory, reductions and completeness, complexity of isomorphism, coding theory
+- **Parallel and high-performance computing:** High-level programming frameworks, graph analytics, spatial and graph clustering, dynamic algorithms
 
 <!-- <h4 style="margin:0 10px 0;">获奖情况</h4> -->
 <!--
@@ -35,7 +35,7 @@ layout: homepage
 - Languages：C/C++, Python, Java, Dart, LaTeX
 - Data Science：NumPy, Pandas, Matplotlib, Scipy, OpenCV-Py, Sklearn, SQL
 - Development：Django, JS, HTML, CSS, React, Node, Flutter
-- Software：Git, Wireshark
+- Software：Git, Wireshark, CUDA Toolkit, NVIDIA HPC SDK
 
 {% include_relative _includes/projects.md %}
 
