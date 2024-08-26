@@ -38,11 +38,11 @@ layout: homepage
 - Development：Django, JS, HTML, CSS, React, Node, Flutter
 - Software：Git, Wireshark, CUDA Toolkit, NVIDIA HPC SDK
 
+{% include_relative _includes/blogs.md %}
+
 {% include_relative _includes/projects.md %}
 
 <!-- {% include_relative _includes/blogs.md %} -->
-
-
 
 <!-- {% include_relative _includes/wp.md %} -->
 
