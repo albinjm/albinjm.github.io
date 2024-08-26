@@ -4,7 +4,7 @@
 
 <ul>
 
-<li><strong>[26.08.2024] Exploring Parameterized Algorithms：</strong><a href="https://albinjm.github.io/blog/fpt_intro.html">A Path to Efficient Problem Solving in Computational Complexity</a></li>
+<li><strong>[26.08.2024] Exploring Parameterized Algorithms: </strong><a href="https://albinjm.github.io/blog/fpt_intro.html">A Path to Efficient Problem Solving in Computational Complexity</a></li>
 
 <!--
 <li><strong>[Stata 数据清洗] </strong><a href="https://mp.weixin.qq.com/s/D0cYVPJJsNiu61GcYwV6cg">经管数据清洗与 Stata 实战：三大地级市数据库和 CSMAR 上市公司数据</a>、<a href="https://www.lianxh.cn/details/889.html">清洗中国城市建设统计年鉴</a>、<a href="https://www.lianxh.cn/details/923.html">一文搞定 CEIC 数据库</a></li>
@@ -22,8 +22,8 @@
 <li><strong>[软件工具] </strong>学术论文写作新武器：Markdown<a href="https://www.lianxh.cn/details/603.html">（上）、</a><a href="https://www.lianxh.cn/details/605.html">（中）</a>、<a href="https://www.lianxh.cn/details/604.html">（下）</a></li>
 <li><strong>[软件工具] </strong><a href="https://www.lianxh.cn/details/1004.html">经管人的 VS Code 配置大全</a></li>
 <li><strong>[软件工具] </strong><a href="https://mp.weixin.qq.com/s/vdiLVud5jSJfw1ts2Mt-6w">Zotero：如何定制参考文献样式 —— 以《世界经济》中文期刊为例</a></li>
-
-
+-->
+<!--
 
 <li> <a href="javascript:toggle_vis('newsmore')">了解更多 >>></a> </li>
 <div id="newsmore" style="display:none">
@@ -34,5 +34,6 @@
 <li><strong>[软件工具] </strong><a href="https://mp.weixin.qq.com/s/mMuR9Xya4F2YAB_Q4nUREw">打字速度更快？我想给你推荐「双拼输入法」</a></li>
 <li><strong>[软件工具] </strong><a href="https://mp.weixin.qq.com/s/ESc2ZfuDoagtANSxb_fFHA">不了解 Linux 系统？先从 Deepin 开始吧</a></li>
 
-</div> -->
+</div> 
+-->
 </ul>
