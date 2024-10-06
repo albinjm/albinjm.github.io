@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Explore Baker’s Approximation Scheme for planar graphs in depth, covering planar graph structures, approximation algorithms, and dynamic programming techniques. Understand the construction of k-outerplanar graphs, tree decomposition, and slicing methods. Learn how these algorithms solve complex problems like Minimum Vertex Cover, Minimum Edge Dominating Set, and Three-Coloring, with adaptable solutions for graph optimization.">
+  <meta name="keywords" content="Albin James Maliakal, Baker’s Approximation Scheme, Planar Graphs, Approximation Algorithms, k-Outerplanar Graphs, Fixed Parameter Tractability, Dynamic Programming, Exact Algorithms for Planar Graphs, Outerplanar Graphs, Graph Algorithms, Computational Graph Theory, Graph Coloring, Tree Decomposition, Slicing Techniques in Graphs, Three-Coloring Planar Graphs, Minimum Vertex Cover, Minimum Edge Dominating Set, Algorithmic Complexity, Optimization Algorithms, Graph Theory Applications, Graph Slicing, Tree-Based Algorithms, Computational Methods in Graph Theory, Algorithm Design, Planar Graph Optimization, Graph Theory Techniques, Computational Complexity, Parameterized Algorithms, NP-Complete Problems, Approximation Scheme for Graphs, Outerplanar Tree Construction, Dynamic Program for Graphs, Fixed-Parameter Algorithms, Three-Coloring Algorithm, Baker’s Algorithm, Planar Graph Approximation, Vertex Cover Problem, Edge Dominating Set Algorithm, Exact Solutions for Outerplanar Graphs, Complexity Theory, Slicing in k-Outerplanar Graphs, Algorithmic Graph Theory, Graph Optimization Problems, Dynamic Programming for Planar Graphs, Computational Efficiency in Graphs, Planar Graph Structure, Graph Walks, Exact Tree Construction in Graphs, Graph Theory Research, Planar Graph Techniques, Computational Graph Analysis" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Albin James's Blog</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://albinjm.github.io/#blogs">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Baker’s Approximation Scheme for Planar Graphs: Techniques, Algorithms, and Applications</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://albinjm.github.io/">Albin James Maliakal</a><!-- <sup>1</sup> -->
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">October 6, 2024 · 50 minute read</span>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">A Gentle Introduction</h2>
+        <div class="content has-text-justified">
+          <p>Graphs, denoted as \( G = (V, E) \), where \( V \) is a finite set of vertices and \( E \subseteq V \times V \) is a set of edges, serve as a fundamental structure for formalizing a plethora of real-world problems across diverse fields such as computer science, operations research, and network theory. The study of graph properties and algorithms is pivotal, particularly in the context of computational complexity.</p>
+
+          <p>A significant subset of graph-related problems is classified as NP-complete, a term that denotes a class of decision problems for which no known polynomial-time algorithm exists. Formally, a problem \( P \) is NP-complete if:</p>
+          
+          <ul>
+              <li>\( P \in \text{NP} \): The solution to \( P \) can be verified in polynomial time.</li>
+              <li>For every problem \( Q \in \text{NP} \), there exists a polynomial-time reduction from \( Q \) to \( P \).</li>
+          </ul>
+          
+          <p>The implications of NP-completeness are profound, as they suggest that a relatively small number of NP-complete problems can encapsulate a vast array of computational challenges, thereby making their study crucial for both theoretical and practical applications.</p>
+          
+          <p>However, the complexity of NP-complete problems remains an open question in theoretical computer science. The runtime of all known algorithms for solving NP-complete problems is exponential, typically expressed as \( O(c^n) \) for some constant \( c > 1 \), where \( n \) is the size of the input. This exponential growth renders such algorithms impractical for large instances, as the time complexity quickly becomes infeasible.</p>
+          
+          <p>Despite the prevailing belief that no polynomial-time algorithm exists for NP-complete problems, it remains unproven whether \( P \neq NP \). Consequently, the quest for efficient algorithms continues, leading to the exploration of various heuristic and approximation techniques.</p>
+          
+          <p>In this discourse, we will delve into four prominent methodologies employed to address NP-complete problems:</p>
+          
+          <ol>
+              <li><strong>Approximation Algorithms:</strong> These algorithms yield solutions that are close to optimal within a guaranteed ratio, often expressed as \( \frac{OPT}{A} \leq (1 + \epsilon) \) for minimization problems.</li>
+              <li><strong>Fixed Parameter Tractability (FPT):</strong> This paradigm allows for the design of algorithms with runtime \( O(f(k) \cdot n^{O(1)}) \), where \( k \) is a parameter that captures the complexity of the instance.</li>
+              <li><strong>Dynamic Programming Techniques:</strong> These methods decompose problems into overlapping subproblems, utilizing recursive relations to build solutions incrementally.</li>
+              <li><strong>Special Case Algorithms:</strong> By restricting the input graph to specific subclasses (e.g., planar graphs, bipartite graphs), one can often devise polynomial-time algorithms that circumvent the general NP-completeness.</li>
+          </ol>
+          
+          <p>Each of these strategies presents unique advantages and disadvantages, and understanding their mathematical underpinnings is essential for advancing the field of algorithmic graph theory.</p>
+          
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Formal Introduction</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Problem Definition</h3>
+        <div class="content has-text-justified">
+          <p>Many NP-hard graph problems become significantly easier to approximate when we focus on planar graphs and their generalizations. A graph is defined as <strong>planar</strong> if it can be drawn on a flat surface (or a sphere) without any edges crossing each other. For more information on related graph classes, one can refer to the concept of <a href="https://erikdemaine.org/papers/BidimensionalSurvey_Encyclopedia2008/paper.pdf"><em>Bidimensionality</em> (2004; Demaine, Fomin, Hajiaghayi, Thilikos)</a>.</p>
+
+          <p>One notable example of a challenging problem is the <strong>maximum independent set</strong>. This problem involves finding the largest subset of vertices in a graph such that no two vertices in this subset are connected by an edge. Mathematically, if \( G = (V, E) \) is a graph, we want to find a set \( I \subseteq V \) such that:</p>
+          
+          <p>\[
+          \forall u, v \in I, \{u, v\} \notin E.
+          \]</p>
+          
+          <p>In general graphs, this problem is difficult to approximate. Specifically, it cannot be approximated within a factor of \( n^{1 - \epsilon} \) for any \( \epsilon > 0 \) unless \( \text{NP} = \text{ZPP} \). Additionally, it cannot be approximated within a factor of \( n^{1/2 - \epsilon} \) unless \( \text{P} = \text{NP} \). However, for planar graphs, we can achieve a 4-approximation (or a simple 5-approximation) by using the largest color class in a vertex 4-coloring (or 5-coloring) of the graph.</p>
+          
+          <p>Another important problem is the <strong>minimum dominating set</strong>. The goal here is to find the smallest subset of vertices such that every vertex in the graph is either included in this subset or is adjacent to at least one vertex in the subset. This can be expressed as:</p>
+          
+          <p>\[
+          \forall v \in V, \exists u \in D \text{ such that } \{u, v\} \in E,
+          \]</p>
+          
+          <p>where \( D \) is the dominating set. In general graphs, this problem is also hard to approximate, specifically within a factor of \( \epsilon \log n \) for some \( \epsilon > 0 \) unless \( \text{P} = \text{NP} \). However, for planar graphs, the minimum dominating set problem has a <strong>Polynomial-Time Approximation Scheme</strong> (PTAS). This means there exists a collection of algorithms that can provide a \( (1 + \epsilon) \)-approximation for any \( \epsilon > 0 \):</p>
+          
+          <p>\[
+          \text{PTAS} = \{ A_\epsilon : A_\epsilon \text{ is a } (1 + \epsilon)\text{-approximation algorithm for all } \epsilon > 0 \}.
+          \]</p>
+
+          <p>There are two primary approaches for designing <strong>Polynomial-Time Approximation Schemes</strong> (PTASs) for problems on planar graphs and their generalizations: the <strong>separator approach</strong> and the <strong>Baker approach</strong>. The first of these, known as the separator approach, was introduced by Lipton and Tarjan. This method relies on the concept of <em>planar separators</em>, which are small subsets of vertices or edges that can effectively divide a graph into smaller components.</p>
+
+          <p>The initial step in the separator approach involves identifying a separator of size \( O(\sqrt{n}) \), where \( n \) represents the total number of vertices in the graph. The significance of this separator is that its removal results in the graph being split into two or more smaller pieces, each of which is a constant fraction smaller than the original graph. This division is crucial because it allows for a more manageable analysis of the graph's structure.</p>
+          
+          <p>Once the separator is removed, the next phase is to apply the same process recursively to each of the resulting smaller subgraphs. This recursive application continues until the size of the subgraphs reaches a constant size, such as \( \frac{1}{\epsilon} \), where \( \epsilon \) is a small positive constant. At this point, the problem can be tackled using brute force methods, which are feasible due to the reduced size of the subgraphs.</p>
+          
+          <p>After solving the subproblems, the final step involves combining the solutions obtained from the smaller pieces back together to form a solution for the original graph. A key advantage of this approach is that the error introduced during the approximation can often be effectively bounded. Specifically, the total size of all separators used throughout the recursion can be limited to \( \epsilon n \). This bounding is essential because it ensures that the approximation remains within acceptable limits.</p>
+          
+          <p>If the optimal solution to the problem is at least some constant factor times \( n \), this method frequently leads to a successful PTAS. In summary, the separator approach provides a systematic and efficient way to address NP-hard problems on planar graphs by leveraging the graph's structure to break it down into smaller, more manageable components, ultimately leading to effective approximation solutions.</p>
+          
+          <p>The planar-separator approach, while effective in many scenarios, has two significant limitations that must be considered. The first limitation pertains to the requirement that the optimal solution must be at least some constant factor times \( n \), where \( n \) is the number of vertices in the graph. If this condition is not met, the cost incurred by the separators can exceed the desired optimal solution by a considerable margin. This situation can arise in various problems, but it is often mitigated through a process known as graph pruning or linear kernelization. This technique simplifies the graph by removing certain vertices or edges, which can help ensure that the optimal solution meets the necessary bounds. Problems such as the independent set, vertex cover, and certain variations of the Traveling Salesman Problem can benefit from this approach. However, there are exceptions; for instance, Grohe has pointed out that the dominating set problem is one that does not lend itself well to the separator theorem technique, indicating that not all problems can be effectively addressed using this method.</p>
+
+          <p>The second limitation of the planar-separator approach is that the approximation algorithms derived from it often result in impractical solutions due to large constant factors involved in the calculations. For example, to achieve an approximation ratio of merely 2, the base case of the algorithm may require an exhaustive search through graphs containing up to \( 2^{2400} \) vertices. This exponential growth in the number of vertices makes the approach computationally infeasible for larger graphs, as the time and resources required to find a solution become prohibitively high.</p>
+          
+          <p>To address these limitations, Baker introduced an alternative approach that not only tackles the issue of impracticality but also partially mitigates the first limitation. Baker's method is based on the decomposition of the graph into overlapping subgraphs that possess bounded outerplanarity. This innovative strategy allows for a more efficient handling of the graph's structure, enabling the development of approximation algorithms that are both effective and more manageable in terms of computational resources. By focusing on overlapping subgraphs, Baker's approach provides a promising avenue for overcoming the challenges posed by the planar-separator method.</p>
+          
+
+        </div>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Planar Graphs</h3>
+        <div class="content has-text-justified">
+
+          <p>A graph \( G = (V, E) \) is defined as planar if it can be embedded in the Euclidean plane \( \mathbb{R}^2 \) such that no two edges intersect except at their endpoints. Formally, this can be expressed as:</p>
+          
+          <p>
+          \[
+          \exists \phi: E \to \mathbb{R}^2 \text{ such that } \phi(e_1) \cap \phi(e_2) = \emptyset \text{ for all } e_1, e_2 \in E, e_1 \neq e_2.
+          \]
+          </p>
+          
+          <p>The study of planar graphs is deeply rooted in combinatorial topology and has significant implications in various fields, including computer science, geography, and network design.</p>
+          
+          <h4>Kuratowski's Theorem</h4>
+          
+          <p>A fundamental result in the characterization of planar graphs is Kuratowski's theorem, which states that a graph \( G \) is planar if and only if it does not contain a subgraph that is homeomorphic to either \( K_{5} \) (the complete graph on five vertices) or \( K_{3,3} \) (the complete bipartite graph on two sets of three vertices). This can be mathematically expressed as:</p>
+          
+          <p>
+          \[
+          G \text{ is planar} \iff K_{5} \not\subseteq G \text{ and } K_{3,3} \not\subseteq G.
+          \]
+          </p>
+          
+          <h4>Euler's Formula</h4>
+          
+          <p>For any connected planar graph \( G \) with \( V \) vertices, \( E \) edges, and \( F \) faces (including the outer, infinite face), Euler's formula provides a profound relationship among these quantities:</p>
+          
+          <p>
+          \[
+          V - E + F = 2.
+          \]
+          </p>
+          
+          <p>This formula is instrumental in deriving various properties of planar graphs, such as bounding the number of edges. Specifically, for a simple planar graph, it can be shown that:</p>
+          
+          <p>
+          \[
+          E \leq 3V - 6 \quad \text{for } V \geq 3.
+          \]
+          </p>
+          
+          <p>This inequality indicates that the number of edges in a planar graph is linearly bounded by the number of vertices.</p>
+          
+          <h4>Face Coloring and the Four Color Theorem</h4>
+          
+          <p>The concept of face coloring in planar graphs leads to the famous Four Color Theorem, which asserts that any planar graph can be colored using at most four colors such that no two adjacent faces share the same color. Formally, if \( \chi(G) \) denotes the chromatic number of the graph \( G \), then:</p>
+          
+          <p>
+          \[
+          \chi(G) \leq 4 \quad \text{for all planar graphs } G.
+          \]
+          </p>
+          
+          <p>This theorem has profound implications in various applications, including map coloring and scheduling problems.</p>
+          
+          <h4>Planar Graph Algorithms</h4>
+          
+          <p>The planarity of graphs allows for the development of efficient algorithms for various graph problems. For instance, the problem of finding a maximum planar subgraph can be solved in polynomial time. Additionally, many NP-complete problems, such as the Hamiltonian cycle problem, exhibit different complexities when restricted to planar graphs.</p>
+          
+          <h4>Applications of Planar Graphs</h4>
+          
+          <p>Planar graphs are extensively utilized in practical applications, including:</p>
+          
+          <ul>
+              <li><strong>Geographic Information Systems (GIS)</strong>: Modeling terrains and networks.</li>
+              <li><strong>Circuit Design</strong>: Minimizing the area of layouts in VLSI design.</li>
+              <li><strong>Network Design</strong>: Optimizing the layout of communication networks.</li>
+          </ul>
+          
+        </div>
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Approximation Algorithms</h3>
+        <div class="content has-text-justified">
+
+          <p>Approximation algorithms are a class of algorithms designed to find near-optimal solutions to optimization problems, particularly those that are NP-hard. Given the intractability of finding exact solutions in polynomial time for many combinatorial problems, approximation algorithms provide a viable alternative by delivering solutions that are guaranteed to be within a certain factor of the optimal solution.</p>
+          
+          <h4>Formal Definition</h4>
+          
+          <p>Let \( P \) be an optimization problem with an optimal solution \( OPT \) and let \( A \) be an approximation algorithm that produces a solution \( A(x) \) for an instance \( x \) of \( P \). The performance of \( A \) is typically measured by the approximation ratio defined as:</p>
+          
+          <p>
+          \[
+          \rho(A) = \frac{A(x)}{OPT(x)},
+          \]
+          </p>
+          
+          <p>where \( \rho(A) \) is the ratio of the value of the solution produced by the algorithm to the value of the optimal solution. An algorithm is said to be a \((\alpha, \beta)\)-approximation algorithm if:</p>
+          
+          <p>
+          \[
+          \alpha \cdot OPT(x) \leq A(x) \leq \beta \cdot OPT(x),
+          \]
+          </p>
+          
+          <p>for all instances \( x \) of the problem.</p>
+          
+          <h4>Types of Approximation Algorithms</h4>
+          
+          <p>Approximation algorithms can be categorized based on their performance guarantees:</p>
+          
+          <ul>
+              <li><strong>Constant Factor Approximation</strong>: An algorithm is a constant factor approximation if there exists a constant \( c > 1 \) such that \( A(x) \leq c \cdot OPT(x) \) for all instances \( x \).</li>
+              
+              <li><strong>Polynomial Time Approximation Scheme (PTAS)</strong>: A PTAS is an algorithm that, for any fixed \( \epsilon > 0 \), produces a solution \( A(x) \) such that:
+              
+              <p>
+              \[
+              A(x) \leq (1 + \epsilon) \cdot OPT(x),
+              \]
+              </p>
+              
+              in polynomial time with respect to the input size \( n \).</li>
+              
+              <li><strong>Fully Polynomial Time Approximation Scheme (FPTAS)</strong>: An FPTAS is a stronger version of PTAS where the running time is polynomial in both the input size \( n \) and \( \frac{1}{\epsilon} \):
+              
+              <p>
+              \[
+              \text{Time}(A) = O\left(n^{k} \cdot \frac{1}{\epsilon^{p}}\right),
+              \]
+              </p>
+              
+              for some constants \( k \) and \( p \).</li>
+          </ul>
+          
+          <h4>Examples of Approximation Algorithms</h4>
+          
+          <p>Several well-known approximation algorithms illustrate the principles discussed:</p>
+          
+          <h4>The Greedy Algorithm for Set Cover</h4>
+          
+          <p>The Set Cover problem seeks to cover a universe \( U \) with the minimum number of subsets from a collection \( S \). A classic greedy algorithm achieves an approximation ratio of \( \ln |U| \):</p>
+          
+          <p>
+          \[
+          A(S) \leq H_k \cdot OPT(S),
+          \]
+          </p>
+          
+          <p>where \( H_k \) is the \( k \)-th harmonic number, and \( k \) is the number of sets chosen.</p>
+          
+          <h4>The Vertex Cover Problem</h4>
+          
+          <p>For the Vertex Cover problem, a simple 2-approximation algorithm can be constructed by selecting edges and including both endpoints in the cover. The approximation ratio is:</p>
+          
+          <p>
+          \[
+          A(V) \leq 2 \cdot OPT(V).
+          \]
+          </p>
+          
+          <h4>The Traveling Salesman Problem (TSP)</h4>
+          
+          <p>For the metric TSP, a well-known approximation algorithm based on Minimum Spanning Tree (MST) yields a solution that is at most 2 times the optimal solution:</p>
+          
+          <p>
+          \[
+          A(TSP) \leq 2 \cdot OPT(TSP).
+          \]
+          </p>
+          
+          <h4>Limitations and Inapproximability Results</h4>
+          
+          <p>While approximation algorithms provide powerful tools for tackling NP-hard problems, certain problems have been proven to be inapproximable within specific bounds. For instance, the Unique Games Conjecture implies that certain problems cannot be approximated better than a constant factor unless \( P = NP \).</p>
+          
+          <h4>Applications of Approximation Algorithms</h4>
+          
+          <p>Approximation algorithms are widely applicable in various fields, including:</p>
+          
+          <ul>
+              <li><strong>Network Design</strong>: Minimizing costs while ensuring connectivity.</li>
+              <li><strong>Resource Allocation</strong>: Efficiently distributing resources under constraints.</li>
+              <li><strong>Scheduling</strong>: Optimizing task assignments in time-sensitive environments.</li>
+          </ul>
+          
+        </div>
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Fixed Parameter Tractability</h3>
+        <div class="content has-text-justified">
+
+          <p>
+            Fixed Parameter Tractability (FPT) is a paradigm in computational complexity theory that provides a framework for analyzing the computational complexity of NP-hard problems by introducing an additional parameter \( k \) that captures certain structural properties of the input. A decision problem \( P \) is said to be fixed parameter tractable if there exists an algorithm that can solve \( P \) in time of the form:
+            </p>
+            
+            <p>
+            \[
+            T(n, k) = f(k) \cdot n^{O(1)}
+            \]
+            </p>
+            
+            <p>
+            where:
+            </p>
+            
+            <ul>
+                <li>\( n \) denotes the size of the input, typically represented as the number of vertices or edges in a graph,</li>
+                <li>\( k \) is a parameter that reflects some aspect of the input's structure, such as treewidth, pathwidth, or the number of vertices in a solution,</li>
+                <li>\( f(k) \) is a computable function that depends solely on \( k \) and can be arbitrarily large, but is independent of \( n \).</li>
+            </ul>
+            
+            <p>
+            The significance of FPT lies in its ability to provide efficient algorithms for instances of the problem where \( k \) is small, even when the problem is NP-hard in general. This is particularly relevant in graph theory, where many problems exhibit tractable behavior on graphs with bounded parameters. For instance, consider a graph \( G \) with treewidth \( k \). The complexity of solving certain NP-hard problems, such as the Vertex Cover or the Dominating Set problem, can be significantly reduced when \( G \) is known to have a small treewidth.
+            </p>
+            
+            <p>
+            To formalize this, let \( P \) be an NP-hard problem defined on a graph \( G = (V, E) \). If we denote the tree decomposition of \( G \) as \( (T, \mathcal{B}) \), where \( T \) is a tree and \( \mathcal{B} \) is a collection of bags (subsets of \( V \)) associated with the nodes of \( T \), the size of each bag is bounded by a function of \( k \). The algorithm can then exploit this structure to efficiently compute solutions by recursively solving subproblems defined on these bags.
+            </p>
+            
+            <p>
+            In mathematical terms, the FPT framework allows us to express the running time of an algorithm \( A \) for problem \( P \) as:
+            </p>
+            
+            <p>
+            \[
+            A(G) = f(k) \cdot n^{c}
+            \]
+            </p>
+            
+            <p>
+            for some constant \( c \), where \( c \) is determined by the specific problem and the nature of the algorithm. This formulation highlights the trade-off between the parameter \( k \) and the input size \( n \), enabling a deeper understanding of the problem's complexity landscape.
+            </p>
+            
+            <p>
+            Moreover, FPT provides a pathway to analyze the hardness of problems by examining the relationship between \( k \) and the structural properties of the input. For example, if \( k \) is small relative to \( n \), the problem may be solvable in polynomial time, while larger values of \( k \) may lead to exponential running times, thus delineating a boundary between tractable and intractable instances.
+            </p>
+            
+            <p>
+            Fixed Parameter Tractability serves as a powerful tool in the study of NP-hard problems, particularly in the context of graph algorithms, where it allows for the development of efficient solutions for instances characterized by low values of the parameter \( k \). This approach not only enhances our understanding of computational complexity but also facilitates the design of practical algorithms for real-world applications. For a more detailed explanation, check out the <a href="https://albinjm.github.io/blog/param-algo-intro.html">main article</a>.
+            </p>            
+          
+        </div>
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Dynamic Programming</h3>
+        <div class="content has-text-justified">
+
+          <p>
+            Dynamic programming (DP) is a powerful algorithmic paradigm employed to solve complex problems by breaking them down into simpler, overlapping subproblems. The fundamental principle of dynamic programming is the optimal substructure property, which asserts that the optimal solution to a problem can be constructed efficiently from optimal solutions to its subproblems.
+            </p>
+            
+            <p>
+            Let us denote a problem \( P \) with an input size \( n \) and a solution space \( S \). The solution to \( P \) can be expressed as a function \( f: S \to \mathbb{R} \), where \( f \) represents the optimal value of the problem. The dynamic programming approach typically involves the following steps:
+            </p>
+            
+            <ol>
+                <li>
+                    <strong>Recursive Decomposition</strong>: The problem \( P \) is recursively decomposed into smaller subproblems \( P_1, P_2, \ldots, P_k \). Each subproblem \( P_i \) corresponds to a specific instance of the original problem, and the relationship between the original problem and its subproblems can often be expressed in terms of a recurrence relation. For example, we can define the optimal solution recursively as:
+                    <p>
+                    \[
+                    f(n) = g(f(n_1), f(n_2), \ldots, f(n_k))
+                    \]
+                    </p>
+                    where \( g \) is a function that combines the solutions of the subproblems \( P_1, P_2, \ldots, P_k \).
+                </li>
+            
+                <li>
+                    <strong>Base Cases</strong>: The recursion continues until a base case is reached, which is a trivial instance of the problem for which the solution is known. Let us denote the base case solution as \( f(0) \) or \( f(1) \), depending on the context.
+                </li>
+            
+                <li>
+                    <strong>Memoization or Tabulation</strong>: To avoid redundant computations, dynamic programming employs either memoization or tabulation. In memoization, solutions to subproblems are stored in a cache (often implemented as a hash table or an array) upon their first computation. This allows for \( O(1) \) retrieval of previously computed values. In tabulation, a table is constructed iteratively, filling in the values of subproblems in a bottom-up manner. The table \( T \) can be defined as:
+                    <p>
+                    \[
+                    T[i] = f(i)
+                    \]
+                    </p>
+                    for \( i = 0, 1, \ldots, n \).
+                </li>
+            
+                <li>
+                    <strong>Backtracking and Merging Solutions</strong>: Once the table is filled, the solution to the original problem can be derived by backtracking through the table. The optimal solution \( f(n) \) is obtained by merging the solutions of the subproblems according to the defined recurrence relation. This merging process can be expressed as:
+                    <p>
+                    \[
+                    f(n) = h(T[n_1], T[n_2], \ldots, T[n_k])
+                    \]
+                    </p>
+                    where \( h \) is a function that combines the results of the subproblems to yield the final solution.
+                </li>
+            
+                <li>
+                    <strong>Complexity Analysis</strong>: The time complexity of a dynamic programming algorithm is typically determined by the number of unique subproblems and the time required to compute each subproblem. If there are \( m \) unique subproblems and each can be computed in \( O(p) \) time, the overall time complexity can be expressed as:
+                    <p>
+                    \[
+                    T(n) = O(m \cdot p)
+                    \]
+                    </p>
+                    The space complexity is often \( O(m) \) for storing the results of the subproblems.
+                </li>
+            </ol>
+            
+            <p>
+            By leveraging recursive decomposition, memoization or tabulation, and efficient merging of solutions, dynamic programming provides a robust framework for tackling a wide array of computational challenges, particularly in combinatorial optimization and decision-making scenarios.
+            </p>                      
+          
+        </div>
+
+       <!-- Re-rendering. -->
+       <h3 class="title is-4">The purpose of this article</h3>
+       <div class="content has-text-justified">
+
+        <p>
+          This article presents a novel technique utilizing the aforementioned principles to address a variety of NP-complete problems specifically within the domain of planar graphs. The methodology is fundamentally rooted in the seminal work titled <a href="https://dl.acm.org/doi/pdf/10.1145/174644.174650">"Approximation Algorithms for NP-Complete Problems on Planar Graphs" by Brenda S. Baker [Baker, 1994]</a>, and aims to elucidate its findings to enhance accessibility for a broader audience.
+          </p>
+          
+          <p>
+          In instances where segments of the article are cited with minimal or no alterations, such modifications will be explicitly indicated. For the purposes of this discussion, we will concentrate on the Maximum Independent Set (MIS) problem, while also providing an overview of how to adapt the proposed technique to other related problems in the appendix.
+          </p>
+          
+          <p>
+          Our initial focus is directed towards a straightforward dynamic programming algorithm that is specifically applicable to outerplanar graphs, which represent a relatively uncomplicated subclass of planar graphs endowed with favorable algorithmic properties. Following this, we will provide a comprehensive overview of how to generalize this algorithm to encompass all planar graphs.
+          </p>
+          
+          <p>
+          To maintain the scope of this article, we will deliberately omit extensive technical details pertaining to the algorithm itself, instead emphasizing its principal innovation: the decomposition of a planar graph \( G \) into slices. Formally, let \( G = (V, E) \) be a planar graph, where \( V \) denotes the set of vertices and \( E \) the set of edges. The decomposition process involves partitioning \( G \) into disjoint slices \( S_1, S_2, \ldots, S_m \), such that each slice \( S_i \) retains certain structural properties conducive to dynamic programming applications.
+          </p>
+          
+          <p>
+          The size of these slices is contingent upon the \( k \)-outerplanarity of the graph \( G \), thereby employing the principle of fixed parameter tractability (FPT). This principle asserts that a problem is fixed-parameter tractable if it can be solved in time \( f(k) \cdot n^{O(1)} \), where \( f \) is a function solely dependent on the parameter \( k \) and \( n \) is the size of the input.
+          </p>
+          
+          <p>
+          Consequently, we derive an algorithm capable of solving \( k \)-outerplanar graphs with exactitude, exhibiting a running time that is linear in the number of nodes \( n \) but exponential in \( k \). This algorithm is subsequently integrated into a polynomial-time approximation scheme, which effectively resolves the Maximum Independent Set problem with an approximation ratio of 
+          </p>
+          
+          <p>
+          \[
+          \frac{k}{k + 1}
+          \]
+          </p>
+          
+          <p>
+          and operates within a time complexity of 
+          </p>
+          
+          <p>
+          \[
+          O(8^k \cdot k \cdot n)
+          \]
+          </p>
+          
+          <p>
+          where \( n \) represents the number of nodes and \( k \) is an arbitrarily chosen positive integer. This framework not only enhances the efficiency of solving NP-complete problems on planar graphs but also contributes to the broader discourse on approximation algorithms in computational complexity theory.
+          </p>
+          
+       </div>
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Preliminaries</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Maximum Independent Set Problem</h3>
+        <div class="content has-text-justified">
+          <p>
+          The <strong>Maximum Independent Set Problem</strong> (MISP) is a classical problem in graph theory and combinatorial optimization. Given an undirected graph \( G = (V, E) \), where \( V \) is the set of vertices and \( E \) is the set of edges, the objective is to find the largest subset \( I \subseteq V \) such that no two vertices in \( I \) are adjacent, i.e., for all \( u, v \in I \), \( (u, v) \notin E \).
+          </p>
+          
+          <p>Formally, the problem can be stated as follows:</p>
+          
+          <p>
+          \[
+          \text{Maximize } |I| \quad \text{subject to } \forall u, v \in I, (u, v) \notin E
+          \]
+          </p>
+          
+          <p>
+          The size of the maximum independent set is denoted as \( \alpha(G) \), where \( \alpha \) is the independence number of the graph \( G \). The problem is NP-hard, meaning that no polynomial-time algorithm is known to exist for solving it in the general case.
+          </p>
+          
+          <p>
+          To express the problem in terms of integer programming, we can define a binary variable \( x_v \) for each vertex \( v \in V \):
+          </p>
+          
+          <p>
+          \[
+          x_v = 
+          \begin{cases} 
+          1 & \text{if } v \in I \\ 
+          0 & \text{otherwise} 
+          \end{cases}
+          \]
+          </p>
+          
+          <p>
+          The objective function can then be formulated as:
+          </p>
+          
+          <p>
+          \[
+          \text{Maximize } \sum_{v \in V} x_v
+          \]
+          </p>
+          
+          <p>Subject to the constraints:</p>
+          
+          <p>
+          \[
+          x_u + x_v \leq 1 \quad \forall (u, v) \in E
+          \]
+          </p>
+          
+          <p>
+          This ensures that no two adjacent vertices can both be included in the independent set \( I \).
+          </p>
+          
+          <p>
+          The problem can also be approached using graph theoretical concepts such as the complement graph \( \overline{G} \), where the edges are defined as \( (u, v) \in \overline{E} \) if and only if \( (u, v) \notin E \). In this context, finding a maximum independent set in \( G \) is equivalent to finding a maximum clique in \( \overline{G} \).
+          </p>
+          
+          <p>
+          The complexity of the MISP can be analyzed through various parameters, including the graph's structure, such as its degree, planarity, and the presence of specific subgraphs. For instance, it is known that for certain classes of graphs, such as bipartite graphs, the problem can be solved in polynomial time using techniques like the Hopcroft-Karp algorithm.
+          </p>
+          
+          <p>
+          In the context of approximation algorithms, the MISP can be approximated within a factor of \( \frac{n}{\log n} \) for general graphs, where \( n \) is the number of vertices. However, for specific subclasses of graphs, such as \( k \)-outerplanar graphs, more efficient algorithms exist that can yield exact solutions in linear time relative to the number of vertices, particularly when \( k \) is fixed.
+          </p>
+          
+          <p>
+          The Maximum Independent Set Problem is a fundamental problem in graph theory with significant implications in various fields, including computer science, operations research, and network theory. Its NP-hardness and the rich structure of its solution space continue to inspire research into efficient algorithms and approximation techniques.
+          </p>          
+
+        </div>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">\( k \)-Outerplanar Graphs</h3>
+        <div class="content has-text-justified">
+
+            <p>
+            Let \( G = (V, E) \) be a planar graph endowed with a planar embedding \( E \). We define the concept of \( k \)-level nodes based on the faces of this embedding. Specifically, we designate every vertex residing on the exterior face of \( G \) as an exterior node, which we denote as a level 1 node. The corresponding exterior edges are defined in a similar manner.
+            </p>
+
+            <p>
+            For \( i > 1 \), we provide a formal definition of level \( i \) nodes: a cycle composed of level \( i \) nodes that constitutes an interior face within the subgraph induced by the set of all level \( i \) nodes is referred to as a level \( i \) face. Let us denote the subgraph induced by all nodes contained within a level \( i \) face as \( G_f \). The vertices located on the exterior edge of \( G_f \) are then classified as level \( i + 1 \) nodes.
+            </p>
+
+            <p>
+            To facilitate the computation of node levels, we can employ an iterative algorithm. The procedure commences with the initialization of a counter \( j = 1 \). In each iteration, we remove all nodes that reside on the exterior face of the current graph configuration. This process is repeated until the graph is devoid of vertices. The level \( \ell(v) \) of a node \( v \in V \) is defined as the iteration step \( j \) at which \( v \) is removed from the graph.
+            </p>
+
+            <p>
+            Utilizing an appropriate data structure for the planar embedding, such as the one proposed by Lipton and Tarjan (1979), this algorithm can be executed in linear time, specifically \( O(n) \), where \( n \) represents the cardinality of the vertex set \( V \). The efficiency of this approach is paramount in the context of planar graph algorithms, allowing for the systematic classification of nodes based on their respective levels.
+            </p>
+
+            <p>
+            A planar embedding \( E \) of a planar graph \( G = (V, E) \) is classified as \( k \)-outerplanar if it satisfies the condition that there exist no vertices \( v \in V \) such that the level \( \ell(v) > k \). This implies that the iterative algorithm for determining node levels terminates after at most \( k \) iterations. Consequently, we define a planar graph \( G \) as \( k \)-outerplanar if it possesses a \( k \)-outerplanar embedding \( E \).
+            </p>
+
+            <p>
+            In particular, when \( k = 1 \), we refer to the graph as outerplanar. The subclass of outerplanar graphs is of significant interest due to its inherent properties that facilitate the development of efficient algorithms for solving various computational problems within this category.
+            </p>
+
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column is-12 has-text-centered">
+                  <img src="./static/images/2_planar_embedding_3_outerplanar.svg"
+                       class="interpolation-image"
+                       style="width: 100%;"
+                       alt="A planar embedding of a 3-outerplanar graph."/>
+                  <p style="text-align: center;">Figure 1. A planar embedding of a \( 3 \)-outerplanar graph.</p>
+              </div>
+            </div>
+
+            <p>
+            To illustrate, consider a \( 3 \)-outerplanar graph depicted in Figure 1. In this graph, we categorize the vertices as follows: the nodes \( A, B, C, D, E, F, G \) are designated as level 1 nodes, the nodes \( a, b, c, d, e, f, g \) are classified as level 2 nodes, and the nodes \( 1, 2, 3, 4, 5, 6, 7, 8 \) are identified as level 3 nodes. It is noteworthy that while the nodes \( 1, 2, 3, 4, 5 \) and \( 6, 7, 8 \) are not enclosed by the same face and thus are not directly connected, they nonetheless share the same level classification, specifically level 3.
+            </p>
+
+            <p>
+            This classification system is crucial for the analysis and algorithmic treatment of outerplanar graphs, as it allows for the application of specialized techniques that leverage the structural properties inherent to this subclass of planar graphs.
+            </p>
+
+        </div>
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">An Approximation Algorithm for Planar Graphs</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Definitions and Overall Strategy</h3>
+        <div class="content has-text-justified">
+          <p>
+            We shall employ the newly defined concept of \( k \)-outerplanarity to devise a polynomial-time approximation scheme for the Maximum Independent Set (MIS) problem on planar graphs. This framework is amenable to adaptation for various NP-complete problems. The objective is to construct an algorithm that, for a freely selected but fixed integer \( k \), achieves a solution for the Maximum Independent Set with an approximation ratio of 
+            </p>
+            
+            <p>
+            \[
+            \frac{k}{k + 1}
+            \]
+            </p>
+            
+            <p>
+            and exhibits linear complexity in relation to the number of vertices \( n \).
+            </p>
+            
+            <p>
+            The crux of our approach lies in the exact resolution of the Maximum Independent Set on disjoint subgraphs that are \( k \)-outerplanar. In this context, we strategically disregard certain vertices in the overarching graph to facilitate the merging of these subgraphs without contravening the requisite conditions for the Maximum Independent Set. 
+            </p>
+            
+            <p>
+            This methodology is encapsulated in the following theorem, which we will substantiate subsequently:
+            </p>
+            
+            <p>
+            <strong>Theorem 1</strong> [Baker, 1994]: Let \( k \) be a positive integer. Given a \( k \)-outerplanar embedding of a \( k \)-outerplanar graph \( G \), an optimal solution for the Maximum Independent Set can be computed in time 
+            </p>
+            
+            <p>
+            \[
+            O(8^k n)
+            \]
+            </p>
+            
+            <p>
+            where \( n \) denotes the total number of vertices in the graph \( G \).
+            </p>
+            
+            <p>
+            This theorem establishes the foundational basis for our algorithm, asserting that the complexity of solving the MIS problem on \( k \)-outerplanar graphs is exponential in \( k \) but linear in \( n \), thereby facilitating efficient computation for fixed values of \( k \).
+            </p>
+            
+            <p>
+            Let \( k \) be a positive integer and let \( G \) be a planar graph. The algorithm proceeds as follows:
+            </p>
+            
+            <ol>
+            <li><strong>Planar Embedding Generation</strong>: Utilize the linear-time algorithm proposed by Hopcroft and Tarjan [Hopcroft and Tarjan, 1974] to generate a planar embedding of the graph \( G \). Subsequently, compute the level \( \ell(v) \) for each vertex \( v \in V(G) \).</li>
+            
+            <li><strong>Component Processing</strong>: For each integer \( i \) such that \( 0 \leq i \leq k \), execute the following steps:
+              <ul>
+                <li>(a) Remove all vertices \( v \) for which \( \ell(v) \mod (k + 1) = i \). This operation partitions the graph \( G \) into disjoint components, each possessing a pre-computed \( k \)-outerplanar embedding.</li>
+                <li>(b) Apply Theorem 1 to precisely determine the Maximum Independent Set for each of these components. The union of the solutions from these components is then taken, denoted as \( S_{\text{union}} \). This is valid since the components are disjoint, ensuring that no edges exist between any two components.</li>
+              </ul>
+            </li>
+            
+            <li><strong>Optimal Solution Selection</strong>: From the solutions obtained for each \( i \), select the optimal solution \( S_{\text{optimal}} \) for the entire graph \( G \).</li>
+            </ol>
+            
+            <p>
+            To establish that this procedure yields a solution with an approximation ratio of 
+            </p>
+            
+            <p>
+            \[
+            \frac{k}{k + 1},
+            \]
+            </p>
+            
+            <p>
+            consider the optimal solution \( S_{\text{OPT}} \). For a specific \( i \) as defined above, at most 
+            </p>
+            
+            <p>
+            \[
+            \frac{1}{k + 1} |S_{\text{OPT}}|
+            \]
+            </p>
+            
+            <p>
+            of the vertices in \( S_{\text{OPT}} \) can be congruent to \( i \) in terms of their levels. Since the remaining components are solved exactly, the union of their solutions \( S_{\text{union}} \) must contain at least 
+            </p>
+            
+            <p>
+            \[
+            |S_{\text{OPT}}| - \frac{1}{k + 1} |S_{\text{OPT}}| = \frac{k}{k + 1} |S_{\text{OPT}}|
+            \]
+            </p>
+            
+            <p>
+            vertices, thereby leading to the desired approximation ratio.
+            </p>
+            
+            <p>
+            This reasoning culminates in the formulation of the following theorem:
+            </p>
+            
+            <p>
+            <strong>Theorem 2</strong> [Baker, 1994]: For a fixed integer \( k \), there exists an algorithm with a time complexity of 
+            </p>
+            
+            <p>
+            \[
+            O(8^k k n)
+            \]
+            </p>
+            
+            <p>
+            for the Maximum Independent Set problem, which guarantees a solution of size at least 
+            </p>
+            
+            <p>
+            \[
+            \frac{k}{k + 1} |S_{\text{OPT}}|
+            \]
+            </p>
+            
+            <p>
+            for general planar graphs. By selecting \( k = \mathcal{O}(\log \log n) \), where \( c \) is a constant, we derive an approximation algorithm that operates in time 
+            </p>
+            
+            <p>
+            \[
+            O(n (\log n)^{3c} \log \log n)
+            \]
+            </p>
+            
+            <p>
+            and achieves a solution of size at least 
+            </p>
+            
+            <p>
+            \[
+            \frac{c \log \log n}{1 + c \log \log n} |S_{\text{OPT}}|.
+            \]
+            </p>
+            
+            <p>
+            In all instances, \( n \) represents the total number of vertices in the graph \( G \). Theorem 2 encapsulates the primary objective of this article, and to substantiate its validity, we must first prove Theorem 1.
+            </p>            
+
+        </div>
+        <!--/ Interpolating. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">An Exact Algorithm for Outerplanar Graphs</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Definitions and Overall Strategy</h3>
+        <div class="content has-text-justified">
+          <p>
+            In this section, we focus on the specific subclass of graphs known as outerplanar graphs, denoted as \( G = (V, E) \), where \( V \) represents the set of vertices and \( E \) the set of edges. The inherent properties of outerplanar graphs facilitate the development of efficient algorithms, which we will explore in detail. Notably, the methodology employed here can be extended to the more generalized class of \( k \)-outerplanar graphs, thus providing a framework for adaptation.
+            </p>
+            
+            <p>
+            The algorithm is predicated on the principles of dynamic programming, a paradigm that allows for the systematic decomposition of complex problems into simpler subproblems. Let us denote the optimal solution for a subgraph \( G' \subseteq G \) as \( OPT(G') \). The overarching goal is to construct the optimal solution for the entire graph \( G \) by recursively merging the solutions of its constituent subgraphs.
+            </p>
+            
+            <p>
+            To formalize this, we define a recursive relation for the optimal solution:
+            </p>
+            
+            <p>
+            \[
+            OPT(G) = \max \left\{ OPT(G_1), OPT(G_2) \right\} + f(b_1, b_2)
+            \]
+            </p>
+            
+            <p>
+            where \( G_1 \) and \( G_2 \) are the two subgraphs obtained from \( G \) by removing a pair of boundary nodes \( b_1 \) and \( b_2 \), and \( f(b_1, b_2) \) is a function that accounts for the interactions between these boundary nodes. The choice of subgraphs is critical; we must ensure that the merging operation can be performed in constant time, \( O(1) \), to maintain overall computational efficiency.
+            </p>
+            
+            <p>
+            To achieve this, we utilize a tree decomposition of the outerplanar graph, which allows us to represent the graph in a hierarchical manner. Each node in the decomposition tree corresponds to a subgraph, and the edges represent the relationships between these subgraphs. This structure not only facilitates the merging of solutions but also ensures that the complexity of the algorithm remains manageable.
+            </p>
+            
+            <p>
+            The algorithm leverages dynamic programming to recursively merge solutions of subgraphs, ensuring that each merging operation is executed in constant time. This careful selection and management of subgraphs enable us to derive an optimal solution for the outerplanar graph \( G \), while also laying the groundwork for extending the approach to \( k \)-outerplanar graphs.
+            </p>         
+
+        </div>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Constructing the Tree \( \overline{G} \) Representing \( G \)</h3>
+        <div class="content has-text-justified">
+
+          <p>
+            To facilitate the selection of subgraphs, we must first establish a systematic approach for merging optimal solutions across two graphs. It is imperative to note that an optimal solution for a subgraph \( H \) is not necessarily a subset of an optimal solution for the merged graph \( G \). This discrepancy arises due to the constraints imposed on nodes within \( H \) that are adjacent to nodes outside of \( H \). For each boundary node \( v \in H \), we must evaluate two scenarios: whether \( v \) is included in the solution set \( S \) or excluded from it. The combinatorial complexity of these scenarios grows exponentially with the number of boundary nodes, thus necessitating a strategy to maintain this count at a manageable constant.
+            </p>
+            
+            <p>
+            Boundary nodes, denoted as \( B \), play a crucial role in determining the optimal configuration of the remaining nodes in \( H \). A fundamental property of connected outerplanar graphs \( G \) (with \( |V| \geq 4 \)) is that they can be decomposed into two distinct components by the removal of two nodes. This decomposition can be conceptualized through a counterclockwise traversal of the exterior edges of \( G \), followed by the application of shortcuts.
+            </p>
+            
+            <p>
+            The construction of the tree \( \overline{G} \) can be delineated through the following steps:
+            </p>
+            
+            <ol>
+            <li><strong>Bridge Removal</strong>: For each bridge \( e \in E \) (where \( e \) is an edge whose removal disconnects \( G \)), we augment the graph by introducing a second edge \( e' \) between the same endpoints, effectively transforming \( e \) into a face. This can be mathematically represented as:
+            \[
+            E' = E \cup \{e'\}
+            \]</li>
+            
+            <li><strong>Vertex Construction</strong>: For every interior face \( f \) and every exterior edge \( e \), we construct a corresponding vertex \( v_f \) and \( v_e \) in the new graph \( G' \).</li>
+            
+            <li><strong>Edge Drawing</strong>: We establish edges between each edge vertex \( v_e \) and the vertex \( v_f \) of the face \( f \) that contains \( e \). Additionally, we connect vertices of faces that share an edge, formalized as:
+            \[
+            \forall v_e \in V_e, \exists v_f \in V_f \text{ such that } (v_e, v_f) \in E'
+            \]</li>
+            
+            <li><strong>Cutpoint Identification</strong>: Certain nodes, termed cutpoints \( C \), require special consideration. A cutpoint is defined as a node \( c \) where at least two faces converge without sharing an edge, leading to the disconnection of the tree representation of \( G \). To ensure connectivity, we draw edges between vertices of faces that both encompass the cutpoint \( c \) and belong to distinct components until \( G' \) is fully connected:
+            \[
+            \forall c \in C, \exists v_{f_1}, v_{f_2} \in V_f \text{ such that } (v_{f_1}, v_{f_2}) \in E'
+            \]</li>
+            </ol>
+
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column is-12 has-text-centered">
+                  <img src="./static/images/2_tree_outerplanar_graph.svg"
+                       class="interpolation-image"
+                       style="width: 100%;"
+                       alt="A tree for an outerplanar graph"/>
+                  <p style="text-align: center;">Figure 2.  A tree for an outerplanar graph.</p>
+              </div>
+            </div>
+
+            <p>See Figure 2 for an example of a graph and its tree. Note that node 9 is a cutpoint. The connection to the face vertex for the triangle \( 7 - 8 - 9 \) was chosen arbitrarily; the square \( 1 - 3 - 7 - 9 \) would have proven equally fit.</p>
+            
+            <p>
+            This structured approach culminates in a tree representation of the graph \( G \), which encapsulates the necessary relationships and constraints imposed by the boundary nodes and cutpoints. The resulting tree \( \overline{G} \) serves as a foundational structure for further analysis and optimization within the context of outerplanar graphs.
+            </p>
+
+        </div>
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Labelling \( \overline{G} \) to Represent a Walk Around \( G \)</h3>
+        <div class="content has-text-justified">
+
+          <p>
+            Let \( G \) be a connected outerplanar graph, and let \( \overline{G} \) be the tree constructed to represent the structural properties of \( G \). To facilitate the extraction of an ordering of subgraphs and their corresponding merges, we must impose a directed structure on \( \overline{G} \) by selecting a root vertex \( r \in V(\overline{G}) \). This choice of root induces a hierarchical ordering of the vertices in \( \overline{G} \).
+            </p>
+            
+            <p>
+            Given that the optimal solutions for edges are inherently defined by their endpoints, we can assert that any edge \( e \in E(G) \) can be represented as a pair of vertices \( (u, v) \) such that \( e = (u, v) \). Consequently, we designate all edge vertices as the leaves of the tree \( \overline{G} \).
+            </p>
+            
+            <p>
+            To formalize the structure, we select an arbitrary face vertex \( f \in V(G) \) to serve as the root \( r \) of the tree \( \overline{G} \). The first child of \( r \) is chosen to be any adjacent vertex \( a \in V(G) \). The ordering of the children of any face vertex is then unambiguously determined by a counterclockwise traversal of the edges incident to that face.
+            </p>
+            
+            <p>
+            To elucidate the ordering of subgraphs represented by the vertices of \( \overline{G} \), we assign labels to each vertex \( v \in V(\overline{G}) \). Each label \( L(v) \) is defined as a two-tuple \( (b_1, b_2) \), where \( b_1, b_2 \in V(G) \) are not necessarily distinct nodes that delineate the boundaries of the subgraph represented by \( v \). The subgraph \( H_v \) corresponding to vertex \( v \) consists of all nodes \( n \in V(G) \) that lie on the counterclockwise walk from \( b_1 \) to \( b_2 \). Formally, we can express this as:
+            </p>
+            
+            <p>
+            \[
+            H_v = \{ n \in V(G) \mid n \text{ is on the counterclockwise walk from } b_1 \text{ to } b_2 \}
+            \]
+            </p>
+            
+            <p>
+            The first boundary node \( b_1 \) is defined as the first of the two nodes to appear in a counterclockwise traversal starting from the right node \( b_2 \). The leaves of the subtree rooted at any vertex \( v \) correspond precisely to the edges traversed during this walk.
+            </p>
+            
+            <p>
+            Inner vertices of the tree \( \overline{G} \) represent inner edges or cutpoints that function as shortcuts during the traversal. Each time a solution is merged, a shortcut is utilized, indicating that all nodes not included in the current walk have been effectively processed.
+            </p>
+            
+            <p>
+            The labelling process proceeds as follows:
+            </p>
+            
+            <ol>
+            <li><strong>Labeling Edge Vertices</strong>: For each edge vertex \( e \in E(G) \), we assign the label \( L(e) = (u, v) \), where \( u \) and \( v \) are the endpoints of the edge \( e \).</li>
+            
+            <li><strong>Labeling Face Vertices</strong>: For each face vertex \( f \in V(\overline{G}) \), we assign the label \( L(f) = (L(c_1), L(c_k)) \), where \( c_1 \) and \( c_k \) are the first and last children of \( f \) in the tree \( \overline{G} \), respectively.</li>
+            </ol>
+            
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column is-12 has-text-centered">
+                  <img src="./static/images/2_tree_ordered_labelled.svg"
+                       class="interpolation-image"
+                       style="width: 100%;"
+                       alt="The tree from Figure 2 ordered and labelled"/>
+                  <p style="text-align: center;">Figure 3.  The tree from Figure 2 ordered and labelled.</p>
+              </div>
+            </div>
+
+            <p>
+            See Figure 3 for the labeled tree of graph \( G \) where the face vertex corresponding to the square defined by the vertices \( 1, 3, 7, 9 \) is chosen as the root \( r \), and the face vertex corresponding to the triangle defined by the vertices \( 1, 2, 3 \) is selected as the first child. This configuration implies that the traversal begins at node \( 1 \). The vertex \( (9, 9) \) serves as a representation of the cutpoint at node \( 9 \).
+            </p>
+            
+            <p>
+            The labelling of the tree \( \overline{G} \) not only facilitates the organization of subgraphs but also enhances the efficiency of subsequent computational processes by clearly delineating the boundaries and relationships among the vertices of \( G \).
+            </p>
+
+        </div>
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">The Dynamic Program Computing the Optimal Solution</h3>
+        <div class="content has-text-justified">
+
+          <p>
+            To compute the optimal solution for the Maximum Independent Set problem on the tree \( \overline{G} \), we employ a dynamic programming approach that constructs a table for each vertex in the tree. Each table will consist of four entries, denoted as \( T(v, b_1, b_2) \), where \( v \) is the vertex in question and \( b_1, b_2 \in \{0, 1\} \) represent the binary states of the two boundary nodes associated with \( v \). The entries are defined as follows:
+            </p>
+            
+            <p>
+            \[
+            T(v, b_1, b_2) = 
+            \begin{cases} 
+            0 & \text{if } b_1 = 0 \text{ and } b_2 = 0 \\
+            1 & \text{if } b_1 = 1 \text{ and } b_2 = 0 \\
+            1 & \text{if } b_1 = 0 \text{ and } b_2 = 1 \\
+            \text{undefined} & \text{if } b_1 = 1 \text{ and } b_2 = 1 
+            \end{cases}
+            \]
+            </p>
+            
+            <p>
+            The rationale behind this encoding is that if both boundary nodes are the same or adjacent, it is impossible for both to be included in the independent set, hence the entry is marked as undefined. Conversely, the defined entries represent the size of the optimal independent set for the current subgraph configuration.
+            </p>
+            
+            <div class="container is-max-desktop content">
+              
+              <pre><code> 
+                1. function table(v)
+                2.     if v is a level 1 leaf with label (x, y)
+                3.         return a table representing (x, y)
+                4.     else
+                5.         T = table(u), where u is the leftmost child of v
+                6.         for each other child c of v from left to right
+                7.             T = merge(T, table(c))
+                8.         return adjust(T)
+            </code></pre>
+            <p style="text-align: center;">This algorithm performs recursive table computation, merging child tables from left to right.</p>
+            
+            </div>
+
+            <p>
+            The computation begins with the base cases for the edges of the graph, where the entries are initialized as \( (0, 1, 1, \text{undefined}) \). Following this, we perform a post-order traversal of the tree to compute the values for all face vertices by backtracking through the recursion.
+            </p>
+            
+            <p>
+            For a parent vertex \( p \) with children vertices \( c_1, c_2, \ldots, c_k \), the boundaries are defined as the left boundary of the first child and the right boundary of the last child. The merging of tables from the children into the parent table is executed through the following procedure:
+            </p>
+            
+            <p>
+            Let \( T_1 \) and \( T_2 \) be the tables corresponding to the children \( c_1 \) and \( c_2 \) with boundaries \( (x, y) \) and \( (y, z) \), respectively. The merged table \( T(x, z) \) is computed as:
+            </p>
+            
+            <p>
+            \[
+            T(x, z) = \max \left( T_1(x, 0) + T_2(0, z), T_1(x, 1) + T_2(1, z) - 1 \right)
+            \]
+            </p>
+            
+            <p>
+            The subtraction of 1 in the second term accounts for the double counting of the boundary node \( y \), which is included in both \( T_1 \) and \( T_2 \). This merging process can be generalized to encompass all possible assignments of \( y \):
+            </p>
+            
+            <p>
+            \[
+            T(x, z) = \max_{b \in \{0, 1\}} \left( T_1(x, b) + T_2(b, z) - |b|_1 \right)
+            \]
+            </p>
+            
+            <p>
+            where \( |b|_1 \) denotes the Hamming weight of the binary vector \( b \), effectively counting the number of ones in \( b \).
+            </p>
+            
+            <p>
+            Once the tables for all children have been computed, we proceed to adjust the entries for the parent vertex. The adjustment procedure ensures that any entries that would yield an invalid configuration (due to adjacency or identical boundary nodes) are marked as undefined.
+            </p>
+            
+            <p>
+            Finally, invoking the table computation on the root of \( \overline{G} \) yields entries for \( (0, 0) \) and \( (1, 1) \). The maximum of these two values provides the size of the maximum independent set of the graph \( G \). The solution can be reconstructed by backtracking through the decisions made during the merge operations, thereby revealing the specific nodes included in the independent set.
+            </p>                   
+
+        </div>
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Conclusion and Adaptability</h3>
+        <div class="content has-text-justified">
+
+          <p>
+            In this section, we encapsulate the algorithmic framework developed thus far. We employ a dynamic programming paradigm to recursively derive solutions for incrementally larger subgraphs, ultimately culminating in a solution for the entire graph \( G \). To facilitate this, we construct a tree \( \overline{G} \) corresponding to the outerplanar graph \( G \), which delineates the precise sequence of merge operations necessary for optimal solution synthesis.
+            </p>
+            
+            <p>
+            Let \( V \) denote the vertex set of \( G \) and \( E \) its edge set. For each vertex \( v \in V \), we compute a table \( T_v \) that encodes the optimal solutions for the subgraphs rooted at \( v \). The computation initiates at the leaves of the tree \( \overline{G} \) and propagates upwards, merging the solutions of child vertices to derive the solution for their parent vertex.
+            </p>
+            
+            <p>
+            A pivotal observation is that any subgraph \( H \subseteq G \) can be effectively bounded using merely two boundary nodes \( b_1, b_2 \in V(H) \) when dealing with outerplanar graphs. This property is crucial as it simplifies the dynamic programming approach, allowing us to maintain a manageable complexity in the solution space.
+            </p>
+            
+            <p>
+            However, this characteristic does not extend to \( k \)-outerplanar graphs, necessitating a reevaluation of our subgraph selection criteria. The transition from outerplanar to \( k \)-outerplanar graphs implies that the subgraphs must be redefined to accommodate the increased complexity inherent in \( k \)-outerplanarity. Consequently, the technical intricacies of the dynamic programming algorithm will also undergo modification.
+            </p>
+            
+            <p>
+            Despite these adjustments, the foundational principle of the algorithm remains intact. The primary distinction lies in the nature of the subgraphs and their respective boundaries. Previously, the subgraphs were constructed from edges, faces, or unions of faces such that each face was adjacent to at most one other face not included in the subgraph. In the context of \( k \)-outerplanar graphs, this approach necessitates a more sophisticated framework, leading us to the exploration of the concept of <i>slices</i>.
+            </p>
+            
+            <p>
+            While the algorithm's core methodology is preserved, the adaptation to \( k \)-outerplanar graphs requires a nuanced understanding of subgraph boundaries and the implementation of slices to effectively manage the increased complexity.
+            </p>            
+
+        </div>
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">On the Notion of Slices</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">The Basic Idea</h3>
+        <div class="content has-text-justified">
+          <p>Let us delve into the intricate properties of \( k \)-outerplanar graphs, which are pivotal in the formulation of a novel subgraph type. By definition, a graph \( G \) is \( k \)-outerplanar if it possesses a planar embedding such that the maximum level of any node does not exceed \( k \). This property ensures that any path \( P \) connecting two exterior nodes \( u \) and \( v \) serves as a boundary that effectively bisects the graph \( G \) into two distinct subgraphs, denoted as \( G_1 \) and \( G_2 \).</p>
+
+          <p>To optimize computational efficiency, it is imperative to select nodes \( u \) and \( v \) such that the length of the path \( |P| \) between them is minimized, ideally constrained by a function \( f(k) \) that reflects the bounded nature of \( k \)-outerplanarity. This contrasts with the simpler case of outerplanar graphs, where the identification of exterior nodes with short connecting paths is straightforward.</p>
+          
+          <p>Let us consider a node \( n_i \) of level \( i \) within the \( k \)-outerplanar graph. Although the distance from \( n_i \) to an exterior node may be unbounded, we can construct a sequence of \( n_1, n_2, \ldots, n_{i-1} \), where each \( n_j \) corresponds to a distinct level \( j \) such that the path \( P' \) formed by these nodes adheres to the planarity constraints. This necessitates the introduction of auxiliary edges \( E' \) that facilitate the construction of slices without impacting the optimal solution computation.</p>
+          
+          <p>By amalgamating the paths of two nodes \( n_i \) and \( n_j \) (where \( n_i \) and \( n_j \) may share an edge or coincide), we delineate a boundary \( B \) comprising \( 2i \) nodes. Specifically, the left boundary \( B_L \) is defined as the path from an exterior edge \( e_L \) to the node \( n_i \), while the right boundary \( B_R \) extends from another exterior node \( e_R \) to the node \( n_j \). Thus, we can represent the boundaries as two vectors of nodes:</p>
+          
+          <p>
+          \[
+          B_L = \{ e_L, n_1, n_2, \ldots, n_i \}, \quad B_R = \{ e_R, n_j, n_{j+1}, \ldots, n_k \}
+          \]
+          </p>
+          
+          <p>To elucidate this concept, we can employ a metaphorical analogy: envision the entire graph \( G \) as a pie. The objective is to extract a slice of a predetermined size. The initial incision, directed towards the center, must not exceed the radius \( r \) of the pie. Subsequently, a second incision is made, terminating precisely at the endpoint of the first cut, again constrained by the radius \( r \). This process yields a slice, analogous to the construction of our boundaries, where \( B_L \) represents the first cut and \( B_R \) signifies the second cut.</p>
+          
+          <p>The strategic selection of boundaries in \( k \)-outerplanar graphs, facilitated by the properties of planarity and node levels, allows for the effective decomposition of the graph into manageable substructures, thereby enhancing the feasibility of algorithmic solutions.</p>          
+
+        </div>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Constructing Trees for \( k \)-Outerplanar Graphs</h3>
+        <div class="content has-text-justified">
+
+          <p>To construct trees for \( k \)-outerplanar graphs, we leverage the inherent structural properties of the graph's components. Each component at level \( i \) is inherently outerplanar, allowing us to employ a systematic approach to represent the graph's topology through a tree structure that encapsulates a counterclockwise traversal of the exterior edges of the component.</p>
+
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-12 has-text-centered">
+                <img src="./static/images/2_triangulation_level2_level3.svg"
+                     class="interpolation-image"
+                     style="width: 100%;"
+                     alt="Triangulating regions between levels 2 and 3"/>
+                <p style="text-align: center;">Figure 4.  Triangulating regions between levels 2 and 3 for the graph of Figure 1. Edges added in the triangulation are shown as dashed lines.</p>
+            </div>
+          </div>
+
+          <p>Let \( C_i \) denote a level \( i \) component, which is enclosed by a level \( i-1 \) face \( f \) characterized by the labels \( (x, y) \). The selection of these labels is contingent upon the traversal of the exterior edges, ensuring that they correspond to two distinct nodes rather than vectors of nodes. The construction of the tree \( T_i \) for component \( C_i \) is predicated on the following steps:</p>
+          
+          <ol>
+            <li><strong>Triangulation</strong>: We initiate the process by performing a triangulation between the nodes \( x \) and \( y \) in linear time, denoted as \( \mathcal{T}(x, y) \). This triangulation facilitates the identification of additional edges that connect \( x \) and \( y \) while preserving the planarity of the graph.</li>
+          
+            <li><strong>Root Selection</strong>: The root \( z \) of the tree \( T_i \) is determined based on the relationship between \( x \) and \( y \):
+              <ul>
+                <li>If \( x = y \), then \( z \) can be any node adjacent to \( x \).</li>
+                <li>If \( x \neq y \), then \( z \) is selected as the node that is adjacent to both \( x \) and \( y \) within the triangulation \( \mathcal{T}(x, y) \).</li>
+              </ul>
+            </li>
+          
+            <li><strong>Child Node Definition</strong>: The leftmost child of the root \( z \) is defined as the first edge encountered in a counterclockwise direction from the edge \( (z, x) \). This selection process is crucial as it unambiguously delineates the structure of the tree \( T_i \) and facilitates the recursive construction of the remaining nodes.</li>
+          
+            <li><strong>Tree Construction</strong>: The recursive construction of the tree proceeds by iterating through the nodes of the component \( C_i \) in parallel, ensuring that each node is appropriately linked to its parent based on the defined edges. The resulting tree \( T_i \) encapsulates the hierarchical structure of the component, with each node representing a vertex in the original graph.</li>
+          
+            <li><strong>Component Independence</strong>: It is imperative to note that each tree \( T_i \) constructed for the level \( i \) components is independent and not linked to other trees. However, the construction of these trees is inherently dependent on the trees of the enclosing components, thereby maintaining a coherent structure across the entire \( k \)-outerplanar graph.</li>
+          </ol>
+          
+          <p>The construction of trees for \( k \)-outerplanar graphs involves a meticulous process of triangulation, root selection, and recursive tree building, ensuring that the resultant structure accurately reflects the underlying graph's topology while facilitating the correct merging of subgraphs during subsequent algorithmic processes.</p>
+
+        </div>
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Formal Definition of Slices</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">A First Approach</h3>
+        <div class="content has-text-justified">
+          <p>Let us delve into the intricate technical details of the concept of slices within the framework of \( k \)-outerplanar graphs. For each vertex \( v \) in the level \( i \) tree \( T_i \) constructed in the preceding sections, we aim to define a slice \( S(v) \) characterized by two boundary vectors \( B_L(v) \) and \( B_R(v) \), each containing \( i \) boundary nodes. Formally, we denote:</p>
+
+          <p>
+          \[
+          B_L(v) = \{b_{L1}, b_{L2}, \ldots, b_{Li}\}, \quad B_R(v) = \{b_{R1}, b_{R2}, \ldots, b_{Ri}\}
+          \]
+          </p>
+          
+          <p>where \( b_{Lj} \) and \( b_{Rj} \) are the boundary nodes for \( j = 1, 2, \ldots, i \).</p>
+          
+          <p>It is imperative to note that the slice \( S(v) \) may encompass nodes of higher levels, denoted as \( v_k \) for \( k > i \), but these nodes are inherently surrounded by a face in the slice, thus negating the necessity for separate boundary nodes for such higher-level vertices. Specifically, for any face vertex \( v \), the slice \( S(v) \) will invariably include all nodes \( N_f \) enclosed by the face, which can be expressed as:</p>
+          
+          <p>
+          \[
+          S(v) = N_f \cup \{(x, y)\}
+          \]
+          </p>
+          
+          <p>where \( (x, y) \) represents the edge associated with the face vertex \( v \).</p>
+          
+          <p>The recursive definition of slices is articulated as follows:</p>
+          
+          <ol>
+              <li><strong>Base Case:</strong> For a level 1 leaf vertex \( v \) labeled as \( (x, y) \):
+              <p>
+              \[
+              S(v) = \{(x, y)\}
+              \]
+              </p>
+              </li>
+          
+              <li><strong>Recursive Case:</strong> For a vertex \( v \) representing a level \( i \) face with no enclosed nodes, the slice is defined as the union of the slices of its children:
+              <p>
+              \[
+              S(v) = \bigcup_{j=1}^{t} S(u_j) \quad \text{where } u_j \text{ are the children of } v
+              \]
+              </p>
+              </li>
+          
+              <li><strong>Enclosing Higher-Level Components:</strong> If \( v \) represents a level \( i \) face enclosing a level \( i+1 \) component \( C \), then the slice is given by:
+              <p>
+              \[
+              S(v) = S(\text{root}(C)) \cup \{(x, y)\}
+              \]
+              </p>
+              </li>
+          
+              <li><strong>Level \( i \) Edge:</strong> For a vertex \( v \) representing a level \( i \) edge, where \( i > 1 \):
+              <p>
+              \[
+              S(v) = \{(x, y)\} \cup \left( \bigcup_{j=1}^{t} \text{edges}(x, z_j) \cup \text{edges}(y, z_j) \right) \cup \bigcup_{j=1}^{t} S(u_j)
+              \]
+              </p>
+              where \( z_j \) are the nodes at level \( i-1 \) connected to \( x \) and \( y \), and \( u_j \) are the children of the enclosing face vertex.
+              </li>
+          </ol>
+          
+          <p>The recursion initiates at the root of the level 1 component, denoted as \( r_1 \), and progresses through the tree structure, culminating at the level 1 leaves. The transition from higher levels back to lower levels is facilitated by the slices associated with the vertices of enclosing faces, ensuring that the boundaries extend from level 1 to level \( i \). This necessitates that every slice \( S(v) \) for a vertex \( v \) at level \( i \) incorporates nodes from all lower levels, thereby maintaining the integrity of the boundary definitions.</p>
+          
+          <p>Let \( v \) be a tree vertex labeled \( (x, y) \). Remember that tree vertices are not labeled with vectors, but two single nodes.</p>
+          
+          <ol>
+              <li>If \( v \) represents a level \( i \) face with no enclosed nodes, \( i \geq 1 \), its slice is the union of the slices of its children, plus \( (x, y) \).</li>
+              <li>If \( v \) represents a level \( i \) face enclosing a level \( i + 1 \) component \( C \), its slice is that of the root of the tree for \( C \) plus \( (x, y) \). (However, as noted above, the boundaries only run from level \( i \) to level 1 instead of from level \( i + 1 \) to 1.)</li>
+              <li>If \( v \) represents a level 1 edge, its slice is the subgraph consisting of \( (x, y) \).</li>
+              <li>If \( v \) represents a level \( i \) edge, \( i > 1 \), then its slice includes \( (x, y) \), edges from \( x \) and \( y \) to level \( i - 1 \) nodes, and the slices computed recursively for appropriate level \( i - 1 \) trees. Here, 'appropriate' is determined by slice boundaries placed along edges in a triangulation of the region between level \( i - 1 \) and \( i \).</li>
+          </ol>
+          
+          <p>Let us denote a \( k \)-outerplanar graph \( G \) as a planar graph that can be embedded in the plane such that all vertices of degree greater than \( k \) lie on the outer face. We define a slice \( S(v) \) for a vertex \( v \) in the context of a tree representation of \( G \).</p>
+          
+          <ol>
+              <li><strong>Intuitive Points:</strong> Points 1 and 3 provide foundational definitions for slices, which can be expressed as follows:
+              <p>
+              \[
+              S(v) = \begin{cases} 
+              \bigcup_{c \in \text{children}(v)} S(c) & \text{if } v \text{ is a face vertex with no enclosed nodes} \\
+              S(\text{root}(C)) \cup \{(x,y)\} & \text{if } v \text{ is a face vertex enclosing component } C \\
+              \{(x,y)\} & \text{if } v \text{ is a level 1 edge} \\
+              \{(x,y)\} \cup E(x, y) \cup \bigcup_{j \in \text{children}(v)} S(u_j) & \text{if } v \text{ is a level } i \text{ edge, } i > 1
+              \end{cases}
+              \]
+              </p>
+              where \( E(x, y) \) denotes the edges connecting \( x \) and \( y \) to the nodes in the lower levels.</li>
+          
+              <li><strong>Inclusion of Component Slices:</strong> The slice \( S(v) \) for a face vertex \( v \) that encloses a component \( C \) is defined as:
+              <p>
+              \[
+              S(v) \supseteq S(\text{root}(C))
+              \]
+              </p>
+              This inclusion is intuitive, as the enclosing face must encapsulate the entirety of the component's slice.</li>
+          
+              <li><strong>Exclusion of Child Slices:</strong> Notably, \( S(v) \) does not encompass the slices of the direct children of the tree vertex \( v \). Instead, we denote the slices for the leaves of the tree corresponding to the enclosed component \( C \) as \( S(L) \), where \( L \) represents the leaves of the tree rooted at \( C \):
+              <p>
+              \[
+              S(v) \cap S(\text{children}(v)) = \emptyset
+              \]
+              </p>
+              This necessitates a detailed examination of the mapping between leaves and their respective children, ensuring that the slices maintain a comprehensive representation of nodes across all levels up to the level of the slice.</li>
+          
+              <li><strong>Boundary Assignment:</strong> The assignment of leaves to children is contingent upon the boundaries defined by the slices. We denote the left boundary of a leaf \( l \) as \( LB(l) \) and the right boundary as \( RB(l) \). The conditions for boundary assignment can be formalized as:
+              <p>
+              \[
+              RB(l_i) = LB(l_{i+1}) \quad \forall i \in \{1, 2, \ldots, n-1\}
+              \]
+              </p>
+              This condition ensures that the slices can be merged seamlessly, facilitating the construction of a coherent representation of the graph.</li>
+          
+              <li><strong>Edge Crossing Condition:</strong> Furthermore, it is imperative that no edges cross the defined slice boundaries. This can be expressed mathematically as:
+              <p>
+              \[
+              \forall e \in E(G), \text{ if } e \text{ crosses a boundary, then } e \notin S(v)
+              \]
+              </p>
+              This condition preserves the planarity of the graph and ensures that the slices remain distinct and non-overlapping.</li>
+          </ol>
+          
+          <p>The construction of slices in \( k \)-outerplanar graphs necessitates careful consideration of the relationships between vertices, their children, and the boundaries that govern their interactions. The formal definitions and conditions outlined above provide a rigorous framework for understanding the structure and properties of slices within this context.</p>                
+
+        </div>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Computing Slices Across Levels</h3>
+        <div class="content has-text-justified">
+
+          <p>We proceed by induction to establish that the utilization of the left boundary 
+            \( LB(v_{i-1}) \) of a vertex \( v_{i-1} \) at level \( i-1 \) and the right boundary 
+            \( RB(v_i) \) of a vertex \( v_i \) at level \( i \), where \( v_i \) is positioned to the right of 
+            \( v_{i-1} \) within the tree structure of the level \( i \) component, yields a valid boundary configuration provided that the interior region delineated by these boundaries is adequately filled.</p>
+            
+            <p>To formalize this, we define a function 
+            \( \Phi: V_i \to \{(v_{i-1}, v_{i-1}') \mid v_{i-1}, v_{i-1}' \in V_{i-1}\} \) that assigns to each vertex 
+            \( v_i \) at level \( i \) a pair of vertices \( (v_{i-1}, v_{i-1}') \) from level \( i-1 \) that effectively fills the aforementioned hole in the boundary.</p>
+            
+            <p>Let \( C \) denote a component at level \( i \) enclosed by a face \( f \) at level \( i-1 \), with the tree vertex corresponding to \( f \) labeled as \( (x, y) \). We denote the triangulation of the region between \( C \) and \( f \) as \( T_{RI}(C, f) \), which has been previously established in the context of tree construction.</p>
+            
+            <p>For any pair of successive edges \( (x_1, x_2) \) and \( (x_2, x_3) \) encountered in a counterclockwise traversal around the exterior edges of \( C \), we assert the existence of at least one node 
+            \( y \in f \) that is adjacent to \( x_2 \) in the triangulation \( T_{RI}(C, f) \). This adjacency condition ensures that the edges \( (x_2, x_1) \), \( (x_2, y) \), and \( (x_2, x_3) \) are arranged in a counterclockwise order around \( x_2 \). We designate such a node \( y \) as a <strong>dividing point</strong> for the edges \( (x_1, x_2) \) and \( (x_2, x_3) \).</p>
+            
+            <p>Formally, we define a dividing point \( D \) for the edges \( (x_1, x_2) \) and \( (x_2, x_3) \) as follows:</p>
+            
+            <p>
+            \[
+            D(x_2) = \{ y \in f \mid (x_2, y) \in E(T_{RI}(C, f)) \text{ and } (x_2, x_1), (x_2, y), (x_2, x_3) \text{ are in counterclockwise order} \}
+            \]
+            </p>
+            
+            <p>It is crucial to note that every node \( y \) of the face \( f \) that is adjacent to \( x_2 \) serves as a dividing point for the two exterior edges involving \( x_2 \), with the exception of <strong>cutpoints</strong>. A cutpoint is defined as a vertex that possesses more than two exterior edges, complicating the assignment of nodes to their respective dividing points.</p>
+            
+            <p>Thus, we require a more nuanced definition to accommodate the presence of cutpoints. Specifically, if \( x_2 \) is a cutpoint, we must consider the additional structural implications on the triangulation and the assignment of dividing points.</p>
+            
+            <p>The identification of dividing points and the assignment of vertices to fill the boundary holes are critical components in maintaining the integrity of the triangulation and ensuring the proper configuration of the slices within the \( k \)-outerplanar graph framework.</p>
+            
+            <p>We will now define the functions assigning boundaries to all level \( i \) vertices, which we will call \( LB \) and \( RB \). These functions will map the vertices of \( C \) to the numbers \( 1 \) to \( r \), where \( r \) is the number of children of the tree vertex corresponding to \( f \). The definition is as follows:</p>
+            
+            <ol>
+                <li>Let the leaves of \( C \) be \( v_1, v_2, \ldots, v_t \) from left to right, and let \( v_j \) have label \( (x_j, x_{j+1}) \), for \( 1 \leq j \leq t \). Let the children of vertex \( f \) be \( z_1, z_2, \ldots, z_r \) from left to right, where \( z_j \) has label \( (y_j, y_{j+1}) \) for \( 1 \leq j \leq r \). Define \( LB(v_1) = 1 \) and \( RB(v_t) = r + 1 \). For \( 1 < j \leq t \), define \( LB(v_j) = q \) if \( q \) is the least \( p \geq LB(v_{j-1}) \) for which \( y_p \) is a dividing point for \( (x_{j-1}, x_j) \) and \( (x_j, x_{j+1}) \). For \( 1 \leq j < t \), define \( RB(v_j) = LB(v_{j+1}) \).</li>
+                <li>If \( v \) is a face vertex of \( C \), with leftmost child \( c_L \) and rightmost child \( c_R \), define \( LB(v) = LB(c_L) \) and \( RB(v) = RB(c_R) \).</li>
+            </ol>
+            
+            <p>Let \( f \) be a face in the planar graph under consideration, and denote the edges of \( f \) as \( e_1, e_2, \ldots, e_k \) in a counterclockwise traversal. We aim to establish a systematic approach to define the left boundary \( LB \) and right boundary \( RB \) for the vertices associated with the leaves of the tree representation of the component \( C \).</p>
+            
+            <p>To facilitate this, we exclude the edge corresponding to the label of the face \( f \) from our current consideration, as its slice has been previously accounted for. Consequently, we initiate our boundary assignments immediately to the right of this edge and conclude precisely to the left, thereby establishing the conditions:</p>
+            
+            <p>
+            \[
+            LB(v_1) = 1 \quad \text{and} \quad RB(v_t) = r + 1
+            \]
+            </p>
+            
+            <p>where \( v_1 \) and \( v_t \) are the first and last leaves of the tree, respectively, and \( r \) denotes the total number of children of the vertex corresponding to \( f \).</p>
+            
+            <p>For each leaf \( v_j \) where \( 1 \leq j \leq t \), we assign a value \( d_j \) representing the leftmost dividing point, subject to the constraint:</p>
+            
+            <p>
+            \[
+            d_j \geq d_{j-1}
+            \]
+            </p>
+            
+            <p>This condition ensures that the boundaries do not encompass the face represented by the parent vertex, thereby maintaining the integrity of the boundary definitions.</p>
+            
+            <p>Furthermore, for all nodes \( v_j \) where \( 1 < j \leq t \), we define the right boundary \( RB \) as follows:</p>
+            
+            <p>
+            \[
+            RB(v_j) = LB(v_{j+1})
+            \]
+            </p>
+            
+            <p>This assignment guarantees that the boundaries are congruent, facilitating subsequent merging operations within the dynamic programming framework.</p>
+            
+            <p>The implications of these definitions yield two critical properties:</p>
+            
+            <ol>
+                <li>The sequences \( LB(v_j) \) and \( RB(v_j) \) are non-decreasing for sibling vertices as \( j \) progresses from \( 1 \) to \( t \):
+                <p>
+                \[
+                LB(v_j) \leq LB(v_{j+1}) \quad \text{and} \quad RB(v_j) \leq RB(v_{j+1})
+                \]
+                </p>
+                This property ensures that the construction of slices does not result in edges that cross the defined boundaries.</li>
+                
+                <li>For each vertex \( v \), it holds that:
+                <p>
+                \[
+                LB(v) \leq RB(v)
+                \]
+                </p>
+                This condition guarantees the correctness of the boundary assignments for each vertex, thereby ensuring that the slices are well-defined and adhere to the structural constraints imposed by the planar graph representation.</li>
+            </ol>
+            
+            <p>The exact translation for a vertex \( v \) labeled \( (x, y) \) from values for \( LB \) and \( RB \) to the boundaries works as follows:</p>
+
+            <ol>
+                <li>If \( v \) is a level 1 leaf, the left boundary of \( \text{slice}(v) \) is \( x \) and the right boundary is \( y \).</li>
+                <li>Suppose \( v \) is a vertex of a tree for a level \( i \) component enclosed by the level \( i - 1 \) face \( f \). Let \( s \) be the number of children of vertex \( f \). Define the right boundary of the 0th child of vertex \( f \) to be the same as the left boundary of the first child of vertex \( f \), and the left boundary of the \( (s + 1) \)th child to be the same as the right boundary of the \( s \)th child. If \( LB(v) = q \), the left boundary of \( \text{slice}(v) \) is \( x \) plus the left boundary of the slice of the \( q \)th child of vertex \( f \). If \( RB(v) = t \), the right boundary of \( \text{slice}(v) \) is \( y \) plus the right boundary of the slice of the \( (t - 1) \)th child of vertex \( f \).</li>
+            </ol>
+            
+            <p>This gives us the formal definition of slices:</p>
+            
+            <p>Let \( v \) be a level \( i \) vertex, \( i \geq 1 \), with label \( (x, y) \). Again, if a vertex \( u \) has \( s \) children, define the left boundary of the \( (s + 1) \)th child to be the same as the right boundary of the \( s \)th child.</p>
+            
+            <ol>
+                <li>If \( v \) is a face vertex, and \( \text{face}(v) \) encloses no level \( i + 1 \) nodes, then \( \text{slice}(v) \) is the union of the slices of the children of \( v \), together with \( (x, y) \) if \( (x, y) \) is an edge (i.e., \( x \neq y \)).</li>
+                <li>If \( v \) is a face vertex and \( \text{face}(v) \) encloses a level \( i + 1 \) component, then \( \text{slice}(v) \) is the subgraph containing \( \text{slice}(\text{root}(C)) \) plus \( (x, y) \) if \( (x, y) \) is an edge.</li>
+                <li>If \( v \) is a level 1 leaf, then \( \text{slice}(v) \) is the subgraph consisting of \( (x, y) \).</li>
+                <li>Suppose \( v \) is a level \( i \) leaf, \( i > 1 \). Suppose the enclosing face is \( f \), and vertex \( f \) has children \( u_j \), \( 1 \leq j \leq t \), where \( u_j \) has label \( (z_j, z_{j+1}) \). If \( LB(v) \neq RB(v) \), then \( \text{slice}(v) \) is the subgraph containing \( (x, y) \), any edges from \( x \) or \( y \) to \( z_j \), for \( LB(v) \leq j \leq RB(v) \), and \( \text{slice}(u_j) \), for \( LB(v) \leq j \leq RB(v) \). If \( LB(v) = RB(v) = r \), then \( \text{slice}(v) \) is the subgraph containing \( (x, y) \), any edges from \( x \) or \( y \) to \( z_r \), the left boundary of \( \text{slice}(u_r) \), and any edges between boundary nodes of successive levels.</li>
+            </ol>
+
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column is-12 has-text-centered">
+                  <img src="./static/images/2_three_slices.svg"
+                       class="interpolation-image"
+                       style="width: 100%;"
+                       alt="Three slices for the graph of Figure 1"/>
+                  <p style="text-align: center;">Figure 5.  Three slices for the graph of Figure 1. Missing edges between boundary nodes are shown as dashed lines.</p>
+              </div>
+            </div>
+            
+            <p>This definition incorporates all of our thoughts collected before. See Figure 5 for the slices of the level 3 vertices \( (6, 7) \), \( (7, 8) \), \( (8, 6) \) in Figure 1. As you can see, the boundaries align so that the slices can be merged easily. For example, the slice of the vertex labeled \( (b, d) \), which represents the face enclosing the level 3 component, can now easily be computed by merging on the right boundary of \( (6, 7) \), which is \( 7, b, A \) and equal to the left boundary of \( (7, 8) \), and merging the resulting slice with the slice for \( (8, 6) \), then finally adding the edge \( (b, d) \).</p>            
+
+        </div>
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Dynamic Programming Adaptation with Slices</h3>
+        <div class="content has-text-justified">
+
+          <p>Let \( S_1 \) and \( S_2 \) be two level \( i \) slices of a planar graph, each defined by their respective boundaries. The objective is to compute the optimal solution for these slices and subsequently merge their solutions into a unified table. The tables \( T_1 \) and \( T_2 \) will encode the sizes of the optimal solutions corresponding to the assignments of the boundary nodes.</p>
+          
+          <p>As we construct a slice \( S \) according to the defined rules, we simultaneously compute its associated table \( T(S) \). The order of merges is dictated by the construction rules of the slices, ensuring a systematic approach to the dynamic programming framework.</p>
+          
+          <p>The merge operation is defined as follows: Given two tables \( T_1 \) and \( T_2 \) for slices \( S_1 \) and \( S_2 \) that share a common boundary node \( y \), we denote the boundaries of these slices as:</p>
+          \[
+          \text{Boundary}(S_1) = (x, y) \quad \text{and} \quad \text{Boundary}(S_2) = (y, z).
+          \]
+          <p>The resulting table \( T \) for the merged slice with boundary \( (x, z) \) can be computed using the formula:</p>
+          \[
+          T(x, z) = T_1(x, y) + T_2(y, z) - |y|_1,
+          \]
+          <p>where \( |y|_1 \) represents the cardinality of the boundary node \( y \) in the context of the optimal solution, ensuring that nodes are not double-counted.</p>
+          
+          <p>For each combination of boundary nodes \( x \) and \( z \), we must compute the maximum over all possible assignments of the boundary node \( y \). Given that \( x, y, \) and \( z \) are vectors containing \( i \) nodes, the total number of possible assignments for each vector is \( 2^i \). Thus, the computational complexity of this operation is characterized by the following:</p>
+          
+          <ol>
+              <li>The number of tables to be computed for each combination of \( x \) and \( z \) is \( 2^i \cdot 2^i = 2^{2i} \).</li>
+              <li>Each computation must consider \( 2^i \) possible assignments of \( y \).</li>
+          </ol>
+          
+          <p>Consequently, the overall complexity of the merge operation is dominated by the number of combinations and assignments, leading to a total running time of:</p>
+          \[
+          O(2^i \cdot 2^i \cdot 2^i \cdot n) = O(8^k \cdot n),
+          \]
+          <p>where \( k \) is the maximum level of the considered vertex in a \( k \)-outerplanar graph.</p>
+          
+          <p>It is important to note that a merge operation is invoked at most once for each face vertex, as its face or edge is incorporated into the already solved portion of the graph, thus avoiding redundant computations. The number of vertices in the graph is linear in the number of edges, which in planar graphs translates to a linear relationship with respect to the number of nodes. This systematic approach ensures that the dynamic programming algorithm remains efficient while addressing the complexities inherent in the merging of slices.</p>          
+
+        </div>
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Adapting the Algorithm to Solve Other Problems</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Introduction</h3>
+        <div class="content has-text-justified">
+          <p>In this section, we delineate the methodology for adapting the final algorithm to address various NP-complete problems with precision. We will specifically examine three prominent problems: Minimum Vertex Cover, Minimum Edge Dominating Set, and Three-Coloring. While the proposed technique is extensible to a multitude of additional problems, our focus will remain on the aforementioned cases, as they sufficiently illustrate the adaptation process.</p>
+
+          <p>The core of our approach lies in the utilization of a consistent decomposition into slices, which facilitates the exact resolution of each of these problems. This adaptability underscores the robustness of the technique. The principal distinction among the problems manifests in the dynamic programming tables employed. For the Maximum Independent Set problem, the dynamic programming table was constructed to compute the maximum cardinality of independent nodes within a slice, denoted as \( |S| \). This necessitates a modification in the table structure for the other problems under consideration.</p>
+          
+          <p>Let us denote the graph \( G = (V, E) \) and define the following problems formally:</p>
+          
+          <ol>
+              <li><strong>Minimum Vertex Cover</strong>: Given a graph \( G \) and a positive integer \( K \leq |V| \), the objective is to determine whether there exists a subset \( V' \subseteq V \) such that \( |V'| \leq K \) and for every edge \( (u, v) \in E \), at least one of \( u \) or \( v \) belongs to \( V' \).</li>
+          
+              <li><strong>Minimum Edge Dominating Set</strong>: Given a graph \( G = (V, E) \) and a positive integer \( K \leq |E| \), the goal is to find a subset \( E' \subseteq E \) such that \( |E'| \leq K \) and every edge \( e \in E \) shares at least one endpoint with some edge in \( E' \).</li>
+          
+              <li><strong>Three-Coloring</strong>: Given a graph \( G = (V, E) \), the task is to ascertain whether it is possible to assign one of three colors to each vertex in \( V \) such that no two adjacent vertices share the same color.</li>
+          </ol>
+          
+          <p>To adapt the dynamic programming framework for these problems, we must modify the table entries accordingly. For Minimum Vertex Cover, the table entries will now encode the size of the Minimum Vertex Cover for the corresponding slice, denoted as \( C(S) \), where \( S \) represents the slice. The boundary nodes will be evaluated to determine their inclusion in the vertex cover, necessitating a reevaluation of their roles in the context of edge coverage.</p>
+          
+          <p>For the Minimum Edge Dominating Set, the entries will reflect the size of the Minimum Edge Dominating Set for each slice, with the boundary nodes indicating whether they are endpoints of edges in the dominating set. The merge operation must also be adapted to compute minimal values rather than maximal ones, ensuring that the solution reflects the minimum edge coverage.</p>
+          
+          <p>In the case of Three-Coloring, the complexity escalates as we must consider multiple states for each node. The table entries will encode the feasibility of three-coloring the slice given the assignments of the boundary nodes. Specifically, for a boundary of size \( k \), the number of possible assignments necessitates the consideration of \( 3^{2k} \) configurations, leading to a significant increase in computational complexity.</p>
+          
+          <p>The merge operation for Three-Coloring will involve evaluating the compatibility of color assignments across slices, which can be expressed as:</p>
+          
+          \[
+          \text{Merge}(C_1, C_2) = \{ (c_1, c_2) \in C_1 \times C_2 \mid c_1 \neq c_2 \}
+          \]
+          
+          <p>where \( C_1 \) and \( C_2 \) are the color assignments from two adjacent slices. This ensures that the resulting color assignment adheres to the constraints of the Three-Coloring problem.</p>
+          
+          <p>While the foundational structure of the algorithm remains intact, the adaptation to different NP-complete problems necessitates careful modifications to the dynamic programming tables and merge operations, ensuring that the unique characteristics of each problem are adequately addressed.</p>
+
+        </div>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Minimum Vertex Cover</h3>
+        <div class="content has-text-justified">
+
+          <p>We commence our analysis with the Minimum Vertex Cover problem, which is defined as follows: Let \( G = (V, E) \) be an undirected graph, where \( V \) is the set of vertices and \( E \) is the set of edges. Given a positive integer \( K \) such that \( K \leq |V| \), we seek to determine the existence of a vertex cover \( V' \subseteq V \) satisfying the conditions:</p>
+          
+          <p>
+          \[
+          |V'| \leq K \quad \text{and} \quad \forall (u, v) \in E, \quad u \in V' \lor v \in V'.
+          \]
+          </p>
+          
+          <p>This implies that for every edge \( (u, v) \in E \), at least one of its endpoints must be included in the vertex cover \( V' \).</p>
+          
+          <p>To adapt our dynamic programming framework for this problem, we modify the bookkeeping details within our algorithm. Each entry in the dynamic programming table, denoted as \( T(S) \), will now represent the size of the Minimum Vertex Cover for a given slice \( S \). The boundary nodes of each slice will be evaluated to ascertain their inclusion in the vertex cover, which can be formally expressed as:</p>
+          
+          <p>
+          \[
+          T(S) = \min \{ |V'| : V' \subseteq S, \, |V'| \leq K, \, \forall (u, v) \in E(S), \, u \in V' \lor v \in V' \}.
+          \]
+          </p>
+          
+          <p>The merge operation, which combines the results from adjacent slices, must be adapted to compute a minimal value rather than a maximal one. Specifically, if we denote the results from two adjacent slices \( S_1 \) and \( S_2 \) as \( T(S_1) \) and \( T(S_2) \), the merged result \( T(S_1 \cup S_2) \) can be computed as:</p>
+          
+          <p>
+          \[
+          T(S_1 \cup S_2) = \min \{ T(S_1), T(S_2) \}.
+          \]
+          </p>
+          
+          <p>In terms of approximation, we partition the graph into subgraphs based on a specified outerplanarity \( k \). However, unlike previous approaches where edge levels were disregarded, we now consider each edge level twice. Formally, for each \( i \) such that \( 0 \leq i < k \), we perform the following steps:</p>
+          
+          <ol>
+              <li>Extract the subgraph \( G_i \) consisting of all nodes at levels \( jk + i \) to \( (j + 1)k + i \) for all \( j \geq 0 \).</li>
+              <li>Compute the optimal solution for each subgraph \( G_i \) and denote this solution as \( T(G_i) \).</li>
+              <li>The final solution is obtained by taking the union of these optimal solutions:
+              <p>
+              \[
+              T_{\text{final}} = \bigcup_{i=0}^{k-1} T(G_i).
+              \]
+              </p>
+              </li>
+          </ol>
+          
+          <p>This approach guarantees that for at least one \( i \), the resulting solution will yield an approximation ratio of at most \( \frac{k + 1}{k} \). The rationale behind this approximation is analogous to that used in the Maximum Independent Set problem. Specifically, for a given \( i \), all levels congruent to \( i \) will contain at most \( \frac{|S|}{k} \) nodes from an optimal solution \( S \). Consequently, the instance utilizing these levels as edge levels counts at most \( \frac{|S|}{k} \) nodes twice, while optimally solving the remainder of the graph, thereby achieving the desired approximation ratio.</p>
+          
+          <p>Thus, the adaptation of the dynamic programming framework for the Minimum Vertex Cover problem is both systematic and efficient, leveraging the structural properties of the graph and the inherent relationships between the slices.</p>          
+
+        </div>
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Minimum Edge Dominating Set</h3>
+        <div class="content has-text-justified">
+
+          <p>We consider the Minimum Edge Dominating Set problem, which is formally defined as follows: Let \( G = (V, E) \) be an undirected graph, where \( V \) is the set of vertices and \( E \) is the set of edges. Given a positive integer \( K \) such that \( K \leq |E| \), we seek to determine the existence of a subset \( E' \subseteq E \) satisfying the conditions:</p>
+          
+          <p>
+          \[
+          |E'| \leq K \quad \text{and} \quad \forall e \in E, \quad \exists e' \in E' \text{ such that } e \text{ shares at least one endpoint with } e'.
+          \]
+          </p>
+          
+          <p>This implies that every edge in \( E \) must be dominated by at least one edge in the set \( E' \).</p>
+          
+          <p>To adapt our dynamic programming framework for this problem, we modify the structure of our tables to encode the size of the Minimum Edge Dominating Set for each corresponding slice \( S \). Specifically, we denote the table entry for a slice \( S \) as \( T(S) \), which will now represent the minimum size of the edge dominating set for that slice, conditioned on the boundary nodes being endpoints of the edges in the dominating set. This can be expressed mathematically as:</p>
+          
+          <p>
+          \[
+          T(S) = \min \{ |E'| : E' \subseteq S, \, |E'| \leq K, \, \forall e \in E(S), \, \exists e' \in E' \text{ such that } e \text{ shares at least one endpoint with } e' \}.
+          \]
+          </p>
+          
+          <p>The merge operation, which combines results from adjacent slices, must also be adapted to account for the edge-centric nature of this problem. If we denote the results from two adjacent slices \( S_1 \) and \( S_2 \) as \( T(S_1) \) and \( T(S_2) \), the merged result \( T(S_1 \cup S_2) \) can be computed as:</p>
+          
+          <p>
+          \[
+          T(S_1 \cup S_2) = \min \{ T(S_1), T(S_2) \}.
+          \]
+          </p>
+          
+          <p>In terms of approximation, we partition the graph into subgraphs based on a specified outerplanarity \( k \), similar to the approach taken for the Minimum Vertex Cover problem. The graph is divided into subgraphs, and for each subgraph, we compute the optimal edge dominating set. The process is formalized as follows:</p>
+          
+          <ol>
+              <li>For each \( i \) such that \( 0 \leq i < k \), extract the subgraph \( G_i \) consisting of all edges at levels \( jk + i \) to \( (j + 1)k + i \) for all \( j \geq 0 \).</li>
+              <li>Compute the optimal solution for each subgraph \( G_i \) and denote this solution as \( T(G_i) \).</li>
+              <li>The final solution is obtained by taking the union of these optimal solutions:
+              <p>
+              \[
+              T_{\text{final}} = \bigcup_{i=0}^{k-1} T(G_i).
+              \]
+              </p>
+              </li>
+          </ol>
+          
+          <p>This approach ensures that the resulting solution will yield an approximation ratio that is efficient and effective in terms of edge coverage. The reasoning behind this approximation is analogous to that used in the Minimum Vertex Cover problem, where the structure of the graph and the relationships between edges are leveraged to achieve optimality.</p>
+          
+          <p>Thus, the adaptation of the dynamic programming framework for the Minimum Edge Dominating Set problem is systematic, focusing on the edge-centric nature of the problem while maintaining the integrity of the underlying algorithmic structure.</p>          
+
+        </div>
+
+       <!-- Re-rendering. -->
+       <h3 class="title is-4">Three-Coloring</h3>
+       <div class="content has-text-justified">
+
+         <p>We investigate the Three-Coloring problem, which is defined as follows: Given a graph \( G = (V, E) \), we seek to determine whether it is possible to assign one of three distinct colors to each vertex in \( V \) such that no two adjacent vertices share the same color. Formally, we want to find a function \( c: V \rightarrow \{1, 2, 3\} \) such that:</p>
+         
+         <p>
+         \[
+         \forall (u, v) \in E, \quad c(u) \neq c(v).
+         \]
+         </p>
+         
+         <p>This problem is fundamentally different from previous problems, particularly in its combinatorial nature, as it involves a multi-state assignment rather than a binary one. For a boundary of size \( k \), we must consider all possible combinations of color assignments for the boundary nodes, leading to a total of \( 3^{2k} \) possible configurations. This can be expressed mathematically as:</p>
+         
+         <p>
+         \[
+         \text{Total Configurations} = 3^{2k}.
+         \]
+         </p>
+         
+         <p>The entries in our dynamic programming table will encode the feasibility of three-coloring a slice of the graph given a specific assignment of colors to the boundary nodes. We denote the table entry for a slice \( S \) as \( T(S) \), which indicates whether the slice can be three-colored under the current boundary color assignments. Thus, we have:</p>
+         
+         <p>
+         \[
+         T(S) = 
+         \begin{cases} 
+         1 & \text{if } S \text{ is 3-colorable under the boundary assignment} \\
+         0 & \text{otherwise}
+         \end{cases}.
+         \]
+         </p>
+         
+         <p>The merging of results from adjacent slices requires careful consideration of the color assignments. Given two slices \( S_1 \) and \( S_2 \), the time complexity for merging these slices is \( O(3^{3k}) \), as we must evaluate all combinations of color assignments for the boundary nodes of both slices. This can be expressed as:</p>
+         
+         <p>
+         \[
+         T(S_1 \cup S_2) = \text{Merge}(T(S_1), T(S_2)).
+         \]
+         </p>
+         
+         <p>It is important to note that approximating the Three-Coloring problem in the manner applied to previous problems is infeasible. The inherent complexity arises from the fact that we cannot simply omit nodes or consider them multiple times without violating the constraints of the coloring. Furthermore, it is well-established that planar graphs are guaranteed to be four-colorable, which renders the approximation of the chromatic number nonsensical in this context.</p>
+         
+         <p>Consequently, while we cannot construct a Polynomial Time Approximation Scheme (PTAS) for the Three-Coloring problem, we can still devise an algorithm to solve the problem for planar graphs with low \( k \)-outerplanarity. This approach leverages the structural properties of the graph to facilitate the three-coloring process, ensuring that we can effectively manage the complexity associated with the multi-state assignments required by the problem.</p>              
+
+       </div>
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Conclusion</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Key Results</h3>
+        <div class="content has-text-justified">
+
+          <p>Baker’s original result is a PTAS for the maximum independent set (as defined above) on planar graphs, as well as for the following list of problems on planar graphs: maximum tile salvage, partition into triangles, maximum H-matching, minimum vertex cover, minimum dominating set, and minimum edge-dominating set.</p>
+          
+          <p>Baker’s approach starts with a planar embedding of the planar graph. Then it divides vertices into layers by iteratively removing vertices on the outer face of the graph: layer \( j \) consists of the vertices removed at the \( j \)-th iteration. If one now removes the layers congruent to \( i \) modulo \( k \), for any choice of \( i \), the graph separates into connected components each with at most \( k \) consecutive layers, and hence the graph becomes \( k \)-outerplanar. Many NP-complete problems can be solved on \( k \)-outerplanar graphs for fixed \( k \) using dynamic programming (in particular, such graphs have bounded treewidth). Baker’s approximation algorithm computes these optimal solutions for each choice \( i \) of the congruence class of layers to remove, and returns the best solution among these \( k \) solutions. The key argument for maximization problems considers the optimal solution to the full graph, and argues that the removal of one of the \( k \) congruence classes of layers must remove at most a \( \frac{1}{k} \) fraction of the optimal solution, so the returned solution must be within a \( 1 + \frac{1}{k} \) factor of optimal. A more delicate argument handles minimization problems as well. For many problems, such as maximum independent set, minimum dominating set, and minimum vertex cover, Baker’s approach obtains a \( (1 + \epsilon) \)-approximation algorithm with running time of \( 2^{O(1/\epsilon)} n^{O(1)} \) on planar graphs.</p>
+          
+          <p><a href="https://arxiv.org/pdf/math/9907126">Eppstein</a> generalized Baker’s approach to a broader class of graphs called graphs of bounded local treewidth, i.e., where the treewidth of the subgraph induced by the set of vertices at distance at most \( r \) from any vertex is bounded above by some function \( f(r) \) independent of \( n \). The main differences in Eppstein’s approach are replacing the concept of bounded outerplanarity with the concept of bounded treewidth, where dynamic programming can still solve many problems, and labeling layers according to a simple breadth-first search. This approach has led to PTASs for hereditary maximization problems such as maximum independent set and maximum clique, maximum triangle matching, maximum H-matching, maximum tile salvage, minimum vertex cover, minimum dominating set, minimum edge-dominating set, minimum color sum, and subgraph isomorphism for a fixed pattern.</p>
+          
+          <p><a href="https://arxiv.org/pdf/cs/0004007">Frick and Grohe</a> also developed a general framework for deciding any property expressible in first-order logic in graphs of bounded local treewidth. The foundation of these results is Eppstein’s characterization of minor-closed families of graphs with bounded local treewidth. Specifically, he showed that a minor-closed family has bounded local treewidth if and only if it excludes some apex graph, a graph with a vertex whose removal leaves a planar graph. Unfortunately, the initial proof of this result brought Eppstein’s approach back to the realm of impracticality, because his bound on local treewidth in a general apex-minor-free graph is doubly exponential in \( r \): \( 2^{2^{O(r)}} \). Fortunately, this bound could be improved to \( 2^{O(r)} \) and even the optimal \( O(r) \). The latter bound restores Baker’s \( 2^{O(1/\epsilon)} n^{O(1)} \) running time for \( (1 + \epsilon) \)-approximation algorithms, now for all apex-minor-free graphs.</p>
+          
+          <p>Another way to view the necessary decomposition of Baker’s and Eppstein’s approaches is that the vertices or edges of the graph can be split into any number \( k \) of pieces such that deleting any one of the pieces results in a graph of bounded treewidth (where the bound depends on \( k \)). Such decompositions in fact exist for arbitrary graphs excluding any fixed minor \( H \), and they can be found in polynomial time. This approach generalizes the Baker-Eppstein PTASs described above to handle general \( H \)-minor-free graphs.</p>
+          
+          <p>This decomposition approach is effectively limited to deletion-closed problems, whose optimal solution only improves when deleting edges or vertices from the graph. Another decomposition approach targets contraction-closed problems, whose optimal solution only improves when contracting edges. These problems include classic problems such as dominating set and its variations, the Traveling Salesman Problem, subset TSP, minimum Steiner tree, and minimum-weight \( c \)-edge-connected submultigraph. PTASs have been obtained for these problems in planar graphs and in bounded-genus graphs by showing that the edges can be decomposed into any number \( k \) of pieces such that contracting any one piece results in a bounded-treewidth graph (where the bound depends on \( k \)).</p>          
+
+        </div>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Applications</h3>
+        <div class="content has-text-justified">
+
+          <p>Most applications of Baker’s approach have been limited to optimization problems arising from “local” properties (such as those definable in first-order logic). Intuitively, such local properties can be decided by locally checking every constant-size neighborhood. Baker’s approach is generalized to obtain PTASs for nonlocal problems, in particular, the connected dominating set. This generalization requires the use of two different techniques. The first technique is to use an \( \epsilon \)-fraction of a constant-factor (or even logarithmic-factor) approximation to the problem as a “backbone” for achieving the needed nonlocal property. The second technique is to use subproblems that overlap by \( \Theta(\log n) \) layers instead of the usual \( \Theta(1) \) in Baker’s approach.</p>
+          
+          <p>Despite this advance in applying Baker’s approach to more general problems, the planar-separator approach can still handle some different problems. Recall, though, that the planar-separator approach was limited to problems in which the optimal solution is at least some constant factor times \( n \). This limitation has been overcome for a wide range of problems, in particular obtaining a PTAS for the feedback vertex set, to which neither Baker’s approach nor the planar-separator approach could previously apply. This result is based on evenly dividing the optimum solution instead of the whole graph, using a relation between treewidth and the optimal solution value to bound the treewidth of the graph, and thus obtaining an \( O(\sqrt{\text{OPT}}) \) separator instead of an \( O(\sqrt{n}) \) separator. The \( O(\sqrt{\text{OPT}}) \) bound on treewidth follows from bidimensionality theory. We can divide the optimum solution into roughly even pieces, without knowing the optimum solution, by using existing constant-factor (or even logarithmic-factor) approximations for the problem. At the base of the recursion, pieces no longer have bounded size but do have bounded treewidth, so fast fixed-parameter algorithms can be used to construct optimal solutions.</p>          
+
+        </div>
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Open Problems</h3>
+        <div class="content has-text-justified">
+
+          <p>An intriguing direction for future research is to build a general theory for PTASs of subset problems. Although PTASs for subset TSP and Steiner tree have recently been obtained for planar graphs, several open problems of this kind remain, such as the subset feedback vertex set.</p>
+          
+          <p>Another instructive problem is to understand the extent to which Baker’s approach can be applied to nonlocal problems. For example, there is a modification of the approach that handles the nonlocal problem of the connected dominating set, but currently, the only known PTAS for the feedback vertex set in planar graphs follows the separator approach.</p>
+
+        </div>
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+
+    <div class="columns is-centered">
+      
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">References</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            <ol>
+              <li>Baker, Brenda S. (1994). Approximation Algorithms for NP-Complete Problems on Planar Graphs. <i>Journal of the ACM</i>, 41, January 1994, pp. 153-180.</li>
+            
+              <li>Lipton, R. J. and Tarjan, R. E. (1979). A Separator Theorem for Planar Graphs. <i>SIAM Journal on Applied Mathematics</i>, 36(2), 177-189.</li>
+            
+              <li>Hopcroft, J. and Tarjan, R. (1974). Efficient Planarity Testing. <i>Journal of the ACM</i>, 21, pp. 549-568.</li>
+            
+              <li>Garey, M. R. and Johnson, D. S. (1979). <i>Computers and Intractability: A Guide to the Theory of NP-Completeness</i>. W.H. Freeman and Co., San Francisco, Calif.</li>
+            
+              <li>Bodlaender, Hans L. and Koster, Arie M. C. A. (2008). Combinatorial Optimization on Graphs of Bounded Treewidth. <i>Computing Journal</i>, 51, May 2008, pp. 255-269.</li>
+            
+              <li>Bodlaender, Hans L. (1998). A Partial k-Arboretum of Graphs with Bounded Treewidth. <i>Journal of Theoretical Computer Science</i>, 209, December 1998, pp. 1-45.</li>
+            </ol>            
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
