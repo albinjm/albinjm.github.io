@@ -33,7 +33,7 @@ layout: homepage
 -->
 <h4 style="margin:0 10px 0;">Technical Skills</h4>
 
-- Languages：C/C++, Python, Java, Dart, LaTeX
+- Languages：C/C++, Python, Java, Dart
 - Data Science：NumPy, Pandas, Matplotlib, Scipy, OpenCV-Py, Sklearn, SQL
 - Development：Django, JS, HTML, CSS, React, Node, Flutter
 - Software：Git, Wireshark, CUDA Toolkit, NVIDIA HPC SDK
