@@ -8,7 +8,7 @@ main:
     pdf: ./assets/files/CS402_Presentation_Slides.pdf
     web: 
     image: ./assets/img/Computational_Complexity_Introduction_121124.gif
-    notes: Offline（20+ people, 30 minutes）
+    notes: Offline (20+ people, 30 minutes)
 
  # - title: Markdown 和 Zotero 的推介与应用实践
  #   authors: 
