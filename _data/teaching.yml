@@ -5,7 +5,7 @@ main:
     conference_short: Theory of Computation
     conference: November 12, 2024
     abstract: This presentation on Computational Complexity examined the resources required for solving computational problems, focusing on time and space complexity. It categorized problems into classes like P, NP, and PSPACE, enhancing understanding of algorithm efficiency.
-    pdf: ./assets/files/CS402_Presentation_Slides.pdf
+    pdf: ./assets/files/Albin James Maliakal Computational Complexity Intro Slides.pdf
     web: 
     image: ./assets/img/Computational_Complexity_Introduction_121124.gif
     notes: Offline (20+ people, 30 minutes)
