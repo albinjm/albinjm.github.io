@@ -3,7 +3,7 @@ main:
    - title: ChromaCut
      authors: 
      project_short: Image Segmentation
-     project: ChromaCut is a cutting-edge toolkit for high-precision image segmentation, combining superpixel over-segmentation and graph-based techniques like the Boykov-Kolmogorov (Min-cut/Max-flow) algorithm. It transforms images into segmented outputs by first dividing them into superpixels for detailed analysis, then applying graph-based methods for accuracy. The toolkit uses CIDE2000 for color evaluation and foreground extraction, enhancing segmentation precision across diverse images.
+     project: ChromaCut is a cutting-edge toolkit for high-precision image segmentation, integrating advanced superpixel over-segmentation and graph-based techniques like the Boykov-Kolmogorov (Min-cut/Max-flow) algorithm. It processes images by first dividing them into superpixels for detailed analysis, then applies graph-based methods for accurate segmentation. Using CIDE2000 for color evaluation and foreground extraction, it enhances segmentation precision across diverse image types.
      pdf: ./assets/files/IJITEE_2019.pdf
      web: https://github.com/albinjm/ChromaCut
      image: ./assets/img/ChromaCut.gif
