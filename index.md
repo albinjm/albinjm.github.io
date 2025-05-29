@@ -40,7 +40,7 @@ layout: homepage
 
 {% include_relative _includes/blogs.md %}
 
-{% include_relative _includes/wp.md %}
+{% include_relative _includes/publications.md %}
 
 {% include_relative _includes/teaching.md %}
 
