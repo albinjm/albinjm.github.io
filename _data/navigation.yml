@@ -19,6 +19,9 @@ main:
   - title: "Teaching"
     url: ./#teaching
 
+  - title: "Publications & WP"
+    url: ./#publications
+
   - title: "Blogs"
     url: ./#blogs
 
