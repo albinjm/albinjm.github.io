@@ -24,8 +24,8 @@ main:
    conference_short: Computational Finance
    conference: Computational Finance
    pdf: 
-   page: 
-   image: ./assets/files/Jia2023.png
+   page: https://github.com/albinjm/QuantHedge-MM
+   image: 
    notes: Working Paper
 
   # - title:  地方公共债务与企业不动产投资：效应与机制
