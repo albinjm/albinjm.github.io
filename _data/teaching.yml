@@ -1,5 +1,15 @@
 main:
 
+  - title: Design and Comparative Analysis of Advanced Quantitative Trading Strategies
+    authors: 
+    conference_short: Computational Finance
+    conference: April 22, 2025
+    abstract: This presentation examined advanced quantitative trading strategies in Python, focusing on momentum and mean reversion models applied to stock data. It covered data collection, preprocessing, technical indicators, and analyzed performance metrics and algorithmic trading outcomes.
+    pdf: ./assets/files/Albin James Maliakal Advanced Quantitative Trading Slides.pdf
+    web: https://github.com/albinjm/SwitchGain
+    image: ./assets/img/Advanced_Quantitative_Trading_Strategies_220425.gif
+    notes: Offline (30 people, 30 minutes)
+
   - title: A Brief Introduction to Computational Complexity
     authors: 
     conference_short: Theory of Computation
@@ -9,16 +19,6 @@ main:
     web: 
     image: ./assets/img/Computational_Complexity_Introduction_121124.gif
     notes: Offline (20+ people, 30 minutes)
-
-  - title: Design and Comparative Analysis of Advanced Quantitative Trading Strategies
-    authors: 
-    conference_short: Computational Finance
-    conference: April 22, 2025
-    abstract: This presentation examined advanced quantitative trading strategies in Python, focusing on momentum and mean reversion models applied to AAPL stock data. It covered data collection (Yahoo Finance), preprocessing, technical indicators (RSI, Bollinger Bands), and analyzed performance metrics and algorithmic trading outcomes.
-    pdf: ./assets/files/Albin James Maliakal Advanced Quantitative Trading Slides.pdf
-    web: 
-    image: ./assets/img/Advanced_Quantitative_Trading_Strategies_220425.gif
-    notes: Offline (30 people, 30 minutes)
 
  # - title: Markdown 和 Zotero 的推介与应用实践
  #   authors: 
