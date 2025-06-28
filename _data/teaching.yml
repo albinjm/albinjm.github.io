@@ -1,5 +1,15 @@
 main:
 
+  - title: Intelligent Traffic Monitoring and Control
+    authors: 
+    conference_short: Urban Computing
+    conference: May 28, 2025
+    abstract: This presentation explored a hybrid IoT architecture (V2X, RSUs, edge-cloud layers) paired with Q-Learning for adaptive traffic control. It detailed real-time data flows, modular design, and the synergy of distributed sensing with reinforcement learning.
+    pdf: ./assets/files/Albin James Maliakal Intelligent Traffic Monitoring Slides.pdf
+    web: 
+    image: ./assets/img/Intelligent_Traffic_Monitoring_280525.gif
+    notes: Offline (20+ people, 30 minutes)
+
   - title: Design and Comparative Analysis of Advanced Quantitative Trading Strategies
     authors: 
     conference_short: Computational Finance
@@ -8,7 +18,7 @@ main:
     pdf: ./assets/files/Albin James Maliakal Advanced Quantitative Trading Slides.pdf
     web: https://github.com/albinjm/SwitchGain
     image: ./assets/img/Advanced_Quantitative_Trading_Strategies_220425.gif
-    notes: Offline (30 people, 30 minutes)
+    notes: Offline (30+ people, 30 minutes)
 
   - title: A Brief Introduction to Computational Complexity
     authors: 
