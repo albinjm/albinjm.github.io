@@ -6,7 +6,7 @@ main:
     conference: May 28, 2025
     abstract: This presentation introduced an intelligent traffic monitoring system combining IoT architecture (V2X, RSUs, edge-cloud layers) with Q-Learning for dynamic signal optimization. It examined real-time data flows, modular design, and the synergy of distributed sensing with reinforcement learning.
     pdf: ./assets/files/Albin James Maliakal Intelligent Traffic Monitoring Slides.pdf
-    web: 
+    web: https://github.com/albinjm/DeepTrafficQ
     image: ./assets/img/Intelligent_Traffic_Monitoring_280525.gif
     notes: Offline (20+ people, 30 minutes)
 
