@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-language" content="en-us">
+  <meta name="description"
+        content="Explore computational complexity theory through engaging analogies - understand P vs NP, complexity classes, and algorithm efficiency. Learn why some problems are inherently hard and how complexity theory shapes computing.">
+  <meta name="keywords" content="Albin James Maliakal, computational complexity, P vs NP, complexity classes, algorithm efficiency, polynomial time, NP-complete, space-time complexity, Turing machines, algorithm design, problem reduction, computational limits, Cook-Levin theorem, computational hierarchy, big O notation, algorithm complexity, computational theory" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Complexity Zoo: Where Algorithmic Animals Show Their True Colors</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://albinjm.github.io/#blogs">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">The Complexity Zoo: Where Algorithmic Animals Show Their True Colors</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://albinjm.github.io/">Albin James Maliakal</a><!-- <sup>1</sup> -->
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">June 30, 2025 · 30 minute read</span>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Recipes for Computational Chaos</h2>
+        <div class="content has-text-justified">
+                <p class="is-size-5">
+                    Imagine you're baking cookies with a friend. Some recipes are simple - mix, drop, bake. Others require precise temperatures, 
+                    exotic ingredients, and hours of chilling. <strong>Computational complexity</strong> is like understanding why some "recipe problems" 
+                    are easy while others make even the smartest chefs scratch their heads.
+                </p>
+
+                <div class="box has-background-info-light" style="border-left: 5px solid #3273dc;">
+                    <p>
+                        <span class="icon-text">
+                            <span class="icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </span>
+                            <span>
+                                At its core, complexity theory asks: <em>"How much 'brain power' does a problem need as it gets bigger?"</em>
+                            </span>
+                        </span>
+                    </p>
+                </div>
+
+                <div class="columns is-vcentered" style="margin: 1.5rem 0;">
+                    <div class="column is-one-third">
+                        <figure class="image">
+                            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGg1eDM5ajRzNzF6ZW44NDdxN2tzMmdtdW90eGd3aTZzZ2k3YzFreSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3GnCVaJAGhfJ6/giphy.gif" alt="Simple puzzle being solved quickly">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <p>
+                            <strong>Easy problems</strong> are like counting jellybeans in a jar - whether there's 10 or 10,000, 
+                            you can eyeball it about equally fast. Computers handle some problems this way too!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="columns is-vcentered" style="margin: 1.5rem 0;">
+                    <div class="column">
+                        <p>
+                            <strong>Tricky problems</strong> grow like a game of telephone - adding just a few more people makes the message 
+                            exponentially harder to pass correctly. Many real-world optimization problems behave this way!
+                        </p>
+                    </div>
+                    <div class="column is-one-third">
+                        <figure class="image">
+                            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExenR6NXJkZmh5bWduaG15dGJwcGluZzZheWpldnl2bGd6YjdsMHJjOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qqdT1AtOmh0L24GZN6/giphy.gif" alt="Complex puzzle being solved slowly">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="notification is-warning is-light">
+                    <p>
+                        Here's the million-dollar cookie (literally!): <strong>Are all problems with easy-to-check solutions also easy to solve?</strong> 
+                        This <a href="https://www.claymath.org/millennium-problems/" target="_blank">P vs NP question</a> is so important it carries 
+                        a $1M prize for its solution!
+                    </p>
+                </div>
+
+                <p>
+                    Just like cooks need to know their oven's limits, computer scientists use complexity theory to:
+                </p>
+                <ul>
+                    <li>🚀 Build faster algorithms (better "recipes")</li>
+                    <li>🔐 Create secure encryption (hard-to-solve "ingredient puzzles")</li>
+                    <li>🧠 Understand the fundamental limits of computation</li>
+                </ul>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">The Fascinating World of Computational Complexity</h2>
+          <div class="content has-text-justified">
+            <p>
+                Step into a vast mathematical marketplace where each stall represents a different computational challenge - complexity theory gives you the price tags showing how much time and memory each will cost you! This field is the ultimate classifier, sorting problems into neat categories based on their hunger for resources. Want to know why some problems are stubbornly difficult while others solve in a blink? That's what we study here!
+            </p>
+            <p>
+                For a deeper dive, check out this <a href="https://www.claymath.org/millennium/p-vs-np/" target="_blank">Clay Mathematics Institute overview</a> on why these questions matter.
+            </p>
+          </div>
+
+        <h3 class="title is-4">Problem Buffet: From Simple to Mind-Bending</h3>
+        <div class="content has-text-justified">
+            <p>
+                Let's tour our computational menu - these aren't just abstract concepts, but problems you encounter daily:
+            </p>
+            <ul class="fun-list">
+                <li><strong>Prime Time:</strong> Is 17 prime? Easy. Is 2<sup>82,589,933</sup>-1 prime? That took <a href="https://www.mersenne.org/primes/?press=M82589933" target="_blank">distributed computing</a>!</li>
+                <li><strong>Average Joe:</strong> Calculate your GPA - simple arithmetic, right?</li>
+                <li><strong>Sorting Hat:</strong> Organize your Spotify playlist by song length - different algorithms have different speeds!</li>
+                <li><strong>Road Trip!</strong> Google Maps finding the fastest route is solving a famous complexity problem live</li>
+                <li><strong>Puzzle Master:</strong> Sudoku, crossword puzzles - all constraint satisfaction problems</li>
+                <li><strong>Graph Guru:</strong> 
+                    <ul>
+                        <li>Is your social network fully connected? (Six Degrees of Kevin Bacon)</li>
+                        <li>Can you color a map with just 3 colors? (<a href="https://en.wikipedia.org/wiki/Four_color_theorem" target="_blank">Spoiler</a>: 4 always works)</li>
+                        <li>Find a group of 5 mutual friends in your network - that's a clique!</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="title is-4">The Binary Backbone: How Computers See Problems</h3>
+        <div class="content has-text-justified">
+            <p>
+                At their core, computers only understand two things: 0 and 1. So we translate every problem into this binary language:
+            </p>
+            
+            <div style="
+                background: #f8f9fa;
+                border-radius: 8px;
+                border-left: 4px solid #6c757d;
+                padding: 1.5rem;
+                margin: 1rem 0;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            ">
+                <div style="
+                    text-align: center;
+                    margin-bottom: 1.25rem;
+                    padding: 0.75rem;
+                    background: white;
+                    border-radius: 6px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                ">
+                    <span style="
+                        font-size: 1.2rem;
+                        font-family: 'Latin Modern Math', 'Cambria Math', serif;
+                    ">
+                        \[
+                        \Pi : \{0,1\}^* \to \{0,1\}^*
+                        \]
+                    </span>
+                </div>
+                
+                <p style="
+                    color: #495057;
+                    font-weight: 500;
+                    margin-bottom: 1rem;
+                ">
+                    Think of this as a magic box where:
+                </p>
+                
+                <ul style="
+                    color: #343a40;
+                    padding-left: 1.5rem;
+                    margin: 0;
+                ">
+                    <li style="margin-bottom: 0.5rem;">
+                        You feed in binary strings (your problem encoded in 0s and 1s)
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                        The box spits out binary answers
+                    </li>
+                </ul>
+            </div>
+
+            <h4>The Algorithmic Chefs</h4>
+            <p>
+                An <strong>algorithm</strong> is like a recipe for our magic box. A good recipe:
+            </p>
+            <ol>
+                <li>Works for all possible ingredients (inputs)</li>
+                <li>Doesn't take forever (time complexity)</li>
+                <li>Doesn't need a kitchen the size of Texas (space complexity)</li>
+            </ol>
+            
+            <p>
+                This is why we care about complexity classes:
+                <span class="tags">
+                    <span class="tag is-primary">P</span>
+                    <span class="tag is-info">NP</span>
+                    <span class="tag is-warning">PSPACE</span>
+                    <span class="tag is-danger">EXP</span>
+                </span>
+                They're like difficulty levels in a video game - each representing problems with similar resource needs.
+            </p>
+            
+            <p>
+                Dive deeper into complexity classes at the <a href="https://complexityzoo.net/" target="_blank">Complexity Zoo</a>!
+            </p>
+        </div>
+      </div>
+    </div>
+    <!-- /Animation. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">The Problem Family Tree</h2>
+          <div class="content has-text-justified">
+            <p>
+                Just like ice cream comes in different flavors, computational problems come in different types - each with its own special characteristics! Let's explore this delicious variety using graph coloring as our example. Imagine you're coloring a map (or maybe coloring countries in <a href="https://en.wikipedia.org/wiki/Map_coloring" target="_blank">Risk</a>) where no neighboring countries can share the same color.
+            </p>
+          </div>
+
+        <h3 class="title is-4">Meet the Problem Family</h3>
+        <div class="content has-text-justified">
+          <div class="complexity-outfits" style="font-family: 'Helvetica Neue', Arial, sans-serif; max-width: 800px; margin: 0 auto; color: #333;">
+              <p style="font-size: 1.1em; text-align: center; margin-bottom: 2em; color: #555; font-weight: 300;">
+                  Here's how our graph coloring problem dresses up in different outfits:
+              </p>
+
+              <!-- Decision Problem -->
+              <div class="problem-card" 
+                  style="border-bottom: 1px solid #eee; padding: 1em 0; transition: all 0.2s ease;"
+                  onmouseover="this.style.backgroundColor='#fafafa'" 
+                  onmouseout="this.style.backgroundColor='transparent'">
+                  <div style="display: flex; align-items: baseline; cursor: pointer;"
+                      onclick="this.parentNode.querySelector('.details').classList.toggle('expanded')">
+                      <h3 style="margin: 0; font-size: 1.1em; font-weight: 500; color: #2c3e50;">
+                          <span style="display: inline-block; width: 1.2em;">•</span>
+                          The Yes/No Twin (Decision Problem)
+                      </h3>
+                      <span style="margin-left: auto; color: #7f8c8d; font-size: 0.9em;">Click for details</span>
+                  </div>
+                  <div class="details" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                      <div style="padding: 0.8em 0 0.8em 1.2em;">
+                          <p style="margin: 0.8em 0; font-style: italic; color: #555;">
+                              "Can I color this map with 4 colors?"
+                          </p>
+                          <div style="font-family: 'Courier New', monospace; color: #2980b9; margin: 0.8em 0;">
+                              \( \text{Can color } G \text{ with } k \text{ colors?} \)
+                          </div>
+                          <p style="color: #7f8c8d; font-size: 0.9em; margin: 0.8em 0;">
+                              The shy sibling who only answers YES or NO.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Search Problem -->
+              <div class="problem-card" 
+                  style="border-bottom: 1px solid #eee; padding: 1em 0; transition: all 0.2s ease;"
+                  onmouseover="this.style.backgroundColor='#fafafa'" 
+                  onmouseout="this.style.backgroundColor='transparent'">
+                  <div style="display: flex; align-items: baseline; cursor: pointer;"
+                      onclick="this.parentNode.querySelector('.details').classList.toggle('expanded')">
+                      <h3 style="margin: 0; font-size: 1.1em; font-weight: 500; color: #2c3e50;">
+                          <span style="display: inline-block; width: 1.2em;">•</span>
+                          The Show-Off (Search Problem)
+                      </h3>
+                      <span style="margin-left: auto; color: #7f8c8d; font-size: 0.9em;">Click for details</span>
+                  </div>
+                  <div class="details" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                      <div style="padding: 0.8em 0 0.8em 1.2em;">
+                          <p style="margin: 0.8em 0; font-style: italic; color: #555;">
+                              "Give me an actual 4-coloring of this map!"
+                          </p>
+                          <div style="font-family: 'Courier New', monospace; color: #2980b9; margin: 0.8em 0;">
+                              \( \text{Show a } k\text{-coloring of } G \)
+                          </div>
+                          <p style="color: #7f8c8d; font-size: 0.9em; margin: 0.8em 0;">
+                              The overachiever who doesn't just tell you it's possible - they'll do it for you!
+                          </p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Counting Problem -->
+              <div class="problem-card" 
+                  style="border-bottom: 1px solid #eee; padding: 1em 0; transition: all 0.2s ease;"
+                  onmouseover="this.style.backgroundColor='#fafafa'" 
+                  onmouseout="this.style.backgroundColor='transparent'">
+                  <div style="display: flex; align-items: baseline; cursor: pointer;"
+                      onclick="this.parentNode.querySelector('.details').classList.toggle('expanded')">
+                      <h3 style="margin: 0; font-size: 1.1em; font-weight: 500; color: #2c3e50;">
+                          <span style="display: inline-block; width: 1.2em;">•</span>
+                          The Accountant (Counting Problem)
+                      </h3>
+                      <span style="margin-left: auto; color: #7f8c8d; font-size: 0.9em;">Click for details</span>
+                  </div>
+                  <div class="details" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                      <div style="padding: 0.8em 0 0.8em 1.2em;">
+                          <p style="margin: 0.8em 0; font-style: italic; color: #555;">
+                              "How many different 4-colorings exist for this map?"
+                          </p>
+                          <div style="font-family: 'Courier New', monospace; color: #2980b9; margin: 0.8em 0;">
+                              \( \text{Count all } k\text{-colorings of } G \)
+                          </div>
+                          <p style="color: #7f8c8d; font-size: 0.9em; margin: 0.8em 0;">
+                              The meticulous one who keeps track of every possible solution.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Optimization Problem -->
+              <div class="problem-card" 
+                  style="border-bottom: 1px solid #eee; padding: 1em 0; transition: all 0.2s ease;"
+                  onmouseover="this.style.backgroundColor='#fafafa'" 
+                  onmouseout="this.style.backgroundColor='transparent'">
+                  <div style="display: flex; align-items: baseline; cursor: pointer;"
+                      onclick="this.parentNode.querySelector('.details').classList.toggle('expanded')">
+                      <h3 style="margin: 0; font-size: 1.1em; font-weight: 500; color: #2c3e50;">
+                          <span style="display: inline-block; width: 1.2em;">•</span>
+                          The Minimalist (Optimization Problem)
+                      </h3>
+                      <span style="margin-left: auto; color: #7f8c8d; font-size: 0.9em;">Click for details</span>
+                  </div>
+                  <div class="details" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                      <div style="padding: 0.8em 0 0.8em 1.2em;">
+                          <p style="margin: 0.8em 0; font-style: italic; color: #555;">
+                              "What's the smallest number of colors I can use?"
+                          </p>
+                          <div style="font-family: 'Courier New', monospace; color: #2980b9; margin: 0.8em 0;">
+                              \( \text{Find minimal } k \text{ for } G \)
+                          </div>
+                          <p style="color: #7f8c8d; font-size: 0.9em; margin: 0.8em 0;">
+                              The efficiency expert who wants to use as few resources as possible.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <style>
+              .details.expanded {
+                  max-height: 300px !important;
+              }
+          </style>
+
+          <script>
+              document.querySelectorAll('.problem-card').forEach(card => {
+                  card.addEventListener('click', function() {
+                      if (this.querySelector('.details').classList.contains('expanded')) {
+                          this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                      }
+                  });
+              });
+          </script>
+            <div class="box has-background-info-light" style="border-left: 5px solid #3273dc; margin: 1.5rem 0;">
+                <div class="icon-text">
+                    <span class="icon has-text-info">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </span>
+                    <span>
+                        Fun fact: The <a href="https://en.wikipedia.org/wiki/Four_color_theorem" target="_blank">Four Color Theorem</a> 
+                        tells us <strong>any map can be colored with just 4 colors</strong> without any bordering countries sharing the same color!
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="title is-4">Why Decision Problems Rule the School</h3>
+        <div class="content has-text-justified">
+            <p>
+                Decision problems are like the popular kids in complexity theory - here's why:
+            </p>
+            
+            <div style="
+                background: #f8f9fa;
+                border-radius: 8px;
+                border-left: 4px solid #6c757d;
+                padding: 1.5rem;
+                margin: 1rem 0;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            ">
+                <div style="
+                    text-align: center;
+                    margin-bottom: 1.25rem;
+                    padding: 0.75rem;
+                    background: white;
+                    border-radius: 6px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                ">
+                    <span style="
+                        font-size: 1.2rem;
+                        font-family: 'Latin Modern Math', 'Cambria Math', serif;
+                    ">
+                        \[
+                        \Pi : \{0,1\}^* \to \{\text{YES}, \text{NO}\}
+                        \]
+                    </span>
+                </div>
+                
+                <p style="
+                    color: #495057;
+                    font-weight: 500;
+                    margin-bottom: 1rem;
+                ">
+                    Think of this as a super strict teacher who only accepts:
+                </p>
+                
+                <ul style="
+                    color: #343a40;
+                    padding-left: 1rem;
+                    margin: 0;
+                    list-style-type: none;
+                ">
+                    <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="color: #2e7d32; font-size: 1.1em;">✅</span>
+                        <span>(<strong style="color: #2e7d32;">YES</strong>, 1) — You pass!</span>
+                    </li>
+                    <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="color: #c62828; font-size: 1.1em;">❌</span>
+                        <span>(<strong style="color: #c62828;">NO</strong>, 0) — Try again!</span>
+                    </li>
+                </ul>
+            </div>
+
+            <h4>The Language of Computation</h4>
+            <p>
+                Every decision problem is secretly a language recognition task:
+                \[
+                L = \{ x \in \{0,1\}^* \mid \Pi(x) = 1 \}
+                \]
+                Imagine \( L \) as an exclusive club with strict bouncers - only certain binary strings get in! This connection between problems and languages is why computer scientists love <a href="https://en.wikipedia.org/wiki/Formal_language" target="_blank">formal language theory</a>.
+            </p>
+            
+            <p>
+                <strong>Pro Tip:</strong> Most complexity classes (like P and NP) are defined using decision problems because they're simpler to analyze - like training wheels for complexity theory!
+            </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">The Great Complexity Bake-Off</h2>
+          <div class="content has-text-justified">
+            <p>
+                Consider computation as an Iron Chef challenge: problems are secret ingredients, algorithms are recipes, and your runtime is the ticking clock determining your success. Complexity theory is our judging panel, determining which recipes are "easy" (polynomial-time) and which are "impossibly difficult" (exponential-time). Just like in <a href="https://en.wikipedia.org/wiki/The_Great_British_Bake_Off" target="_blank">baking shows</a>, the key is measuring how requirements scale as problems get bigger!
+            </p>
+          </div>
+
+        <h3 class="title is-4">The Pantry of Computational Resources</h3>
+        <div class="content has-text-justified">
+            <p>
+                Every algorithm needs ingredients to work with. Here's what's in our computational kitchen:
+            </p>
+              <ul class="fun-list" style="list-style: none; padding-left: 0;">
+                  <li class="interactive-item" style="margin-bottom: 1.5rem; padding: 1rem; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5f5f5'" 
+                      onmouseout="this.style.backgroundColor='transparent'"
+                      onclick="toggleTooltip(this)">
+                      <strong style="color: #3273dc;">⏱️ Time:</strong> 
+                      <p style="display: inline;">The clock is ticking! How many steps until your algorithm finishes?</p>
+                      <div class="tooltip" style="display: none; margin-top: 0.5rem; padding: 0.5rem; background: #fff9e6; border-left: 3px solid #ffdd57; border-radius: 4px;">
+                          <div class="tag is-warning is-light">Like counting how many times you stir the batter</div>
+                          <p style="margin-top: 0.3rem; font-size: 0.9em;">Fun fact: A linear-time algorithm (<code>O(n)</code>) for 1M items takes ~1M steps!</p>
+                      </div>
+                  </li>
+
+                  <li class="interactive-item" style="margin-bottom: 1.5rem; padding: 1rem; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5f5f5'" 
+                      onmouseout="this.style.backgroundColor='transparent'"
+                      onclick="toggleTooltip(this)">
+                      <strong style="color: #00d1b2;">🗃️ Space:</strong> 
+                      <p style="display: inline;">How much counter space (memory) does your recipe need?</p>
+                      <div class="tooltip" style="display: none; margin-top: 0.5rem; padding: 0.5rem; background: #f0fdf4; border-left: 3px solid #48c774; border-radius: 4px;">
+                          <div class="tag is-success is-light">Like needing a bigger kitchen for complex dishes</div>
+                          <p style="margin-top: 0.3rem; font-size: 0.9em;">Example: Merge Sort uses <code>O(n)</code> extra space!</p>
+                      </div>
+                  </li>
+
+                  <li class="interactive-item" style="margin-bottom: 1.5rem; padding: 1rem; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5f5f5'" 
+                      onmouseout="this.style.backgroundColor='transparent'"
+                      onclick="toggleTooltip(this)">
+                      <strong style="color: #b86bff;">🎲 Randomness:</strong> 
+                      <p style="display: inline;">The secret spice! Some algorithms use random choices like a chef's intuition.</p>
+                      <div class="tooltip" style="display: none; margin-top: 0.5rem; padding: 0.5rem; background: #f6f2ff; border-left: 3px solid #b86bff; border-radius: 4px;">
+                          <div class="tag is-info is-light">Think "a pinch of salt" vs exact measurements</div>
+                          <p style="margin-top: 0.3rem; font-size: 0.9em;">Used in QuickSort and cryptography!</p>
+                      </div>
+                  </li>
+
+                  <li class="interactive-item" style="margin-bottom: 1.5rem; padding: 1rem; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5f5f5'" 
+                      onmouseout="this.style.backgroundColor='transparent'"
+                      onclick="toggleTooltip(this)">
+                      <strong style="color: #ff3860;">✨ Non-determinism:</strong> 
+                      <p style="display: inline;">The magical "what-if" machine that can guess perfectly!</p>
+                      <div class="tooltip" style="display: none; margin-top: 0.5rem; padding: 0.5rem; background: #fff0f3; border-left: 3px solid #ff3860; border-radius: 4px;">
+                          <div class="tag is-danger is-light">Like a cooking genie who always chooses right</div>
+                          <p style="margin-top: 0.3rem; font-size: 0.9em;">NP problems can be verified quickly if you guess the solution!</p>
+                      </div>
+                  </li>
+
+                  <li class="interactive-item" style="margin-bottom: 1.5rem; padding: 1rem; border-radius: 8px; transition: all 0.3s ease;"
+                      onmouseover="this.style.backgroundColor='#f5f5f5'" 
+                      onmouseout="this.style.backgroundColor='transparent'">
+                      <strong style="color: #7957d5;">🔮 Bonus Ingredients:</strong> 
+                      <p style="display: inline;">Quantum entanglement, parallel processors – the fancy equipment of tomorrow's kitchens!</p>
+                  </li>
+              </ul>
+
+              <script>
+              function toggleTooltip(element) {
+                  const tooltip = element.querySelector('.tooltip');
+                  tooltip.style.display = tooltip.style.display === 'none' ? 'block' : 'none';
+              }
+              </script>
+        </div>
+
+        <h3 class="title is-4">The Growth Rate Leaderboard</h3>
+        <div class="content has-text-justified">
+            <p>
+                We don't care about small recipes - we want to know how things scale when cooking for a stadium! That's asymptotic analysis:
+            </p>
+            
+            <div class="box">
+                <p><strong>Big-O Notation Cheat Sheet:</strong></p>
+                <table class="table is-bordered">
+                    <tr>
+                        <td>\( O(1) \)</td>
+                        <td>Constant time</td>
+                        <td>Instant noodles of algorithms</td>
+                    </tr>
+                    <tr>
+                        <td>\( O(\log n) \)</td>
+                        <td>Logarithmic</td>
+                        <td>Finding a name in a phone book</td>
+                    </tr>
+                    <tr>
+                        <td>\( O(n) \)</td>
+                        <td>Linear</td>
+                        <td>Reading every page in a book once</td>
+                    </tr>
+                    <tr>
+                        <td>\( O(n^2) \)</td>
+                        <td>Quadratic</td>
+                        <td>Checking every pair of people in a room</td>
+                    </tr>
+                    <tr>
+                        <td>\( O(2^n) \)</td>
+                        <td>Exponential</td>
+                        <td>Trying every possible combination lock</td>
+                    </tr>
+                </table>
+                <p>Learn more about <a href="https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-o-notation" target="_blank">Big-O notation</a> with examples!</p>
+            </div>
+
+            <h4>The Complexity Speed Dating Chart</h4>
+            <p>
+                Here's how different complexity classes flirt with problem sizes:
+                <div class="complexity-table" style="max-width: 600px; margin: 1em auto;">
+                    <table class="table is-bordered is-striped">
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>When n=100</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>\(O(1)\)</td>
+                                <td><span class="tag is-success is-light">1 operation</span></td>
+                            </tr>
+                            <tr>
+                                <td>\(O(\log n)\)</td>
+                                <td><span class="tag is-info is-light">7 operations</span></td>
+                            </tr>
+                            <tr>
+                                <td>\(O(n)\)</td>
+                                <td><span class="tag is-warning is-light">100 operations</span></td>
+                            </tr>
+                            <tr>
+                                <td>\(O(n^2)\)</td>
+                                <td><span class="tag is-danger is-light">10,000 operations</span></td>
+                            </tr>
+                            <tr>
+                                <td>\(O(2^n)\)</td>
+                                <td>
+                                    <div class="tooltip is-tooltip-multiline" data-tooltip="That's more than atoms in the observable universe!">
+                                        <span class="tag is-danger">\[ 1.2677 \times 10^{30}\; \text{operations!} \]</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="has-text-centered">See why exponential time is scary?</p>
+            </p>
+        </div>
+
+        <h3 class="title is-4">The Complexity Family Tree</h3>
+        <div class="content has-text-justified">
+            <p>
+                Meet the who's who of complexity classes, from the speedy to the sluggish:
+            </p>
+            
+            <div class="complexity-tree">
+                <div class="complexity-node is-primary">
+                    \( O(1) \) - Constant<br>
+                    <small>Always fast, no matter what</small>
+                </div>
+                <div class="complexity-arrow">↓</div>
+                <div class="complexity-node is-info">
+                    \( O(\log n) \) - Logarithmic<br>
+                    <small>Slows down gracefully</small>
+                </div>
+                <div class="complexity-arrow">↓</div>
+                <div class="complexity-node is-success">
+                    \( O(n) \) - Linear<br>
+                    <small>Grows steadily with input</small>
+                </div>
+                <div class="complexity-arrow">↓</div>
+                <div class="complexity-node is-warning">
+                    \( O(n^2) \) - Quadratic<br>
+                    <small>Gets sluggish quickly</small>
+                </div>
+                <div class="complexity-arrow">↓</div>
+                <div class="complexity-node is-danger">
+                    \( O(2^n) \) - Exponential<br>
+                    <small>Basically unusable</small>
+                </div>
+                <div class="complexity-arrow">↓</div>
+                <div class="complexity-node is-dark">
+                    \( O(n!) \) - Factorial<br>
+                    <small>"How many ways can I fail?" time</small>
+                </div>
+            </div>
+
+            <div style="
+                background: #fffaf0;
+                border-radius: 10px;
+                border-left: 5px solid #ffc107;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+                padding: 1.25rem 1.5rem;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                line-height: 1.6;
+                margin: 0.5rem 0;
+            ">
+                <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                    <span style="color: #ff9800; font-size: 1.25rem; margin-top: 0.1rem;">
+                        ⏳
+                    </span>
+                    <div>
+                        <h3 style="
+                            color: #ff6f00;
+                            margin: 0 0 0.5rem 0;
+                            font-size: 1.1em;
+                            font-weight: 600;
+                        ">Fun Fact</h3>
+                        <p style="margin: 0 0 0.75rem 0; color: #5a4a30;">
+                            Factorial time <code style="
+                                background: #fff5e6;
+                                color: #e65100;
+                                padding: 0.2rem 0.4rem;
+                                border-radius: 4px;
+                                font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+                            ">O(n!)</code> grows <em style="color: #e65100; font-style: italic;">scary fast</em>!
+                        </p>
+                        
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <span style="
+                                background: #ffebee;
+                                color: #c62828;
+                                padding: 0.35rem 0.7rem;
+                                border-radius: 20px;
+                                font-size: 0.85em;
+                                font-weight: 600;
+                            ">
+                                n=20 → 20! ≈ 2.4×10¹⁸ ops
+                            </span>
+                            <span style="
+                                background: #e3f2fd;
+                                color: #1565c0;
+                                padding: 0.35rem 0.7rem;
+                                border-radius: 20px;
+                                font-size: 0.85em;
+                                font-weight: 600;
+                            ">
+                                More than stars in our galaxy!
+                            </span>
+                        </div>
+                        
+                        <p style="margin: 0; color: #5a4a30;">
+                            That's like trying every possible way to arrange a 20-course meal — even for small inputs, it's hopelessly slow!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">The Space-Time Complexity Continuum</h2>
+          <div class="content has-text-justified">
+            <p>
+                Welcome to the computational Olympics, where problems compete in two main events: <strong>time</strong> (how fast can you solve me?) and <strong>space</strong> (how much memory do I need?). Like athletes training for different sports, algorithms specialize in either speed or memory efficiency - but the real magic happens when we see how they interact!
+            </p>
+          </div>
+
+        <h3 class="title is-4">The Weight Classes of Computation</h3>
+        <div class="content has-text-justified">
+            <p>
+                Just as boxers have weight classes, problems have complexity classes based on their resource needs:
+            </p>
+            <div class="box has-background-white-ter" style="border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-radius: 10px; overflow: hidden;">
+                <div class="columns is-vcentered">
+                    <div class="column has-background-primary-light" style="border-right: 1px solid #e1e1e1; padding: 1.5rem;">
+                        <div class="icon-text mb-2">
+                            <span class="icon has-text-primary">
+                                <i class="fas fa-stopwatch"></i>
+                            </span>
+                            <h5 class="title is-5 has-text-primary">Time Division</h5>
+                        </div>
+                        <p class="has-text-grey-dark">
+                            \(\mathrm{TIME}(f(n))\) - The sprinting competition:
+                        </p>
+                        <p class="has-text-grey">
+                            <small>"How many steps before you finish?"</small>
+                        </p>
+                    </div>
+                    <div class="column has-background-info-light" style="padding: 1.5rem;">
+                        <div class="icon-text mb-2">
+                            <span class="icon has-text-info">
+                                <i class="fas fa-brain"></i>
+                            </span>
+                            <h5 class="title is-5 has-text-info">Space Division</h5>
+                        </div>
+                        <p class="has-text-grey-dark">
+                            \(\mathrm{SPACE}(f(n))\) - The memory weightlifting:
+                        </p>
+                        <p class="has-text-grey">
+                            <small>"How much mental workspace do you need?"</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p>
+                These are the basic training grounds for all computational problems. Want to go pro? Check out this <a href="https://complexityzoo.net/" target="_blank">Complexity Zoo</a> of all known complexity classes!
+            </p>
+        </div>
+
+        <h3 class="title is-4">The Champions League of Complexity</h3>
+        <div class="content has-text-justified">
+            <p>
+                Meet the superstar complexity classes that every computer scientist should know:
+            </p>
+            
+            <div class="complexity-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+    
+              <!-- Logarithmic Space -->
+              <div class="complexity-card" style="background: linear-gradient(135deg, #f6f9ff 0%, #e3eeff 100%); border-radius: 10px; overflow: hidden; border-left: 5px solid #3298dc; box-shadow: 0 4px 6px rgba(50,152,220,0.1);">
+                  <div class="card-header" style="background-color: #3298dc; padding: 1rem; color: white;">
+                      <div style="font-family: 'Courier New', monospace; font-size: 1.1rem; font-weight: bold;">
+                          \( L = \mathrm{SPACE}(\log n) \)
+                      </div>
+                  </div>
+                  <div class="card-content" style="padding: 1.5rem;">
+                      <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                          <span class="icon has-text-info" style="margin-right: 0.5rem;">
+                              <i class="fas fa-sd-card"></i>
+                          </span>
+                          <small style="color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+                              The memory-saver: Can solve problems using only logarithmic space - like remembering just a few numbers at a time!
+                          </small>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Polynomial Time -->
+              <div class="complexity-card" style="background: linear-gradient(135deg, #f6fff7 0%, #e3ffe6 100%); border-radius: 10px; overflow: hidden; border-left: 5px solid #48c774; box-shadow: 0 4px 6px rgba(72,199,116,0.1);">
+                  <div class="card-header" style="background-color: #48c774; padding: 1rem; color: white;">
+                      <div style="font-family: 'Courier New', monospace; font-size: 1.1rem; font-weight: bold;">
+                          \( P = \mathrm{TIME}(\mathrm{poly}(n)) \)
+                      </div>
+                  </div>
+                  <div class="card-content" style="padding: 1.5rem;">
+                      <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                          <span class="icon has-text-success" style="margin-right: 0.5rem;">
+                              <i class="fas fa-tachometer-alt"></i>
+                          </span>
+                          <small style="color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+                              The efficient champion: Solves problems in polynomial time - the gold standard for "practically solvable" problems.
+                          </small>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Polynomial Space -->
+              <div class="complexity-card" style="background: linear-gradient(135deg, #fffbf6 0%, #fff1e3 100%); border-radius: 10px; overflow: hidden; border-left: 5px solid #ffdd57; box-shadow: 0 4px 6px rgba(255,221,87,0.1);">
+                  <div class="card-header" style="background-color: #ffdd57; padding: 1rem; color: rgba(0,0,0,0.7);">
+                      <div style="font-family: 'Courier New', monospace; font-size: 1.1rem; font-weight: bold;">
+                          \( \mathrm{PSPACE} = \mathrm{SPACE}(\mathrm{poly}(n)) \)
+                      </div>
+                  </div>
+                  <div class="card-content" style="padding: 1.5rem;">
+                      <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                          <span class="icon has-text-warning" style="margin-right: 0.5rem;">
+                              <i class="fas fa-chalkboard"></i>
+                          </span>
+                          <small style="color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+                              The memory-rich: Can use polynomial memory but might take longer - like having a huge whiteboard to work on.
+                          </small>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Exponential Time -->
+              <div class="complexity-card" style="background: linear-gradient(135deg, #fff6f6 0%, #ffe3e3 100%); border-radius: 10px; overflow: hidden; border-left: 5px solid #f14668; box-shadow: 0 4px 6px rgba(241,70,104,0.1);">
+                  <div class="card-header" style="background-color: #f14668; padding: 1rem; color: white;">
+                      <div style="font-family: 'Courier New', monospace; font-size: 1.1rem; font-weight: bold;">
+                          \( \mathrm{EXP} = \mathrm{TIME}(2^{\mathrm{poly}(n)}) \)
+                      </div>
+                  </div>
+                  <div class="card-content" style="padding: 1.5rem;">
+                      <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                          <span class="icon has-text-danger" style="margin-right: 0.5rem;">
+                              <i class="fas fa-dumbbell"></i>
+                          </span>
+                          <small style="color: #4a4a4a; font-size: 0.9rem; line-height: 1.5;">
+                              The powerlifter: Solves problems in exponential time - theoretically possible but practically impossible for large inputs.
+                          </small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+            <div class="content" style="margin: 2rem 0;">
+              <div class="box has-background-light" style="border-left: 4px solid #7957d5;">
+                  <div class="icon-text mb-3">
+                      <span class="icon has-text-primary">
+                          <i class="fas fa-project-diagram"></i>
+                      </span>
+                      <span class="has-text-weight-bold">Complexity Class Hierarchy</span>
+                  </div>
+
+                  <div class="has-text-centered" style="margin: 1.5rem 0;">
+                      <div class="complexity-chain">
+                          <span class="tag is-info is-medium">L</span>
+                          <span class="icon has-text-grey">
+                              <i class="fas fa-chevron-right"></i>
+                          </span>
+                          <span class="tag is-success is-medium">P</span>
+                          <span class="icon has-text-grey">
+                              <i class="fas fa-chevron-right"></i>
+                          </span>
+                          <span class="tag is-warning is-medium">PSPACE</span>
+                          <span class="icon has-text-grey">
+                              <i class="fas fa-chevron-right"></i>
+                          </span>
+                          <span class="tag is-danger is-medium">EXP</span>
+                      </div>
+                  </div>
+
+                  <div class="content">
+                      <p>
+                          These classes form an inclusion hierarchy:
+                          <div class="has-text-centered" style="margin: 1rem 0;">
+                              \[
+                              L \subseteq P \subseteq \mathrm{PSPACE} \subseteq \mathrm{EXP}
+                              \]
+                          </div>
+                      </p>
+
+                      <div class="columns is-vcentered">
+                          <div class="column is-narrow">
+                              <figure class="image is-64x64">
+                                  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGUxYzNqb2VlejhicnYyeWZ2MzFyaXlqbDEzaGRtdTE0cGVqMWkwcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/X8HbeXDF7nzaM/giphy.gif" 
+                                      alt="Russian nesting dolls animation">
+                              </figure>
+                          </div>
+                          <div class="column">
+                              <p>
+                                  Think of it like Russian nesting dolls - each class contains all the previous ones, 
+                                  but we don't know if any are <em>exactly</em> equal! The strictness of these inclusions 
+                                  remains one of complexity theory's great open questions.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <h3 class="title is-4">The Ultimate Computing Machine</h3>
+        <div class="content has-text-justified">
+              <div class="responsive-turing-img">
+                <img 
+                  src="https://worldofcomputing.net/wp-content/uploads/2013/01/turingMachine.gif" 
+                  alt="Cartoon Turing Machine" 
+                >
+                <p class="caption">Not all heroes wear capes. Some have infinite tapes.</p>
+              </div><br>
+
+              <style>
+                .responsive-turing-img {
+                  max-width: 50%;
+                  margin: 0 auto;
+                }
+                .responsive-turing-img img {
+                  width: 100%;
+                  height: auto;
+                }
+                .caption {
+                  text-align: center;
+                  font-style: italic;
+                }
+                /* Mobile adjustment */
+                @media (max-width: 768px) {
+                  .responsive-turing-img {
+                    max-width: 100%;
+                  }
+                }
+              </style>
+            <p>
+                All our complexity analysis is based on the <strong>Turing Machine</strong> - the theoretical "ultimate computer" that:
+            </p>
+            <ul>
+                <li>Can simulate any algorithm (<a href="https://en.wikipedia.org/wiki/Church%E2%80%93Turing_thesis" target="_blank">Church-Turing thesis</a>)</li>
+                <li>Makes no assumptions about implementation details</li>
+                <li>Is robust enough that polynomial-time computations don't depend on exact model</li>
+            </ul>
+            <div class="notification is-light">
+                <strong>Fun Fact:</strong> Your smartphone is "just" a very fast, very compact realization of a Turing machine with finite memory!
+            </div>
+        </div>
+
+        <h3 class="title is-4">The Separation Games</h3>
+        <div class="content has-text-justified">
+            <p>
+                Complexity theory has its own version of the Hunger Games - where complexity classes fight for separation:
+            </p>
+            
+            <div class="columns is-variable is-4">
+              <!-- Time Hierarchy Theorem -->
+              <div class="column">
+                  <div class="box has-background-primary-light" style="border-left: 4px solid #00d1b2; border-radius: 6px;">
+                      <div class="media">
+                          <div class="media-left">
+                              <span class="icon has-text-primary">
+                                  <i class="fas fa-stopwatch fa-lg"></i>
+                              </span>
+                          </div>
+                          <div class="media-content">
+                              <h5 class="title is-5 has-text-primary">Time Hierarchy Theorem</h5>
+                          </div>
+                      </div>
+                      <div class="content">
+                          <p class="has-text-grey-dark">
+                              If \( f_1 = o\left(\frac{f_2}{\log f_2}\right) \), then:
+                          </p>
+                          <div class="has-text-centered" style="margin: 1rem 0;">
+                              \[
+                              \mathrm{TIME}(f_1) \subsetneq \mathrm{TIME}(f_2)
+                              \]
+                          </div>
+                          <div class="notification is-primary is-light" style="padding: 1rem;">
+                              <span class="icon-text">
+                                  <span class="icon has-text-primary">
+                                      <i class="fas fa-lightbulb"></i>
+                                  </span>
+                                  <span>
+                                      <strong>Translation:</strong> Give an algorithm significantly more time, and it can solve strictly more problems.<br>
+                                      <small>(<a href="https://www.ams.org/journals/tran/1965-117-00/S0002-9947-1965-0170805-7/S0002-9947-1965-0170805-7.pdf" target="_blank">Stearns & Hartmanis, 1965</a>)</small>
+                                  </span>
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Space Hierarchy Theorem -->
+              <div class="column">
+                  <div class="box has-background-info-light" style="border-left: 4px solid #3298dc; border-radius: 6px;">
+                      <div class="media">
+                          <div class="media-left">
+                              <span class="icon has-text-info">
+                                  <i class="fas fa-memory fa-lg"></i>
+                              </span>
+                          </div>
+                          <div class="media-content">
+                              <h5 class="title is-5 has-text-info">Space Hierarchy Theorem</h5>
+                          </div>
+                      </div>
+                      <div class="content">
+                          <p class="has-text-grey-dark">
+                              If \( f_1 = o(f_2) \), then:
+                          </p>
+                          <div class="has-text-centered" style="margin: 1rem 0;">
+                              \[
+                              \mathrm{SPACE}(f_1) \subsetneq \mathrm{SPACE}(f_2)
+                              \]
+                          </div>
+                          <div class="notification is-info is-light" style="padding: 1rem;">
+                              <span class="icon-text">
+                                  <span class="icon has-text-info">
+                                      <i class="fas fa-lightbulb"></i>
+                                  </span>
+                                  <span>
+                                      <strong>Translation:</strong> Even slightly more memory means strictly more computational power.<br>
+                                      <small>(No logarithmic factor needed!)</small>
+                                  </span>
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <h3 class="title is-4">The Space-Time Showdown</h3>
+        <div class="content has-text-justified">
+            <p>
+                In the ultimate battle of resources, space has a secret advantage:
+                \[
+                \mathrm{TIME}(f(n)) \subseteq \mathrm{SPACE}\left(\frac{f(n)}{\log f(n)}\right)
+                \]
+                This 1977 result by <a href="https://dl.acm.org/doi/pdf/10.1145/322003.322015" target="_blank">Hopcroft, Paul, and Valiant</a> shows that <strong>space can simulate time</strong> with only logarithmic overhead - making memory the ultimate computational resource!
+            </p>
+            <div class="notification is-info" style="border-radius: 8px; border-left: 5px solid #209cee; background-color: #f6fbfe;">
+                <div class="icon-text">
+                  <span class="icon has-text-info">
+                    <i class="fas fa-box-open"></i>
+                  </span>
+                  <span>
+                    <strong style="color: #296fa8;">Practical Takeaway:</strong>
+                  </span>
+                </div>
+                <div class="content mt-3">
+                  <p style="color: #333; line-height: 1.5;">
+                    When designing algorithms, saving memory often gives bigger gains than saving time. It's like packing efficiently for a trip - good organization lets you do more with limited luggage space!
+                  </p>
+                  <div class="has-text-right mt-3">
+                    <span class="tag is-info is-light">
+                      <i class="fas fa-luggage-cart mr-2"></i>Algorithm Tip
+                    </span>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">The Grand Mystery of NP and coNP</h2>
+          <div class="content has-text-justified">
+            <p>
+                Step into the shoes of a complexity sleuth, where mysterious problems leave behind clues in their runtime patterns and witness statements from reduction proofs. In this section, we'll explore the twin realms of <strong>NP</strong> and <strong>coNP</strong> - the magical lands where solutions can be verified with a detective's keen eye, even if they're devilishly hard to find from scratch. Think of yourself as Sherlock Holmes with a polynomial-time magnifying glass!
+            </p>
+            <div class="notification is-info is-light">
+                <strong>Case File:</strong> The P vs NP problem is one of seven <a href="https://www.claymath.org/millennium-problems" target="_blank">Millennium Prize Problems</a> worth $1,000,000 for its solution!
+            </div>
+          </div>
+
+        <h3 class="title is-4">The Two Faces of Verification</h3>
+        <div class="content has-text-justified">
+            <div class="columns">
+                <div class="column">
+                    <article class="message is-info">
+                        <div class="message-header">
+                            <p>NP: The Optimist's Paradise</p>
+                        </div>
+                        <div class="message-body">
+                            <p>For every <span class="tag is-success is-medium">YES</span> instance, NP provides:</p>
+                            <ul>
+                                <li>A <strong>witness</strong> (like a suspect's alibi)</li>
+                                <li>That's <strong>short</strong> (polynomial in size)</li>
+                                <li>And <strong>quick to verify</strong> (polynomial time)</li>
+                            </ul>
+                            <div class="box">
+                                \[
+                                x \in L \Rightarrow 
+                                \]
+
+                                \[
+                                \exists w \text{ with } |w| \leq p(|x|) 
+                                \]
+
+                                \[
+                                \text{and } V(x,w) = 1
+                                \]
+                                <small>Translation: There exists a proof that's easy to check</small>
+                            </div>
+                            <p><strong>Real-world case:</strong> Sudoku solutions are easy to verify but hard to find!</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="column">
+                    <article class="message is-danger">
+                        <div class="message-header">
+                            <p>coNP: The Skeptic's Refuge</p>
+                        </div>
+                        <div class="message-body">
+                            <p>For every <span class="tag is-danger is-medium">NO</span> instance, coNP provides:</p>
+                            <ul>
+                                <li>A <strong>counter-example</strong> (like finding the murder weapon)</li>
+                                <li>That's <strong>compact</strong> (polynomial in size)</li>
+                                <li>And <strong>quick to confirm</strong> (polynomial time)</li>
+                            </ul>
+                            <div class="box">
+                                \[
+                                x \notin L \Rightarrow 
+                                \]
+
+                                \[
+                                \exists w \text{ with } |w| \leq p(|x|) 
+                                \]
+
+                                \[
+                                \text{and } V(x,w) = 1
+                                \]
+                                <small>Translation: There exists a disproof that's easy to verify</small>
+                            </div>
+                            <p><strong>Real-world case:</strong> Proving a number is composite by showing its factors!</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="notification is-warning is-light" 
+                style="border-left: 4px solid #FFA500;
+                        border-radius: 8px;
+                        background-color: #fffaf0;
+                        padding: 1.25rem;">
+                <div class="media">
+                    <div class="media-left">
+                        <span class="icon has-text-warning">
+                            <i class="fas fa-search fa-lg"></i>
+                        </span>
+                    </div>
+                    <div class="media-content">
+                        <p style="color: #333;">
+                            <span class="has-text-weight-semibold" style="color: #805d00;">Forensic Tip:</span> 
+                            A "short proof" means the certificate length grows at most polynomially with the input size, and verification is a polynomial-time process. It's like having crime scene evidence that scales reasonably with the complexity of the case!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="title is-4">Exhibit A: The 3-Coloring Conundrum</h3>
+        <div class="content has-text-justified">
+            <div class="box">
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Case Study:</strong> 3-COLORING ∈ NP
+                            </p>
+                                  <div class="responsive-turing-img">
+                                    <img 
+                                      src="./static/images/Systeme-interactif-preuve.svg" 
+                                      alt="Systeme interactif preuve" 
+                                    >
+                                  
+                                  </div>
+                            <p>
+                                <strong>Evidence Verification:</strong>
+                            </p>
+                            <ol>
+                                <li>Witness provides a coloring (certificate)</li>
+                                <li>Detective checks:
+                                    <ul>
+                                        <li>Only 3 colors appear in the coloring</li>
+                                        <li>No two adjacent vertices share colors</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <p>
+                                <strong>Time Complexity:</strong> \( O(|E|) \) - linear in the number of edges!
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <h3 class="title is-4">Problem Classification Exercise</h3>
+        <div class="content has-text-justified">
+           <div class="responsive-turing-img">
+            <img 
+              src="./static/images/NP-co-NP.svg" 
+              alt="P-versus-NP" 
+            >
+          </div>
+            <div style="
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                max-width: 800px;
+                margin: 1rem auto;
+            ">
+                <p>
+                    Consider the following computational problems and determine their classification with respect to NP and coNP:
+                </p>
+                
+                <ul style="padding-left: 1.5rem;">
+                    <li style="margin-bottom: 0.75rem;">Given a graph \( G \), is \( G \) connected?</li>
+                    <li style="margin-bottom: 0.75rem;">Given an integer \( n \), is \( n \) prime? Is \( n \) composite?</li>
+                    <li style="margin-bottom: 0.75rem;">Given integers \( n \) and \( k \), does \( n \) admit a prime factor \( \leq k \)?</li>
+                    <li style="margin-bottom: 0.75rem;">Given two graphs \( G_1 \) and \( G_2 \), are they isomorphic?</li>
+                    <li style="margin-bottom: 0.75rem;">Given a graph \( G \) on \( n \) vertices, does \( G \) contain a clique of size \( \frac{n}{2} \)?</li>
+                    <li style="margin-bottom: 0.75rem;">Given an \( n \times n \) chessboard configuration, does player 1 have a winning strategy?</li>
+                    <li style="margin-bottom: 0.75rem;">Given a program \( P \), does \( P \) always terminate?</li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <h3 class="title is-4">The Non-deterministic Family Reunion</h3>
+        <div class="content has-text-justified">
+            <p>
+                Meet the extended non-deterministic family, from the modest to the extravagant:
+            </p>
+            
+            <div class="complexity-family" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; padding: 1rem; font-family: Arial, sans-serif;">
+
+            <!-- NL Card -->
+            <div class="family-member">
+                <div class="card" style="height: 100%; border: 1px solid #e0e0e0; border-radius: 8px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'"
+                    onmouseout="this.style.transform=''; this.style.boxShadow='none'">
+                    <div class="card-content" style="padding: 1.5rem; height: 100%;">
+                        <p style="font-size: 1.5rem; font-weight: bold; color: #3a86ff; margin-bottom: 0.5rem;">NL</p>
+                        <p style="color: #6c757d; font-size: 0.9rem; margin-bottom: 1.5rem;">NSPACE(log n)</p>
+                        <div style="margin-bottom: 1rem; line-height: 1.5;">
+                            The minimalist cousin who works with tiny notepads
+                        </div>
+                        <div style="background: #f8f9fa; padding: 0.75rem; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9rem;"><strong style="color: #495057;">Specialty:</strong> Path problems in limited memory</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NP Card -->
+            <div class="family-member">
+                <div class="card" style="height: 100%; border: 1px solid #e0e0e0; border-radius: 8px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'"
+                    onmouseout="this.style.transform=''; this.style.boxShadow='none'">
+                    <div class="card-content" style="padding: 1.5rem; height: 100%;">
+                        <p style="font-size: 1.5rem; font-weight: bold; color: #8338ec; margin-bottom: 0.5rem;">NP</p>
+                        <p style="color: #6c757d; font-size: 0.9rem; margin-bottom: 1.5rem;">NTIME(poly(n))</p>
+                        <div style="margin-bottom: 1rem; line-height: 1.5;">
+                            The famous celebrity everyone talks about
+                        </div>
+                        <div style="background: #f8f9fa; padding: 0.75rem; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9rem;"><strong style="color: #495057;">Specialty:</strong> Verification of solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NPSPACE Card -->
+            <div class="family-member">
+                <div class="card" style="height: 100%; border: 1px solid #e0e0e0; border-radius: 8px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'"
+                    onmouseout="this.style.transform=''; this.style.boxShadow='none'">
+                    <div class="card-content" style="padding: 1.5rem; height: 100%;">
+                        <p style="font-size: 1.5rem; font-weight: bold; color: #ff006e; margin-bottom: 0.5rem;">NPSPACE</p>
+                        <p style="color: #6c757d; font-size: 0.9rem; margin-bottom: 1.5rem;">NSPACE(poly(n))</p>
+                        <div style="margin-bottom: 1rem; line-height: 1.5;">
+                            The wealthy relative with unlimited storage
+                        </div>
+                        <div style="background: #f8f9fa; padding: 0.75rem; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9rem;"><strong style="color: #495057;">Specialty:</strong> Games and puzzles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEXP Card -->
+            <div class="family-member">
+                <div class="card" style="height: 100%; border: 1px solid #e0e0e0; border-radius: 8px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'"
+                    onmouseout="this.style.transform=''; this.style.boxShadow='none'">
+                    <div class="card-content" style="padding: 1.5rem; height: 100%;">
+                        <p style="font-size: 1.5rem; font-weight: bold; color: #fb5607; margin-bottom: 0.5rem;">NEXP</p>
+                        <p style="color: #6c757d; font-size: 0.9rem; margin-bottom: 1.5rem;">NTIME(2<sup>poly(n)</sup>)</p>
+                        <div style="margin-bottom: 1rem; line-height: 1.5;">
+                            The extravagant uncle with unlimited time
+                        </div>
+                        <div style="background: #f8f9fa; padding: 0.75rem; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9rem;"><strong style="color: #495057;">Specialty:</strong> Generalized chess strategies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEXP Card -->
+            <div class="family-member">
+                <div class="card" style="
+                    height: 100%; 
+                    border: 1px solid #e0e0e0; 
+                    border-radius: 8px; 
+                    transition: all 0.3s ease;
+                    overflow: hidden;"
+                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'"
+                    onmouseout="this.style.transform=''; this.style.boxShadow='none'">
+                    <div class="card-content" style="
+                        padding: 1.5rem; 
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;">
+                        <div class="responsive-turing-img" style="
+                            width: 100%;
+                            text-align: center;">
+                            <img 
+                                src="./static/images/Class-heirarchy.svg" 
+                                alt="Class heirarchy"
+                                style="
+                                    width: 90%;
+                                    max-width: 800px;
+                                    height: auto;
+                                    display: block;
+                                    margin: 0 auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            
+            <div class="notification is-info" style="border-left: 4px solid #209cee; border-radius: 8px; background-color: #f6fbfe; padding: 1.25rem;">
+                <div class="media">
+                    <div class="media-left">
+                        <span class="icon has-text-info">
+                            <i class="fas fa-secret"></i>
+                        </span>
+                    </div>
+                    <div class="media-content">
+                        <p style="color: #333; line-height: 1.5; margin-bottom: 0;">
+                            <span style="font-weight: 500; color: #1565c0;">Family Secret:</span> 
+                            Savitch's Theorem shows that NPSPACE = PSPACE - the non-deterministic space family has a deterministic counterpart!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="title is-4">The Great Theorems Gallery</h3>
+        <div class="content has-text-justified">
+            <div class="columns">
+                <div class="column">
+                    <article class="message">
+                        <div class="message-header">
+                            <p>Savitch's Theorem (1970)</p>
+                        </div>
+                        <div class="message-body">
+                            <p>
+                                \[
+                                \mathrm{NSPACE}(f(n)) \subseteq \mathrm{SPACE}(f(n)^2)
+                                \]
+                            </p>
+                            <p>
+                                <strong>Translation:</strong> Non-deterministic space can be simulated deterministically with only quadratic space overhead. It's like reconstructing a crime scene from limited evidence!
+                            </p>
+                            <p>
+                                <strong>Consequence:</strong> PSPACE = NPSPACE
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="column">
+                    <article class="message">
+                        <div class="message-header">
+                            <p>Immerman-Szelepcsényi (1987)</p>
+                        </div>
+                        <div class="message-body">
+                            <p>
+                                \[
+                                \mathrm{NSPACE}(f(n)) = \mathrm{coNSPACE}(f(n))
+                                \]
+                            </p>
+                            <p>
+                                <strong>Translation:</strong> For space-bounded computation, verifying YES and NO answers are equally powerful. The justice system is fair in space-limited worlds!
+                            </p>
+                            <p>
+                                <strong>Consequence:</strong> NL = coNL
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="title is-4">The Million Dollar Mystery: P vs NP</h3>
+        <div class="content has-text-justified">
+            <div class="p-np-hero" style="background: linear-gradient(135deg, #ff3860, #ff6b6b); color: white; padding: 4rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(255, 56, 96, 0.3); transition: all 0.3s ease;">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div style="text-align: center;">
+                        <h1 style="font-size: 3.5rem; margin-bottom: 1rem; font-weight: 700;">
+                            \[
+                            P \overset{?}{=} NP
+                            \]
+                        </h1>
+                        <h2 style="font-size: 1.5rem; font-weight: 400; opacity: 0.9; margin-bottom: 1.5rem;">
+                            The most important open problem in computer science
+                        </h2>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <script>
+            document.querySelector('.p-np-hero').addEventListener('mouseover', function() {
+                this.style.boxShadow = '0 8px 30px rgba(255, 56, 96, 0.4)';
+                this.style.transform = 'translateY(-2px)';
+            });
+            document.querySelector('.p-np-hero').addEventListener('mouseout', function() {
+                this.style.boxShadow = '0 4px 20px rgba(255, 56, 96, 0.3)';
+                this.style.transform = 'translateY(0)';
+            });
+            </script>
+            
+            <div class="columns">
+                <div class="column">
+                    <div class="box">
+                        <p><strong>If P = NP:</strong></p>
+                        <ul>
+                            <li>Most encryption breaks (RSA, Bitcoin!)</li>
+                            <li>Automatic theorem provers become perfect</li>
+                            <li>Perfect protein folding prediction</li>
+                            <li>AI can match human creativity</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box">
+                        <p><strong>If P ≠ NP:</strong></p>
+                        <ul>
+                            <li>Some problems are inherently hard</li>
+                            <li>Creative problem-solving remains valuable</li>
+                            <li>Current cryptography stays secure</li>
+                            <li>We get to keep the $1,000,000 prize</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="notification" style="
+                  background: #fffaf0;
+                  border-left: 4px solid #ffb347;
+                  border-radius: 6px;
+                  padding: 1.25rem;
+                  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                  line-height: 1.5;
+              ">
+                  <h3 style="
+                      color: #e67e22;
+                      margin-top: 0;
+                      margin-bottom: 0.75rem;
+                      font-size: 1.1em;
+                      font-weight: 600;
+                  ">Expert Consensus</h3>
+                  <p style="
+                      color: #5a4a30;
+                      margin-bottom: 0;
+                  ">
+                      Most <a href="https://www.cs.umd.edu/~gasarch/papers/poll.pdf" target="_blank" 
+                      style="color: #e67e22; text-decoration: underline; font-weight: 500;">complexity theorists</a> believe 
+                      <span style="
+                          display: inline-block;
+                          background: #ffe8cc;
+                          color: #d35400;
+                          padding: 0.25rem 0.5rem;
+                          border-radius: 4px;
+                          font-weight: 600;
+                          font-size: 0.9em;
+                          margin: 0 0.2rem;
+                      ">P ≠ NP</span>, 
+                      but no one has found the smoking gun proof yet!
+                  </p>
+              </div>
+            
+          
+                <strong>Padding Argument:</strong> If P = NP, then by "padding" inputs, we could show that EXP = NEXP. This is like saying if small crimes are easy to solve, then organized crime must also be manageable!
+                \[
+                P = NP \Rightarrow EXP = NEXP
+                \]
+            
+        </div>
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">The Great Complexity Reduction Showdown</h2>
+          <div class="content has-text-justified">
+            <p>
+                Witness the leaderboard of computation, where algorithms are scored by their efficiency! Here we'll learn how computer scientists compare problems by <strong>reducing</strong> them to one another - like determining which video game boss is tougher by seeing who can defeat whom. At the heart of this lies the powerful concept of <em>completeness</em>, which helps us identify the hardest problems in any complexity class.
+            </p>
+            <div class="notification is-info is-light" style="border-radius: 8px; border-left: 4px solid #209cee; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+              <div class="icon-text">
+                  <span class="icon has-text-info">
+                      <i class="fas fa-sitemap"></i>  <!-- Network icon for "reduction" concept -->
+                  </span>
+                  <span>
+                      <strong>Fun Fact:</strong> The concept of reduction is like a <em>universal adapter</em> in math! 
+                      It connects problems from <a href="https://en.wikipedia.org/wiki/Turing_reduction" target="_blank">computability theory</a> 
+                      to <a href="https://en.wikipedia.org/wiki/Reduction_(complexity)" target="_blank">complexity theory</a>, 
+                      showing how solutions to one problem can unlock others.
+                  </span>
+              </div>
+          </div>
+          </div>
+
+        <h3 class="title is-4">The Two Faces of Problem Reduction</h3>
+        <div class="content has-text-justified">
+            <div class="columns">
+                <div class="column">
+                    <article class="message is-info">
+                        <div class="message-header">
+                            <p>Transformation Reduction: The Problem Translator</p>
+                        </div>
+                        <div class="message-body">
+                            <p>Given problem \(\Pi_1\), we can:</p>
+                            <ol>
+                                <li>Convert any instance \(x_1\) to \(\Pi_2\)'s format using function \(f\)</li>
+                                <li>This conversion takes polynomial time</li>
+                                <li>The answer stays the same: \(\Pi_1(x_1) = \Pi_2(f(x_1))\)</li>
+                            </ol>
+                            <div class="box">
+                                \[
+                                \Pi_1 \leq_p \Pi_2
+                                \]
+                                <small>Read as "\(\Pi_1\) reduces to \(\Pi_2\)"</small>
+                            </div>
+                            <p><strong>Analogy:</strong> Like translating a math problem from English to French - the solution stays the same, just the language changes!</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="column">
+                    <article class="message is-success">
+                        <div class="message-header">
+                            <p>Oracle Reduction: The Problem Solver</p>
+                        </div>
+                        <div class="message-body">
+                            <p>Given problem \(\Pi_1\), we can:</p>
+                            <ol>
+                                <li>Use a magical \(\Pi_2\)-solving black box (oracle)</li>
+                                <li>Make polynomial-time computations around it</li>
+                                <li>Solve \(\Pi_1\) using this combination</li>
+                            </ol>
+                            <div class="box">
+                                \[
+                                \Pi_1^P \subseteq \Pi_2^P
+                                \]
+                                <small>Using \(\Pi_2\) as an oracle in P-time</small>
+                            </div>
+                            <p><strong>Analogy:</strong> Like using a calculator in a math exam - you still need to know how to set up the problems!</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="notification is-light">
+                <strong>Key Insight:</strong> Both methods show that \(\Pi_2\) is <em>at least as hard as</em> \(\Pi_1\). If you can solve \(\Pi_2\) efficiently, you can solve \(\Pi_1\) efficiently too!
+            </div>
+        </div>
+
+        <h3 class="title is-4">The Hall of Fame: Hard and Complete Problems</h3>
+        <div class="content has-text-justified">
+            <div class="box">
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Hardness:</strong> A problem is \(\mathcal{C}\)-hard if it's <em>at least as hard</em> as every problem in class \(\mathcal{C}\)
+                            </p>
+                            <p>
+                                <strong>Completeness:</strong> A problem is \(\mathcal{C}\)-complete if it's:
+                            </p>
+                            <ol>
+                                <li>\(\mathcal{C}\)-hard (toughest in its class)</li>
+                                <li>In \(\mathcal{C}\) (member of the class)</li>
+                            </ol>
+                            <p>
+                                <strong>NP-Completeness Crown:</strong> The Boolean satisfiability problem (SAT) wears this crown, as proven by Cook and Levin in 1971:
+                                \[
+                                \text{SAT} \in \text{NP-complete}
+                                \]
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="notification" style="
+                background: #fff9e6;
+                border-left: 4px solid #ffd166;
+                border-radius: 4px;
+                padding: 1.25rem;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            ">
+                <h3 style="
+                    color: #e6a700;
+                    margin-top: 0;
+                    margin-bottom: 0.75rem;
+                    font-size: 1.1em;
+                    font-weight: 600;
+                ">Why SAT?</h3>
+                <p style="
+                    color: #5a4a30;
+                    margin-bottom: 0;
+                    line-height: 1.5;
+                ">SAT was the first NP-complete problem discovered because Boolean formulas are universal - they can encode <em style="color: #d4a000; font-style: italic;">any</em> NP problem! This makes SAT the "mother of all NP-complete problems."</p>
+            </div>
+        </div>
+
+        <h3 class="title is-4">The NP-Completeness Domino Effect</h3>
+        <div class="content has-text-justified">
+            <div class="columns">
+                <div class="column">
+                    <div class="box">
+                        <h5 class="title is-5">The Cook-Levin Breakthrough (1971)</h5>
+                        <p>
+                            \[
+                            \text{SAT} \in \text{NP-complete}
+                            \]
+                            <small>The first NP-complete problem discovered</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box">
+                        <h5 class="title is-5">Karp's 21 Problems (1972)</h5>
+                        <p>
+                            \[
+                            \text{3SAT, Clique, etc.} \in \text{NP-complete}
+                            \]
+                            <small>Showed many practical problems are NP-complete</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            </p>
+
+                <div class="responsive-turing-img">
+                  <img 
+                      src="https://leimao.github.io/images/blog/2023-11-20-P-VS-NP/P_np_np-complete_np-hard.svg" 
+                      alt="Cook-Levin Breakthrough" 
+                  >
+                </div>
+            
+            <div class="notification" style="
+                background: #f0f7ff;
+                border-left: 4px solid #4dabf7;
+                border-radius: 6px;
+                padding: 1.25rem;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            ">
+                <h3 style="
+                    color: #1971c2;
+                    margin-top: 0;
+                    margin-bottom: 0.75rem;
+                    font-size: 1.1em;
+                    font-weight: 600;
+                ">Reduction Chain</h3>
+                <p style="
+                    color: #2c3e50;
+                    margin-bottom: 0;
+                    line-height: 1.5;
+                ">Once SAT was proven NP-complete, researchers could prove other problems NP-complete by reducing SAT to them. This created a <span style="font-weight: 600; color: #1971c2;">domino effect</span> where thousands of problems were shown to be equally hard!</p>
+            </div>
+    <!--/ Animation. -->
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">The Cosmic Consequences of NP-Completeness</h3>
+        <div class="content has-text-justified">
+          <p>
+              The existence of NP-complete problems suggests that numerous important computational problems may be inherently intractable. The prevailing belief in computational complexity theory is that:
+              \[
+              P \neq NP
+              \]
+              implying that no efficient algorithm exists for NP-complete problems. This conjecture remains one of the most important open problems in mathematics and computer science.
+          </p>
+
+          <div class="notification is-primary" 
+              style="border-left: 4px solid #3273dc;
+                      border-radius: 8px;
+                      background: linear-gradient(to right, #f5f9ff 0%, #ebf3ff 100%);
+                      padding: 1.25rem;
+                      box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+              <div class="media">
+                  <div class="media-left">
+                      <span class="icon has-text-primary">
+                          <i class="fas fa-lock"></i>
+                      </span>
+                  </div>
+                  <div class="media-content">
+                      <p style="color: #333; line-height: 1.5; margin-bottom: 0;">
+                          <span style="font-weight: 500; color: #2657a7;">The Cryptographic Paradox:</span> 
+                          While frustrating for optimization, the likely truth that P ≠ NP is what keeps our online transactions secure! Modern cryptography relies on problems being hard to solve but easy to verify.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="box">
+            <h5 class="title is-5">What Would Change If P = NP?</h5>
+            <div class="columns">
+              <div class="column">
+                <div class="content">
+                  <p><strong>Positive Impacts:</strong></p>
+                  <ul>
+                    <li>Revolutionize logistics and scheduling</li>
+                    <li>Accelerate drug discovery</li>
+                    <li>Automate mathematical proofs</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p><strong>Negative Impacts:</strong></p>
+                  <ul>
+                    <li>Break most modern encryption</li>
+                    <li>Disrupt blockchain technologies</li>
+                    <li>Require complete cryptography overhaul</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="notification is-warning is-light" 
+              style="border-left: 4px solid #ffdd57;
+                      border-radius: 8px;
+                      background-color: #fffaf0;
+                      padding: 1.25rem;
+                      box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+              <div class="media">
+                  <div class="media-left">
+                      <span class="icon has-text-warning">
+                          <i class="fas fa-trophy"></i>
+                      </span>
+                  </div>
+                  <div class="media-content">
+                      <p style="color: #333; line-height: 1.5; margin-bottom: 0;">
+                          <span style="font-weight: 500; color: #947600;">Current Status:</span> 
+                          Despite decades of research and numerous claimed proofs (all incorrect so far), the question remains open. The Clay Mathematics Institute offers a <a href="https://www.claymath.org/millennium/p-vs-np/" target="_blank" style="text-decoration: underline;">$1,000,000 prize</a> for its solution!
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="responsive-turing-img">
+            <img 
+              src="https://wscor.win.tue.nl/woeginger/P-versus-NP/pudlak.png" 
+              alt="P-versus-NP" 
+            >
+            <p class="caption">A cartoon by Pavel Pudlak on "P versus NP"</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="columns is-centered">
+      
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Further Reading</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            <ol>
+              <li>Arora, S., & Barak, B. (2009). <i>Computational Complexity: A Modern Approach</i>. Cambridge University Press. (Comprehensive coverage from basic to advanced complexity theory)</li>
+              
+              <li>Papadimitriou, C. H. (1994). <i>Computational Complexity</i>. Addison-Wesley. (Classic textbook with deep insights into complexity classes)</li>
+              
+              <li>Sipser, M. (2012). <i>Introduction to the Theory of Computation</i> (3rd ed.). Cengage Learning. (Excellent introduction to P, NP, and complexity hierarchies)</li>
+              
+              <li>Garey, M. R., & Johnson, D. S. (1979). <i>Computers and Intractability: A Guide to the Theory of NP-Completeness</i>. W.H. Freeman. (The definitive reference on NP-completeness)</li>
+              
+              <li>Goldreich, O. (2008). <i>Computational Complexity: A Conceptual Perspective</i>. Cambridge University Press. (Unique philosophical approach to complexity)</li>
+              
+              <li>Hopcroft, J. E., Motwani, R., & Ullman, J. D. (2007). <i>Introduction to Automata Theory, Languages, and Computation</i> (3rd ed.). Pearson. (Foundations of computation models)</li>
+              
+              <li>Kozen, D. C. (2006). <i>Theory of Computation</i>. Springer. (Rigorous treatment of complexity classes)</li>
+              
+              <li>Fortnow, L. (2013). <i>The Golden Ticket: P, NP, and the Search for the Impossible</i>. Princeton University Press. (Accessible discussion of P vs. NP)</li>
+              
+              <li>Moore, C., & Mertens, S. (2011). <i>The Nature of Computation</i>. Oxford University Press. (Connections between physics and computation)</li>
+              
+              <li>Hartmanis, J. (1994). Turing Award Lecture: On Computational Complexity and the Nature of Computer Science. <i>Communications of the ACM</i>, 37(10), 37-43. (Historical perspective from a complexity pioneer)</li>
+            </ol>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
