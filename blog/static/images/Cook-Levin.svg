@@ -1,0 +1,292 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="75.475009" height="88.715999" viewBox="0 0 75.475009 88.715999">
+<defs>
+<mask id="mask_62">
+<g transform="matrix(.28456,0,0,.28456,.5791626,-4.328575)">
+<image id="image_63" width="259" height="321" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAQMAAAFBCAAAAABWKpVwAAAACXBIWXMAAA7EAAAO
+xAGVKw4bAAAggklEQVR4nOVdd0AT1x+/uwxGAoSwEghTREFRHKB14qh14KhiVVRQ
+0TpQQYaIIrJxgxsUIQQcrf39am3VavurtW79WWfrwIXsGTat45dfQhgZl+SSu8ul
+8Pnjcnl3l/fN9977vve+7zsAFpcNdGewuSzAimtNNBmEwpprBVhybYgmg1DYcC0B
+Cy6HaDIIBYdrAZh3cx7Ycs0BM64t0WQQCjuuGcDk2hFNBqGw5zIBU6490WQQCgeu
+KcDIciKaDELRI4sBmBztSTQZhKJnpglgfNiVaDIIhethY4B+0INoMgjFgAM0wCBt
+KNFkEIpP0gwA6o4xRJNBKMZupwKkpElEk0EoJieRACD2c6LJIBQztwgPG/2IJoNQ
++G0UHiIWEU0GoVgcITyEfEk0GYTiy2DhYVUQ0WQQitWrhIel64gmg1CsWyo8zI8i
+mgxCETVfeJgWDxFNB4GAEqYJj947qEQTQiCoO72Fx4H7aUQTQiBoBwYIj85HGUQT
+QiAYR52FR06OOdGEEAiLHJFa3SqnO2+2WedYCY/Mbq1UFamVAcD4sBvRhBAItwwj
+4bF7K5KGphkIj6Tk7qxEmSRSobTNFrsrFohXCq0rp+6KVatbPwIiCaaDSET6t374
+JHTfRROU6NP6+UmraOyeMNgjHhRdMk0IpoQ4MNp2W21yLAmmhDhY5ogt0sxzuq8V
+hh1XvGA0Su9LMCXEwT3dqPWTun0cwZQQh3HbKeKTjd13otihUF65llA6iMTalW0n
+s2MIpYNIbPFtOxmRqk8oIcRBP3V425nzUVNCKSEOplnObWdWvO6qUbTmWbWdmRzp
+rqZprkeM2866r0nS2M49tm5rijJ/Y8fpimAC6SASISs6Tqcmdk8tCilxasd5v7aV
+Q3eDUUa/jnNrHotASogDS2JSYHKke241uR027jgnp0wkkBLiMCmF3PkldBlxhKiE
+sa2x6ps0wrJQiS8LNiq8DxWMQ+P9Resx47Aw4f/wjo+Ljwv7rFOD653kLfUJj9Cq
+UCVX0UBKcTJyNz4rR06RoHKs6LOkhAMAsYLGsnJ+/VcO7ZdjBbFSn/BQfhUF9HeP
+lPjmxDXDpRYhDwSnjDp5sJtl5/2TYEd7LySYB2ZcSVcuZnYPXGrhFH2oaZzdyYNY
+YdmY+t8t2i5L84D+SdDmkNEiAzFh1zEdGBJqDDgsiV5iG4cXD3pkMyW+UbaPx6UW
+TnHpwf9dspTigWNpQbuHtRQPGHmFJeX1/P1mosdKNvxZ+jtr0PW/q0t+O4sXD8a3
+K1TFCMXHcJtTUjTi7oeVitvBbhaHw2HtFl1gHZjn5uRz5UNIa/O5tagHy+zsx4P9
++qf/hRcPvpSWtbPxqYZTUmyz8sM9e+tOeTD6oqQ8EArJ8vKyRtG/JLWK5dH1PxkL
+efBRtIqb0Hhb2GI4t3HiAdihTBRjwCE6HtUI37+N5RVBtF2xxLjwtYNwyOdw2GRh
+weUt8fHxWy63/ksDrxWb4/Y05rOFfaGqv7AgRLBPuJaD9uHEA6N0aY8+Fg+XSBCt
+fWDBX/lTCsU8uBwbFzaRAQAR1eUV96yl5YHx9oq6yvJKQSFH9Jho+2+zIEF0NQEn
+HsiukmgHBuNRTSsPGGcF31YWcyQHuTGJ8QnhJtI8mNX8wLeXzTDRnWLxgXc78JQ1
+Uo6eh0c14j8zte6doIgDM9BL8WCjYLfw1Lelkwc4y4N50TIFgRF4VCP+M7TjAgQ8
+WPzh9wlOvhc/FHXwgHEO13EhYolMwWhc9lna/ox3BQIesL75u6H4flhJZzsAvG68
+qy65gtP8QD91lEyJbYemHUuI10qAvn98qDHM0kh6zWQ5L3pNP4boibbHANAhMDrQ
+YYzSFZXGsOTJBgChHxqER0U6DA95BeLGhUQQQiDmbZYr8pMv6trYECBXBNM0ujRo
+B7zkyixyupcbAwdGl07d2b2skrxT9eQLg1fKl3VhrIBz7528lQxT2lVBTpkCU+rI
+tYAp7aow58KFhaIfwmXpqKMYCD8MrpddQ3RlBMB7uk9LIWmZEOIAxc+CLXfidh+H
+V2Z2L9hyenr3EQj9DyvYw4zsPgIhQNEG6/Tk7iIQSEmKgkL16DYCwTxH0d4i/ZD8
+UqprYsghhXEvwlYoutLFsFKxRcM4uLVUF4R+2liF19hyasauCdtcxUbqlB1wi6mu
+hynSm+7SCNikPUIIxCZ5VWIn+nQLbw7TrD5KrhpldIfp8uAMperj0O4wOq4MU3p5
+1D5DLRFCHAz3j1Z63ZzroiVKiEMvFUsCMGaBlighDgtjQOU3TNmhZOjsEqDunKzi
+DmteV99usldpekVKmq0VSojDF4kqtSQztnXtrRbKtukq77Hhde2oGHa5qnMxkZN9
+Vd7zT4YvEoXh9C49MlB2TENwF5vXlRO0OCHyb4diu/I0aWEsInfWCXu6bkgI/b2f
+IrrPnKtsef3PRl+kTkvhXTeY4KpwhDd6dtkAaiaZSHVEtEMjVd/0j8QoxXsrslgU
+0zVjAUAxixDf65jbNfcZbHmOiO8lJXbN4CB+qpeMnRi7vyuqFQ0PKN5ik4dJ5hDc
+KJEECJGpelQypEK5hRGGqDfeLY3GjyxQn8FyHT0jYG3Mzj0HM3PycjIP7tkZExww
+Y7Qri6GPX73Q5kC17nfKxUOLAOoxe04I2nni8vMqvghVFaVvXz5/+ba0QvS9trYq
+//KJnUETnJl6eHDCLhe5RBQBilO2JacJQLrD+PDc22V1dVXPr369O3zJrPGDXRw5
+1mwW25rj2Mtz/KzA8O15/3lcWVdXdit3wxRHOtZ8CIhTc8QffgTLuSKV45N0rqCu
+7tWF/SE+bixTA3hqQKqJpatPyIELr2rrC84l+thi2TNMMoervkkKhvs/w6hukOax
+ivesofZ+TvgEOyMkgxPJiOMdknO/pv7lyVUeRlix4TP1x7rPd2FhkwLS3NecKW98
++234CEv10v9QLYaEfP2qseJ82AAaFmzQ2zVD7WfMuANR10u2W/xdWVP+YV8nQ03+
+BmjgOPvgn43lp5c6otd1D8rWINTHl9HoFg2gsXfqEyED5tqjyf9E4czMyG9+nupt
+jK4xQJs1ifBgl4sm6TFo6Xe+ln9+mSN6BS3FaemZav65hVZouNAzV6P9swjNo+lB
+TiE3m/J3jUL58toB0oftyG++HeKoecsMjtCIFFee6t0IWICOG5+2/B7ujOWGFdk5
+7Hbzk809NGSqDU+zUKGkWPXmlm0A7dc/broUaI31FAdkLfq15cl6e41+NzBOQ1Ps
+gZoE5Ddf9bDleoAZHpNd0Nz/t+aHazQgyjJH00GOkqy2D7ThjP+03FpqidfCBzRf
+fKvl1+lqJ9lbmKyxaB6SrZ4hO+TJq3+1wQbPlTBoHfGy/thg9Vq2ebbmxujUbWpF
+ozcPK6g56I63KhLqs6/6baRafojzt6GYogxRw+eR4n2h5T+fasPoW2/Cz39dHIu8
+dVtw0fgkUFL8EVcUW1Ecpa2kJpZRRRVxiCsLSEE1URucgyxECDjkXMuZT7TnCkQa
++l3L+SHIBA8rB53xLTke0TSbvvxNxSZ8wg8qAjOy/E0QopANy+NRTtb6Ipln2x1u
+uv6pts2YyOOvNh9GoPGzz0ObbgaKDFPV4sAhl5oOEWHRZ3eg8dJQldSFRqIeqZzy
+VMQdps59Ub4Wl4hzKkELKnvlp2LYc8vFwKxmeYJSqUqP5N+fSJRfJGniPX6UUqFA
+ScAiMqRF9gglV83Tmn4g0mSjz/dNe5TNYUZgE9Xh8wOK5+cOJ1qO4hJ1EDHYR/7q
+DNQrB9p+RQ6t6oG2V6H5ruvFhmSiM2QzEusvKlQOzN6HURLzITwO/IX+V2qCid+c
+NQipueIBf8mGh9W+KSkqAnZ4GXSzarku2HNSllXehl0RQOFRmElr+1y42ebQu2X+
+umHfTVpYdg8uQfNgzRSp8Ji9X34CMOhuyVxdMdmB5pTcldcU0fd9gWEdhqlytqvu
+Nyr8dIUFQibMK7/RT7ZwfiqmwsrjmMxmg8ulqiW6FDGCtKjqskyIk57H+mNaBbgy
+RUo7wjnLX6kbsqAd5BX8s1KWZHpbV2Ks1GNkzJT4ZprdtB7NDhoeoEY2cSVjyH+e
+gfnMxSuvc+1huLUlFaO5B4ag7WrZ2ikAnPKwD+oBrUluN2cnhTTm6WLkFLO8xpB2
+GaWfvAYHic04NKftbFr5z7rpAGj/c3l70qkv0nHx4B9wTKxJ6P/4mfyUicy2bd1b
+IrPZZKA1pjzHStroADRi2ZirI0TaIwx3VsFWJYYHP3skHiHdjg9QoyY1sGiviCar
+M1Uwayj2nbKLolUF++5dNgCElpWUlz47NVViJm0X/mN+4b0Mb+RcaI803VFF608r
+h2/V96IQocZ7FyGuRj0Ybg+CAL0dzRthXgenSPBhPdiZdeTylsTjtZWdgdm8rr67
+l741+3kZ8rjusjyQ/Q4HcnTLNj0ACtqB21LOMdcbmFObB2exJso+88RVKvOKXsTH
+s+06Htvf/kqyJgGUHgciAVG3YLON2noOSY9lKeSpPtuqtYUY2xpDTGumSJ61/WfQ
+wMqaIYq/P7C8zNNGlKupvQQOjOP8LwBvNS0R1cI47pRHj2D1i5ziutuiBBuSWUdc
+K16261eCBSfF7DARSlMDv3OvX5+bZyBq3nc+OZj/OMLANefVH7Ei3oZWxa69/fbm
+Gno7D8ifnXz+9spaBmD9UPCxsqw6orMEFm6PH07m4pNdRgxodWEV/DqEU1IYWF08
+VJYHbR2YfubvTs9R0pqGtwcPFtavhoScq/3uZNqrhpCvTqW9ehcEiJ4senToQEHL
+elLbT80tK0jfebclmWIU19iQFpc4pqNEgWT5oqpgNZ4LGTD4f9/CT444JcXOWYJs
+PQkeUMM7+oLVn5WdSv5e+ZWTIWhKVb6LqAftNAQC/qoWTm4WvfvRWPRk+SQQnFT5
+qreYB/YPC71BwPV+uVd735AogQXt9Mc12P5raXjk3z81CfaKkEDroaW1E607ZGLC
+MX5V+8u3KSh16LjV/+MpYTcw/ObjQmE74A8DgN7l/E+Ex4p8tujJr4QXDU599Bf/
+5znv/mVvY2NzVLCqnQcSJbCYeOrBc2wXS1Kg59ZM8ToGq7cSEUjaIzjTtyP7TOnz
+b6ZTxFlHjCz/rOxUPkcJUkQfKYIo0VNC+WDbdhTnK0mWuMgBIgWNJaWlZY2CLe08
+kCiBQ//jQ6bU5OA3kw9oSKMCvllwI1Qrgf1fNUcVFbdlIeKwRHOk1uwzbENJeSDN
+Aw4gdZTlQZTgWlx8fHxcvHc7DyRKYGBzdDZA3dOAeLtcXfR4eM9ZKKjX7YCJw9lK
+IClO8LpZOuNGaxYiEhAiONExLvh//Lq1L3xYCMsD6b4w/8NJg/YqWpuYZIk8jHes
+Ew60PR88wCf3GkBOaWy1TzLaGilvaSH+Bz0fKci8IpwfJArnB2Sn/etFMlEo9iZX
+imQiDA/aZKKruMDpMd9PH4BMRxoBrKfVojwZEiVyoK7f1lq6qDEJHwXP0OLT4tmR
+VXqg3ODT1lBD38PzQDxPTMl6WjpPuAJtKDhw8G3r2AjDg6JHB4VjY2Tb2AjOK+Wf
+Stnz211rQJ8r+CVJODZ2lsgCWpwhDqZvcroYF2ckw7zKdpco55wZsiqatsk850LZ
+HTZs2kn78AvC9UL6aKpojnT+9evz4jmS6CnJo1CSBN8pvLnWqL2API73Z/Fjnmjp
+4Xr4cYlojtRZIg1wOq89hf24qlw8ZsvT6/Z2zEoGnpBNVNC2qAPNbMXrRnmRIbFu
+lJwrk6WPohbEtGmdK7evE/UtbSzFnU/PsnWuLFEihTHHOnLKUPfXIYn1oCZMzr12
+7/w2+gROoVdRJKz0Oi4RA6zf67PYO21/0SCVDNznmJwqGxNozoN+x3wkvpGSGjCP
+68L8KV9qYxPyzcVly115elslcM2dLSWo3fIvYK1J8mvcIj0WQPN48CHLiYFLjsyO
+DxTbOBfbKkwuPJcNqEdawO2NbSUo0IvrLzsh6JX/I7YSwac+WW5KQJrP05WgIa45
+C+XmRFBKnargcGrB4HgxjI4SmpuL4wJNDfTLmQczLRxYcgzL4DbDKw/DaSygWcc+
+wbAWTeF1zBdOaUI9UjkMu0pIqTXesBfAiSfGa8dnXTHAcccnw9Mwhr8bu1WD4/Mf
+FBgggqOO+xK790ryPT5KwWswOvsMO93qskbFnk3uWSsUL2Xxh8EKrmKZtLRxKVb1
+GJ176qD4qv2+Ldq11pYEM+aAg+Krjs/OYmVAO7JGab8y23zAWcllPNFjf6yyzV9S
+Wo0y+1J1kFCrPI6IfmDeSCIkIzgyd6nyFfL4unhsqjK7cY2p/A7o09wl2rdHMFx0
+YoKKjQSz69ex6afj6uJU3tNz31aVe4EYwyZ5Xy+VrS9eRRNGCDCFL5sEGAYmwTlj
+tWmjRRrFDUNgazO6NgmL2sxuXUGyCCWNy12nostgCNMQHiLHGebVG1h0huF8hKy0
+TTiiJa8uaOjhJISWMMl8LGbzYfVIE5ToT81bp40ckBYhudORroZ86hWn4EEMw389
+RyztQPvY7M/wDkSq91lWnAPiu23zv0E/jXUqyFXDd5XqnbnNDc+db8gtOXO8GlZN
+enlv0PszfV6vXmRR5lLeOg5ufu82a48tU0/yrq5XPx6OLOLUFSqg00beYly8/0GL
+hbmbnNT85WH8WLT10k7/IZ8LWgXIA5Ky55tjHgfDbA43ZYDaC3XWn9+i3XHivDyu
+gSs7dciOLH82llwArQKytw/RgBT9Ey/QzmDH1kZq9Jze4ITc1ZhFhSH3DMpO1IQD
+QmyoHYOy9tV1mqYvo7hH8uKGYxAdCKQPT8iNdNfUc8qnLghl/XsqNN9JgWwWZBxd
+6ozOyJ/aM/BQRgBH8/G2d0UauvdAP3cXjYU6aDRsE2/nHAdN2UB1mLOTt2kYqth5
+5vcUKUMRgv3sJMp5H4nlE5u1c0lftUNCgvTe83fkJvqwUK5BDL5+qvbIJoVBNYno
+KBCBxJ68KTN9wzRHOtIWDdHtJ0Zk5ERPtsZAqibXoLNh/7wWG80sxBgUuDXn0KYF
+njYmyt8rRLf2XLg5g5u8ZBATm1Xol7Wqs9AoQ1AtvEmmJqBY9J+94UDe0aRgP28X
+azMjPVJn9wBJekZm1r28/dbGHszev3H+IAvsHGin1KLLI5BUo8CTWEOANKu+01Zs
+3JnJ5abvSopZHxa8JmhNcNj6mKRd6dyczJ0bV0x3t9Io4KRiDKhJQPM4JasADzUh
+qGdiaec+cpJvQOCXK1at+DIwwHfSSHc7SxNcYgpz3h5FI1WMfrypPf0YXmDeOo8o
+fo4CmN89o3s+fOqC9v0dNDpF9kuerrlyqg9qbj6aCYJj+V6it9bRA9xX5oDicQ85
+karah0/3kFiDxo5wNF82j41KHz4dRASSTSKFmMRfKVOiyodPF7GKPxHF09P5ssYX
+Knz4dBJL+Whsl2fxZR1CVPjw6SQC+Gja6Ty+rFuqch8+3YQfH43Fqj9f1vBZuQ+f
+bmI2X+34wBKQb0XKffh0E7P4aJKK+PHnyJQo8uHTZczlo0k3Jd+KFPnw6TIWyvVo
+dTCDv0SmRJEPny4jkI9GkTSFv1ymRIUPn05iBR+NAfs4fohMiSofPl3EOj4aw6zB
+/BiZEpU+fDqILfxBqm9SiJ6Vu2VKVPvw6R5SK9DY0VoXHNXtYQ8JKFlv0EzlLR7+
+i/g4mWhh+O/7aCzFTC79SnS4VPRgXP4FjXOX/oln6PbqdAGs/GOoMiLsqtQd/z1N
+4Vq1A9XzYaiNOIjHuFp0A7hfrVrZSHQSC2vRObyOrI3CiBLisImvbuJGadij26vT
+BVCyCtDlZWVc/u2fPjiaXrmEzu+ZnFnogA0phMGh6AjKpryhdrTqm3Qa3hpaWHZi
+Rp3sLss/Davq0JniAIBLSTo+vikgCYLoNJDGJFPMDEFDAxDERyNHyihBk4tTBJNL
+NzC2wiBZMElefvT+e8YZH91mEHK59+CrgQa7dxh+mtDDZFJP0AjjvM7Mm6hWCyKA
+qZVoU/t0/JSBOeQc5sW8kEVLzu/tfS+Avj/OYG66Q5+j02h70wzCnnt6vo6iZRyi
+e/haQphldnav3I36pxbXo1FMd4Dk6klZdb3PqDdrDTet1Os92ohqKewB+iCZAkJU
+EkijgcY2VItZ7rSUJMMtrwb2z/OBbBhY8GFBPfqM5f0r01D75pjMG2303a+mszJ6
+0/owQJKyvwZS9UHnzwxH/TLH6lqagVtvtDM0aG8F+lgdJpduo4up7bRusP3DDMPJ
+Mw2E7xzpQxRTqsWWBfST16x6DkHlk2V+B7U4ECKJjyKihluw3cjX66jDNcnIC5Ko
+0+YbpLzwsPTQ3DBsOB8DY2MUHoJ2M4wWFM7W8zBF0a8hr8X0la8nkNka6jWRe2cq
+g+1zjRyCaI6U9YVjGV4YKJ4HhrOm3Z0CaMIF2ulnWBiZUjJL1R4dQRJp3YMBzp9j
+NLUAgVGZHv32ahCmzr30CCaK8TkNq9V8Ahy7zfbTrVgGxwD1gJmPpzKGq9uq1jQo
+zK+lFuyefaeWTDLopR/0aCSAtd5Bz15vcZGvej2C9v1TdLqDdpAPl6s1xPo/n0LH
+INU9DHoG2Yzf6qDGAx7l6Ri9ipkNEYjvNV3Qu38SfmHUoNAHg2nIDX8iG7BJWQcA
+Vv+9itDoGQS8326E8AyCQO9B35mHLM8uAJhdu4P0VpXYgnCQ1V+yiDEBN4fvNhhE
+7zO1R9YUfBpkt801x6ByJCMMCJqf/RaXLCjSoOq539qMRN5QM8s0TXUvD4OvCxB0
+8YEJzo62WjFNstk61dhW9ey779uvMAxj5tu4WfWfC3yOxbQUESjUzddUvhVwcyOW
+dtRmlx+qGGdJPjMZvbWR7F0MaNYuNl2F7LV7dBnTQG7Lm1SoVk2//0Vbyd5bAZG9
+zvgov2VVExYpfTth++CKMi0C1Ne6z0AtWyl+cnGmUjWsxdX7GPvkbWhSppJyvpWu
+9SCKEMN8ubLA8oua1mNco9PjK4rbOtUkaCoB+SwHPd2qeIi0uvoI8wRFEU0KPZ8Z
+KYGEeL9Rh9iwFDa/ZU2ybkjoYf/ghiInBYcLuwnyABx2Q9aWuB3sm/dxyKsX3BwM
+f4FlwyIqmKhLpoKQuuC65rU41Me++gTWNom677IDDtUhAqRvPxFWt+H69CourjVf
+NOyCE0EUv03EGauSkl/BjQ2U3fVYpjXuBP2r8pHypbSJ9kRaqvSbDvcCRpWfxCqg
+rgxGlP1bfr9i0Ev5aPTahMMa+QgNjNOl6EyQFIOc1LRKTgQZT8UpYyZCjC+Q0/iC
+Qc0JuLVN2xvP3GWKmAtcYW/VGuiDTWTfS7/n13AMcDudny0jhkcVbND854xD4+Lj
+oxf3RtWZekfLSEUaF5Xvjiro7WtYLM11+kgU2wicIkFlWWXTi0VoNJATXi6T+g4G
+Nu7FdRHf406+lHpKb7o6QS1lwSku97TuFV73Bs32OM1BumkOyr+NU7K2dkypPC05
+KWT+chrF5EDsHKV/TIDG7oviu05Sw2p2uhJvdRY5rmWjRMuleKgf1bETbQ5iSYJo
+FBTpHf5dwk2FHN2yBff5iuXZCokApWYzZQcKdYBJOwBZbImXMqPiey2ENx709I/O
+7jv4FZpX2CoPXMJq36AKRDU8uHMk9PjjiVamK7Mqz3asR5jj0cif1nGhounlYlQ7
+U9vrO6Less9WaSckBzmqObVdFNM/7Y9CjcgpbkyLi17iim5zbmKMTdsZLa05SkuL
+F5OsxvC2FaTd44NoxkYE2ctVAmKats2xKBFNWdgn61MA23M1/uJ6DacMRPESMeEB
+4/Qp8R+HFlaft0X9c4jR505hW0xB+8ko7G0w4YFhcIhYqTix8I5Wc6eNfPFEvDoN
+K/DW/Fcw4YE5WxztdMSTF1gloEEGcHrRPU/RSZ/pKHSJxmFh6FVQMfdapyie94un
+aXmXB/qi9LZoVAd7zyPW2Yc0NVG08dHvVtkcretyoIWVV/sKeRDzBi+VDTI4uogC
+T/a9UulPgDqLvKz6mnBO5uJNaFwgyv4HLgAw4Fr1Mm1mxOmsfknFf4cCQM9onFL8
+IgLp05V0wOtORSBBMQpI80sfjgK881cQU70Ixv7uIDDqQekCQlqBCJBv4YsZhm5m
+TMI0y54vUijT8otgc1hqCdCkP8uW0cLPORBUv4HJcNfA8qeTCNXuA15X62JCjzgQ
+U7nhjhT2xtprhOdTdTndzOvlOY0QkWSy94fjzd/pQJpp1t6GW49uYGMarRagcSPG
+/bdxn04E6qAFlb5Ps7HXep80v1haVBKkI/GfSRNu11z/zU27lUJO/U4L7qpK4KhF
+9OL9VTuPodUxus/1osZcnQrWYhT0puKK1sxUAYDaI/7vwrU6FqQLGnbxf3fGaiug
+lN6aNy0XR+hOP2iHZVRRLVcrCX5B54Tq0hidGA9kQRpx/u+bfvgrNenzH78/M1xX
+w7Qwg1789e1IfO30KKO+bny7ibis2ioBDj3NL091x+8dkfruqmxJ70PYKhER6KN/
+FRSkoNw1UQSSa+LrhvPLdWw4gIFL/E8tL+NcsV9AUNxi899XBKNK2qUtgMzdVc2v
+9wzDNrGrvldqgeBm4FC808ViBeMBC/4UVPImm2H1ykDmlNzy+p9zh2L0e1oBaVwK
+r7bp2oZ+WFgG6bmF/VZXW7rOGLMgKdoCLfT6g5Yinp89urGSYjeXW/j+fc5wD617
+iWAACtN6W2llw7PM2faavkA9u9kHn7z7+MPqAMz8VbUOuqv7nmp+w4uTa7xM1R0u
+SaYDV/CevXt/PiXCAQ/atAj6oKHJhTUN1VfTlnpaIO0WVMsBAalXqj40nk4NswH+
+aVIADnouAxb89qbqPf/37Oi5HtZKkxdSjFkD5kblPKhueP8kddNsE6grMEAMiMnp
+v+mrn0o/NlW/+iUjfp2Pp7O1hSXDgE6nUAz19RkMBovjNGz+qpjMn57w39WXvcj0
+n+2i2zNiFEi9+ayw+V0dv/zVw8eXv/nh+6Pcfx8/efnyr8+KyuvfN/HLnn2zF42p
+2z8CZKZj4KwlQVt+uHXm/uM/assLS0tK+G/++PXio+/iouZ5L3cy6DqtXzEMW9VN
+LoMNLSzZE/tYc2zcJtpaMoyGuIiujSEgtvn/AdLWXnk38isfAAAAAElFTkSuQmCC"/>
+</g>
+</mask>
+</defs>
+<g>
+<path transform="matrix(1,0,0,-1,-258.27,129.616)" d="M0 0H362.835V272.126H0Z" fill="#ffffff"/>
+<text fill="#adade0" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.616)" font-size="4.9813" font-family="NimbusSanL"><tspan y="-2.095" x="350.306 353.0756 354.4604 357.22999">9/10</tspan></text>
+<text fill="#3333b3" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.616)" font-size="10.9091" font-family="NimbusSanL"><tspan y="-255.38" x="8.503998 16.380368 22.445828 28.511288 34.576749 40.031297 43.064027 45.485849 51.551309 57.616769 66.10405 72.16951 78.23497 87.33316 92.78771 98.85317 107.94045 114.00591 116.427738 122.493198 125.525928 131.59139 137.65685 143.7223 149.17685">Reductionsandcompleteness</tspan></text>
+<path transform="matrix(1,0,0,-1,-233.44095,-98.699977)" d="M0 0H313.176V14H0Z" fill="#edcccc"/>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="7.9701" font-family="NimbusSanL"><tspan y="-233.119" x="28.346 33.26355 37.694929 39.46429 43.44934 47.88072 52.312097 58.95119 60.720556 65.15193 69.136989 71.79103 76.222408 80.65378 85.08515 89.0702 91.28589 93.05525 97.486629">Polynomialreduction</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-217.272" x="28.346 34.93624 38.813676 41.135953 45.013387 48.751344 50.299528 54.17696">Aproblem</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="6.9738" font-family="CMR7"><tspan y="-217.272" x="61.925">&#x03a0;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="4.9813" font-family="CMR5"><tspan y="-216.276" x="67.806">1</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="6.9738" font-family="NimbusSanL" font-weight="bold"><tspan y="-217.272" x="73.633 76.34581 80.22324 84.48424 88.74523 92.622669 96.5001">reduces</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-217.272" x="102.316 103.86419">in</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="6.9738" font-family="NimbusSanL" font-style="italic"><tspan y="-217.272" x="109.68 113.557437 117.43487 118.983058 122.469959 126.34739 130.22483 136.034 137.58219 141.45961 144.94652 146.88524 148.43343 154.2426">polynomialtime</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-217.272" x="160.20801 162.14673 167.96288 173.77902 177.65645 179.97873 183.85616 187.5941 189.14229 193.01972">toaproblem</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="6.9738" font-family="CMR7"><tspan y="-217.272" x="200.768">&#x03a0;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="4.9813" font-family="CMR5"><tspan y="-216.276" x="206.64801">2</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-217.272" x="210.53702 214.41446 218.29189 222.16931 224.10803 227.98546">,noted</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="6.9738" font-family="CMR7"><tspan y="-217.272" x="233.80103">&#x03a0;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="4.9813" font-family="CMR5"><tspan y="-216.276" x="239.68202">1</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="6.9738" font-family="CMSY7" font-style="italic"><tspan y="-217.272" x="245.83803">&#x2264;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="6.9738" font-family="CMR7"><tspan y="-217.272" x="254.33203">&#x03a0;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="4.9813" font-family="CMR5"><tspan y="-216.276" x="260.21305">2</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61603)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-217.272" x="264.10105 267.9785 269.52668 271.25617 273.1949 275.1336">,if...</tspan></text>
+<text fill="#3333b3" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="MSAM7"><tspan y="-207.559" x="27.717">&#x25b6;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-206.313" x="38.551 40.873277 42.811994 45.064535 48.941968 52.8194 56.3063 58.035806 61.91324 64.40986 70.21903 74.096469 76.03518 77.58337 81.4608 85.338237 87.66051 91.53794 95.415378 98.902278 102.77971 106.65714 110.91813 112.85684 114.795558 119.133258 120.862758 124.74019 129.00118 132.8786 134.42679 137.9137 139.46189 143.33931 146.8262 148.76493 152.64235 156.51978 160.00667">(transformation-based)...forallinstance</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-206.313" x="165.822">x</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="4.9813" font-family="CMR5"><tspan y="-205.317" x="170.34001">1</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-206.313" x="176.16602 180.04344">of</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="CMR7"><tspan y="-206.313" x="183.92102">&#x03a0;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="4.9813" font-family="CMR5"><tspan y="-205.317" x="189.80202">1</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-206.313" x="193.69002 197.56746 201.44489 205.32231 211.13846 214.62535 218.50278 224.31893 228.05687 231.9343 233.48249 235.03067 240.84682 242.395 248.21115 252.08858 255.966 257.5142 261.0011 264.87855 268.75599 274.56517 276.11335 279.99079 283.4777 285.4164 286.9646 292.77378 298.58995 302.46739 308.28355 309.83174 313.70918 317.19609 319.1348 323.01225 326.88969 330.3766">,onecanbuildinpolynomialtimeaninstance</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-198.343" x="38.55101">x</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="4.9813" font-family="CMR5"><tspan y="-197.347" x="43.06901">2</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-198.343" x="48.89601 52.773447">of</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="CMR7"><tspan y="-198.343" x="56.651014">&#x03a0;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="4.9813" font-family="CMR5"><tspan y="-197.347" x="62.531015">2</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-198.343" x="68.35802 71.84492 75.72235 79.20925 85.0254 86.96411 90.841548 94.71898">suchthat</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="CMR7"><tspan y="-198.343" x="98.596019">&#x03a0;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="4.9813" font-family="CMR5"><tspan y="-197.347" x="104.47701">1</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="CMR7"><tspan y="-198.343" x="108.36501">(</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-198.343" x="111.47901">x</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="4.9813" font-family="CMR5"><tspan y="-197.347" x="115.99601">1</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="CMR7"><tspan y="-198.343" x="119.88501 125.26181 133.64432">)=&#x03a0;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="4.9813" font-family="CMR5"><tspan y="-197.347" x="139.53002">2</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="CMR7"><tspan y="-198.343" x="143.419">(</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-198.343" x="146.53202">x</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="4.9813" font-family="CMR5"><tspan y="-197.347" x="151.05002">2</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="CMR7"><tspan y="-198.343" x="154.93802">)</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27 129.61612)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-198.343" x="158.05103">.</tspan></text>
+<text fill="#3333b3" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27003 129.61608)" font-size="6.9738" font-family="MSAM7"><tspan y="-187.633" x="27.717">&#x25b6;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27003 129.61608)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-186.388" x="38.551 40.873277 44.75071 47.00325 50.880685 54.367586 55.915769 59.7932 62.11548 65.99291 69.870349 73.35725 77.23468 81.112117 85.3731 87.31181 89.25053 93.58823 95.52694 99.40437 103.28181 105.60408 111.42023 115.08845 118.57535 120.123538 123.610439 125.54915 130.97476 134.85219 140.66834 144.54576 146.09395 149.97138 153.8488 156.2757 157.82389 159.7626 163.64003 171.38793 173.32665 177.20407 181.0815 184.95894 188.44583 192.32326 193.87145 197.18399 201.06142">(oracle-based)...thereexistsanalgorithmthatsolves</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27003 129.61608)" font-size="6.9738" font-family="CMR7"><tspan y="-186.388" x="206.486">&#x03a0;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27003 129.61608)" font-size="4.9813" font-family="CMR5"><tspan y="-185.392" x="212.366">1</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27003 129.61608)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-186.388" x="218.193 219.74118 225.55733 229.43476 233.31218 234.86037 238.34726 242.22469 246.10211 251.91129 253.45948 257.3369 260.82383 262.76255 264.31074 270.1199 275.93608 279.8135 281.3617 284.67427 288.5517 294.36787 298.2453 301.7322 305.21913 309.09657 312.58348 318.0091 319.9478">inpolynomialtimegivenaccessto</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27003 129.61608)" font-size="6.9738" font-family="NimbusSanL" font-weight="bold"><tspan y="-186.388" x="325.763 329.64045">an</tspan><tspan y="-178.418" x="38.550996 42.81199 45.524797 49.40223 53.140188 55.078905">oracle</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27003 129.61608)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-178.418" x="60.894998 62.6245 66.50193">for</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27003 129.61608)" font-size="6.9738" font-family="CMR7"><tspan y="-178.418" x="70.763">&#x03a0;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27003 129.61608)" font-size="4.9813" font-family="CMR5"><tspan y="-177.422" x="76.644">2</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27003 129.61608)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-178.418" x="82.47 84.792278 86.34046 92.15661 97.972759 103.78193 107.65936 111.14626 115.0237 116.571887 120.44932 126.265468 128.20418 132.0816 135.95903 139.83647 143.7139 147.59133 150.869 155.83435 159.71178 162.03406 167.45967 171.3371 175.21453 179.09195 182.57884 184.51757 186.06575 189.94318 193.8206 199.24622 200.97573 204.85315">(ieamachinethatanswersquestionsfor</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27003 129.61608)" font-size="6.9738" font-family="CMR7"><tspan y="-178.418" x="209.114">&#x03a0;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27003 129.61608)" font-size="4.9813" font-family="CMR5"><tspan y="-177.422" x="214.995">2</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.27003 129.61608)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-178.418" x="220.821 222.36919 228.18534 232.06276 235.94019 237.48838 241.36582 243.30454 244.85272 250.6619 254.53932 256.8616">inunittime).</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61614)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-161.481" x="28.346 30.284718 36.10087 39.978303 41.91702 45.794454 49.671888 53.93288 58.898229 62.77566 65.09794 68.97537 72.357669">Inotherwords,</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61614)" font-size="6.9738" font-family="CMR7"><tspan y="-161.481" x="76.235">&#x03a0;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61614)" font-size="4.9813" font-family="CMR5"><tspan y="-160.485" x="82.116">2</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61614)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-161.481" x="87.943 89.49119 94.9168 97.239078 101.11651 104.993938 106.54212 110.419559 114.29699 117.78389 121.661319 125.53875 130.96437 134.8418 138.71923 141.0415 144.91893 149.17993 153.05736">is&#x201c;atleastashard&#x201d;as</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61614)" font-size="6.9738" font-family="CMR7"><tspan y="-161.481" x="158.482">&#x03a0;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61614)" font-size="4.9813" font-family="CMR5"><tspan y="-160.485" x="164.36299">1</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26997 129.61614)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-161.481" x="168.25099">.</tspan></text>
+<path transform="matrix(1,0,0,-1,-233.44083,-.89383509)" d="M0 0H313.176V14H0Z" fill="#edcccc"/>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61617)" font-size="7.9701" font-family="NimbusSanL"><tspan y="-135.313" x="28.346 34.100416 38.53179 41.185838 45.617216 50.04859 54.47997 58.46502 64.66576 69.09713 73.5285 80.17557 84.160617 88.59199 95.23108 99.66245 101.431819 105.86319 108.07888 112.510257 116.94163 121.373 125.35805">Hardnessandcompleteness</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61617)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-122.455" x="28.346 32.39778 36.275217 40.53621 46.35236 49.83926 51.387445 55.264879 58.751779">Foraclass</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61617)" font-size="6.9738" font-family="CMSY7" font-style="italic"><tspan y="-122.455" x="64.178">C</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61617)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-122.455" x="70.79 74.667438 78.54486 82.422298 84.74457 88.622 92.35996 93.90815 97.78558 103.59476 109.02037 112.897808 116.77524 122.591388 128.40753 130.34626 133.83315 137.71057 143.52672 147.40415 151.28159 153.60387 157.4813 161.35872 165.23615 168.72304 170.66176 172.20995 176.08737 179.9648">ofproblemsandatypeofreduction:</tspan></text>
+<text fill="#3333b3" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61617)" font-size="6.9738" font-family="MSAM7"><tspan y="-112.741008" x="27.717">&#x25b6;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61617)" font-size="6.9738" font-family="CMSY7" font-style="italic"><tspan y="-111.496" x="38.551">C</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61617)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-111.496" x="43.225 45.547277 49.42471 53.302145 55.62442 59.501855 63.839559 67.71699 71.59441 73.1426 77.020038 80.89747 84.38437 88.261798 92.13923 97.56484 101.442279 105.31971 107.64198 113.45813 117.33556 122.76118 126.63861 130.41143 135.83704 139.71446 142.03675 145.91417 149.65212 151.2003 155.07773 162.82563 164.37381">-hard:atleastashardasanyproblemin</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61617)" font-size="6.9738" font-family="CMSY7" font-style="italic"><tspan y="-111.496" x="170.18799">C</tspan></text>
+<text fill="#3333b3" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61617)" font-size="6.9738" font-family="MSAM7"><tspan y="-100.786" x="27.716996">&#x25b6;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61617)" font-size="6.9738" font-family="CMSY7" font-style="italic"><tspan y="-99.541" x="38.550996">C</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61617)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-99.541" x="43.224996 45.54727 49.034173 52.911607 58.720785 62.598218 64.1464 68.023838 69.96255 73.83998 78.17768 82.055118 85.93255 87.87126">-complete:both</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61617)" font-size="6.9738" font-family="CMSY7" font-style="italic"><tspan y="-99.541" x="93.68599">C</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61617)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-99.541" x="98.359989 100.68226 104.55969 108.437129 110.7594 116.57555 120.45298 124.330417 130.14656 131.69475">-hardandin</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61617)" font-size="6.9738" font-family="CMSY7" font-style="italic"><tspan y="-99.541" x="137.50998">C</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61618)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-76.627" x="28.346 32.997526 36.484426">Ex:</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61618)" font-size="6.9738" font-family="NimbusRomNo9L"><tspan y="-76.627" x="40.822 45.857084 49.734518 52.056795 55.15316 58.64006 64.065677 67.552577 69.49129 72.587657 74.52637">NP-complete</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61618)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-76.627" x="79.562 85.57341 87.1216">=in</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61618)" font-size="6.9738" font-family="NimbusRomNo9L"><tspan y="-76.627" x="92.937 97.972087">NP</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61618)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-76.627" x="103.787998 107.66543 111.54286">and</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61618)" font-size="6.9738" font-family="NimbusRomNo9L"><tspan y="-76.627" x="117.35899 122.39408 126.271518 128.5938 132.08069 135.17707 137.49935">NP-hard</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61618)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-65.668" x="38.039995 40.36227 44.239706 48.117139 50.439416 54.212244">(here,</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61618)" font-size="6.9738" font-family="NimbusSanL" font-style="italic"><tspan y="-65.668" x="58.088994 60.02771 62.28025 66.157688 70.03512 73.52202 75.25152 79.12895 81.62557 87.434749 91.31218 93.25089 94.79908 98.67651 102.55395 104.87622 108.753658 112.63109 116.11799 119.99542">transformation-based</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61618)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-65.668" x="126.48399 130.36142 134.23885">and</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61618)" font-size="6.9738" font-family="NimbusSanL" font-style="italic"><tspan y="-65.668" x="140.055 141.60318 147.41933 151.29676 155.17418 156.72237 160.20926 164.08669 167.96411 173.77329 175.32147 179.1989 182.6858 184.62453 186.17272 191.98189">inpolynomialtime</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61618)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-65.668" x="196.00899">)</tspan><tspan y="-51.72" x="38.21399 43.214204 47.37756">SAT</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61618)" font-size="6.9738" font-family="CMSY7" font-style="italic"><tspan y="-51.72" x="53.75199">&#x2208;</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61618)" font-size="6.9738" font-family="NimbusRomNo9L"><tspan y="-51.72" x="61.05899 66.09408 69.97151 72.293788 75.39015 78.87705 84.302669 87.789569 89.72828 92.824649">NP-complet</tspan></text>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61618)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-51.72" x="103.675998 105.99827 111.033359 114.91079 118.78822 122.27512 126.15255 130.02999 133.6982 137.18509 138.73328 142.6107 144.15889 148.03632 151.91374">(Cook,Levin&#x2019;71)</tspan></text>
+<g mask="url(#mask_62)">
+<g transform="matrix(.28456,0,0,.28456,.5791626,-4.328575)">
+<image id="image_64" width="259" height="321" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAQMAAAFBCAAAAABWKpVwAAAACXBIWXMAAA7EAAAO
+xAGVKw4bAAAAaElEQVR4nO3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAgKcBRhMAAVYaXv4AAAAASUVORK5CYII="/>
+</g>
+</g>
+<text fill="#404040" xml:space="preserve" transform="matrix(1 0 -0 1 -258.26985 129.61618)" font-size="6.9738" font-family="NimbusSanL"><tspan y="-31.642" x="264.716 267.03828 272.07337 275.9508 279.82826 283.7057 287.58314 291.46058 295.338 299.21546 300.76365 306.5798 310.45726 314.3347 315.88288 317.43107 321.09928 324.41184 328.28929">(whatpeoplebelieve)</tspan></text>
+</g>
+</svg>
