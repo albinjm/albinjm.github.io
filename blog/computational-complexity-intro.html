@@ -74,7 +74,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">June 30, 2025 · 30 minute read</span>
+        <span class="dnerf">June 30, 2025 · 20 minute read</span>
       </h2>
     </div>
   </div>
@@ -286,7 +286,7 @@
         <h2 class="title is-3">The Problem Family Tree</h2>
           <div class="content has-text-justified">
             <p>
-                Just like ice cream comes in different flavors, computational problems come in different types - each with its own special characteristics! Let's explore this delicious variety using graph coloring as our example. Imagine you're coloring a map (or maybe coloring countries in <a href="https://en.wikipedia.org/wiki/Map_coloring" target="_blank">Risk</a>) where no neighboring countries can share the same color.
+                Just like cookies comes in different flavors, computational problems come in different types - each with its own special characteristics! Let's explore this delicious variety using graph coloring as our example. Imagine you're coloring a map (or maybe coloring countries in <a href="https://en.wikipedia.org/wiki/Map_coloring" target="_blank">Risk</a>) where no neighboring countries can share the same color.
             </p>
           </div>
 
@@ -599,36 +599,131 @@
                 We don't care about small recipes - we want to know how things scale when cooking for a stadium! That's asymptotic analysis:
             </p>
             
-            <div class="box">
-                <p><strong>Big-O Notation Cheat Sheet:</strong></p>
-                <table class="table is-bordered">
-                    <tr>
-                        <td>\( O(1) \)</td>
-                        <td>Constant time</td>
-                        <td>Instant noodles of algorithms</td>
-                    </tr>
-                    <tr>
-                        <td>\( O(\log n) \)</td>
-                        <td>Logarithmic</td>
-                        <td>Finding a name in a phone book</td>
-                    </tr>
-                    <tr>
-                        <td>\( O(n) \)</td>
-                        <td>Linear</td>
-                        <td>Reading every page in a book once</td>
-                    </tr>
-                    <tr>
-                        <td>\( O(n^2) \)</td>
-                        <td>Quadratic</td>
-                        <td>Checking every pair of people in a room</td>
-                    </tr>
-                    <tr>
-                        <td>\( O(2^n) \)</td>
-                        <td>Exponential</td>
-                        <td>Trying every possible combination lock</td>
-                    </tr>
+            <div class="box" style="
+                background: #f8f9fa;
+                border-radius: 10px;
+                padding: 1.5rem;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            ">
+                <p style="
+                    color: #2b2d42;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    margin-top: 0;
+                    margin-bottom: 1rem;
+                    text-align: center;
+                ">
+                    Big-O Notation Cheat Sheet
+                </p>
+                
+                <table style="
+                    width: 100%;
+                    border-collapse: separate;
+                    border-spacing: 0;
+                    margin: 0 auto;
+                ">
+                    <thead>
+                        <tr>
+                            <th style="
+                                background: #2b2d42;
+                                color: white;
+                                padding: 0.75rem;
+                                text-align: left;
+                                border-radius: 6px 6px 0 0;
+                            ">Complexity</th>
+                            <th style="
+                                background: #2b2d42;
+                                color: white;
+                                padding: 0.75rem;
+                                text-align: left;
+                                border-radius: 6px 6px 0 0;
+                            ">Analogy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="
+                                padding: 0.75rem;
+                                border-bottom: 1px solid #e9ecef;
+                                background: #f1faee;
+                            ">
+                                <span style="font-weight: 600; color: #1b9aaa;">\( O(1) \)</span>
+                                <br>Constant time
+                            </td>
+                            <td style="
+                                padding: 0.75rem;
+                                border-bottom: 1px solid #e9ecef;
+                                font-style: italic;
+                                color: #457b9d;
+                            ">Instant noodles of algorithms</td>
+                        </tr>
+                        <tr>
+                            <td style="
+                                padding: 0.75rem;
+                                border-bottom: 1px solid #e9ecef;
+                                background: #f1faee;
+                            ">
+                                <span style="font-weight: 600; color: #1b9aaa;">\( O(\log n) \)</span>
+                                <br>Logarithmic
+                            </td>
+                            <td style="
+                                padding: 0.75rem;
+                                border-bottom: 1px solid #e9ecef;
+                                font-style: italic;
+                                color: #457b9d;
+                            ">Finding a name in a phone book</td>
+                        </tr>
+                        <tr>
+                            <td style="
+                                padding: 0.75rem;
+                                border-bottom: 1px solid #e9ecef;
+                                background: #f1faee;
+                            ">
+                                <span style="font-weight: 600; color: #1b9aaa;">\( O(n) \)</span>
+                                <br>Linear
+                            </td>
+                            <td style="
+                                padding: 0.75rem;
+                                border-bottom: 1px solid #e9ecef;
+                                font-style: italic;
+                                color: #457b9d;
+                            ">Reading every page in a book once</td>
+                        </tr>
+                        <tr>
+                            <td style="
+                                padding: 0.75rem;
+                                border-bottom: 1px solid #e9ecef;
+                                background: #f1faee;
+                            ">
+                                <span style="font-weight: 600; color: #1b9aaa;">\( O(n^2) \)</span>
+                                <br>Quadratic
+                            </td>
+                            <td style="
+                                padding: 0.75rem;
+                                border-bottom: 1px solid #e9ecef;
+                                font-style: italic;
+                                color: #457b9d;
+                            ">Checking every pair of people in a room</td>
+                        </tr>
+                        <tr>
+                            <td style="
+                                padding: 0.75rem;
+                                background: #f1faee;
+                                border-radius: 0 0 0 6px;
+                            ">
+                                <span style="font-weight: 600; color: #1b9aaa;">\( O(2^n) \)</span>
+                                <br>Exponential
+                            </td>
+                            <td style="
+                                padding: 0.75rem;
+                                font-style: italic;
+                                color: #457b9d;
+                                border-radius: 0 0 6px 0;
+                            ">Trying every possible combination lock</td>
+                        </tr>
+                    </tbody>
                 </table>
-                <p>Learn more about <a href="https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-o-notation" target="_blank">Big-O notation</a> with examples!</p>
             </div>
 
             <h4>The Complexity Speed Dating Chart</h4>
@@ -1009,8 +1104,37 @@
                 <li>Makes no assumptions about implementation details</li>
                 <li>Is robust enough that polynomial-time computations don't depend on exact model</li>
             </ul>
-            <div class="notification is-light">
-                <strong>Fun Fact:</strong> Your smartphone is "just" a very fast, very compact realization of a Turing machine with finite memory!
+            <div style="
+                background: #f8f9ff;
+                border-left: 4px solid #5a67d8;
+                border-radius: 6px;
+                padding: 1rem;
+                font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            ">
+                <p style="
+                    margin: 0;
+                    color: #2d3748;
+                    font-size: 1em;
+                    line-height: 1.5;
+                ">
+                    <span style="
+                        display: inline-block;
+                        background: #5a67d8;
+                        color: white;
+                        padding: 0.2rem 0.5rem;
+                        border-radius: 4px;
+                        font-weight: 600;
+                        margin-right: 0.5rem;
+                        font-size: 0.9em;
+                    ">Fun Fact</span>
+                    Your smartphone is <strong>"just"</strong> a very fast, very compact 
+                    <span style="
+                        border-bottom: 2px dotted #5a67d8;
+                        font-weight: 500;
+                    ">Turing machine</span> 
+                    with finite memory!
+                </p>
             </div>
         </div>
 
@@ -1139,9 +1263,6 @@
             <p>
                 Step into the shoes of a complexity sleuth, where mysterious problems leave behind clues in their runtime patterns and witness statements from reduction proofs. In this section, we'll explore the twin realms of <strong>NP</strong> and <strong>coNP</strong> - the magical lands where solutions can be verified with a detective's keen eye, even if they're devilishly hard to find from scratch. Think of yourself as Sherlock Holmes with a polynomial-time magnifying glass!
             </p>
-            <div class="notification is-info is-light">
-                <strong>Case File:</strong> The P vs NP problem is one of seven <a href="https://www.claymath.org/millennium-problems" target="_blank">Millennium Prize Problems</a> worth $1,000,000 for its solution!
-            </div>
           </div>
 
         <h3 class="title is-4">The Two Faces of Verification</h3>
@@ -1847,7 +1968,7 @@
               src="https://wscor.win.tue.nl/woeginger/P-versus-NP/pudlak.png" 
               alt="P-versus-NP" 
             >
-            <p class="caption">A cartoon by Pavel Pudlak on "P versus NP"</p>
+            <p class="caption">A cartoon by <a href="https://users.math.cas.cz/~pudlak/" target="_blank">Pavel Pudlák</a> on "P versus NP"</p>
           </div>
 
         </div>
