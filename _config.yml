@@ -1,10 +1,10 @@
 # Basic Information 
 title: Albin James Maliakal
 position: 
-affiliation: National Institute of Technology
-subaffiliation: 
-affiliation_link: https://albinjm.github.io/
-subaffiliation_link: 
+affiliation: Indian Institute of Technology Madras
+subaffiliation: Department of Computer Science & Engineering
+affiliation_link: https://www.iitm.ac.in/
+subaffiliation_link: https://www.cse.iitm.ac.in/
 affiliation_logo: ./assets/img/albin-logo.png
 email: albinjames2002@gmail.com
 email2: 
@@ -14,7 +14,7 @@ address_link:
 # Search Engine Optimization (SEO)
 keywords: albin james maliakal, albin james, albinjm, albin, james, maliakal, albinjames
 canonical: https://albinjm.github.io/
-description: I am a third-year undergraduate student of Computer Science and Engineering. I explore the frontiers of Machine Learning and Natural Language Processing Research. I am currently learning about computer vision techniques for medical imaging, face recognition, and self-driving cars. I am looking to collaborate on research related to AI, ML, and RL. Discover my projects, publications, and interests on my website.
+description: I’m a graduate student in Computer Science and Engineering, with a focus on Computational Complexity and Algorithm Design. I’m passionate about exploring the theoretical foundations of these fields and their practical applications in real-world problem-solving.
 
 # The option is used to enable the Johns Hopkins template.
 enable_hopkins_logo: false
