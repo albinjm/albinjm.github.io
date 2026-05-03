@@ -4,8 +4,9 @@
 
 <ul>
 
-<li><strong>[30.06.2025] Baking with Algorithms: </strong><a href="https://albinjm.github.io/blog/computational-complexity-intro.html">A Tasty Guide to Computational Complexity (And Why Some Problems Are Impossible Soufflés)</a></li>
-<li><strong>[06.10.2024] Slicing Through Complexity: </strong><a href="https://albinjm.github.io/blog/bakers-planar-approx.html">Baker’s Approximation Scheme for <em>k</em>-Outerplanar Graphs</a></li>
-<li><strong>[26.08.2024] Exploring Parameterized Algorithms: </strong><a href="https://albinjm.github.io/blog/param-algo-intro.html">A Path to Efficient Problem Solving in Computational Complexity</a></li>
+<li><strong>[02.05.2026] Efficient Multi-Word Compare-and-Swap: </strong><a href="https://albinjm.github.io/blog/efficient-multiword-cas">Teaching CAS to Juggle</a></li>
+<li><strong>[30.06.2025] Baking with Algorithms: </strong><a href="https://albinjm.github.io/blog/computational-complexity-intro">A Tasty Guide to Computational Complexity (And Why Some Problems Are Impossible Soufflés)</a></li>
+<li><strong>[06.10.2024] Slicing Through Complexity: </strong><a href="https://albinjm.github.io/blog/bakers-planar-approx">Baker’s Approximation Scheme for <em>k</em>-Outerplanar Graphs</a></li>
+<li><strong>[26.08.2024] Exploring Parameterized Algorithms: </strong><a href="https://albinjm.github.io/blog/param-algo-intro">A Path to Efficient Problem Solving in Computational Complexity</a></li>
 
 </ul>
